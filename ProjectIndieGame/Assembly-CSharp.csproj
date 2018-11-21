@@ -61,9 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\DeathScript.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
+=======
+    <Compile Include="Assets\CharacterSelectScript.cs" />
+    <Compile Include="Assets\Scripts\DeathScript.cs" />
+    <Compile Include="Assets\Scripts\Movement.cs" />
+>>>>>>> bd75f2e8850eac0a0abd8273c6627dacf926bd08
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
