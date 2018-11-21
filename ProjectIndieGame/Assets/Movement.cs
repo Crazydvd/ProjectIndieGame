@@ -4,10 +4,24 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private Rigidbody _rigidBody;
+
+    private float _speed = 0.2f;
+
+    private Vector3 forward;
+    private Vector3 backward;
+    private Vector3 left;
+    private Vector3 right;
+
     // Use this for initialization
     void Start()
     {
+        _rigidBody = GetComponent<Rigidbody>();
 
+        forward = new Vector3(0, 0, _speed);
+        backward = new Vector3(0, 0, -_speed);
+        left = new Vector3(-_speed, 0, 0);
+        forward = new Vector3(_speed, 0, 0);
     }
 
     // Update is called once per frame
@@ -15,22 +29,22 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += new Vector3(0, 0, 1);
+            _rigidBody.velocity += forward;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += new Vector3(0, 0, -1);
+            _rigidBody.velocity += backward;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += new Vector3(-1, 0, 0);
+            _rigidBody.velocity += left;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += new Vector3(1, 0, 0);
+            _rigidBody.velocity += right;
         }
     }
 }

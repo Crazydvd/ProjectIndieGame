@@ -62,9 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Movement.cs" />
-    <Compile Include="Assets\Scripts\Physics\Rbody.cs" />
-    <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
-    <Compile Include="Assets\Scripts\Physics\Vec3.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
