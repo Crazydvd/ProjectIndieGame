@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 0.2f;
-    [Range(1,2)]
+    [Range(1, 2)]
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
@@ -102,7 +102,6 @@ public class Movement : MonoBehaviour
     private void reflect(Vector3 pNormal)
     {
         _normal.Set(pNormal.x, pNormal.z);
-        _velocity = new Vector2(_rigidBody.velocity.x, _rigidBody.velocity.z);
         _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
         _rigidBody.velocity = vector;
@@ -112,11 +111,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.tag.ToUpper() == "WALL")
         {
-            //Debug.Log(_rigidBody.velocity + " - " + _rigidBody.velocity.magnitude + "mag" + _speed);
-            //if (_rigidBody.velocity.magnitude > _speed)
-            //{
-                reflect(collision.contacts[0].normal);
-            //}
+            reflect(collision.contacts[0].normal);
         }
     }
 
@@ -129,7 +124,6 @@ public class Movement : MonoBehaviour
 
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;
-            //Debug.Log("DAMAGE:" + delta);
             _rigidBody.velocity = delta;
         }
     }
