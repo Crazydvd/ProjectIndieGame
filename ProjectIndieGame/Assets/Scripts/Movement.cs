@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 0.2f;
+    [Range(1,2)]
+    [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
     private Vector3 forward;
@@ -45,22 +47,22 @@ public class Movement : MonoBehaviour
 
         _walkVelocity = Vector3.zero;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetAxis("LeftVertical_P" + _playerID) > 0)
         {
             _walkVelocity += forward;
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetAxis("LeftVertical_P" + _playerID) < 0)
         {
             _walkVelocity += backward;
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
         {
             _walkVelocity += left;
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
         {
             _walkVelocity += right;
         }
@@ -80,12 +82,14 @@ public class Movement : MonoBehaviour
         if (_rigidBody.velocity.magnitude > _speed)
         {
             _rigidBody.velocity += _walkVelocity;
+            _rigidBody.velocity *= 0.99f;
         }
         else
         {
             _rigidBody.velocity = _walkVelocity;
         }
-        _lateVelocity = _rigidBody.velocity;
+        _lateVelocity.x = _rigidBody.velocity.x;
+        _lateVelocity.y = _rigidBody.velocity.z;
         //_velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
     }
 
@@ -120,6 +124,7 @@ public class Movement : MonoBehaviour
     {
         if (pOther.gameObject.tag.ToUpper() == "WEAPON")
         {
+            transform.GetChild(0).gameObject.SetActive(false);
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
 
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;

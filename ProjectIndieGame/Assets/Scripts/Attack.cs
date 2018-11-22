@@ -13,7 +13,7 @@ public class Attack : MonoBehaviour
             return;
         }
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") || Input.GetButtonDown("Accept_P1"))
         {
             transform.GetChild(0).gameObject.SetActive(true);
             Invoke("DisableHitBox", 0.25f);
