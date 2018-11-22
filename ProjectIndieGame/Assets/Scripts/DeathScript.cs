@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class DeathScript : MonoBehaviour
 {
-    public Image resolutionScreen;
+    public Text resolutionScreen;
     Rigidbody _rigidbody;
     Vector3 startPosition;
-    PlayerStatus _playerStatus;    
+    PlayerStatus _playerStatus;
+    PlayersHandler _playersHandler;
 
     // Use this for initialization
     void Start()
@@ -16,6 +17,7 @@ public class DeathScript : MonoBehaviour
         startPosition = transform.position;
         _rigidbody = GetComponent<Rigidbody>();
         _playerStatus = GetComponent<PlayerStatus>();
+        _playersHandler = Camera.main.GetComponent<PlayersHandler>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,8 +30,14 @@ public class DeathScript : MonoBehaviour
             if (_playerStatus.GetLives() <= 0)
             {
                 Debug.Log("You just fucking died");
-                resolutionScreen.gameObject.SetActive(true);
+                _playersHandler.GetPlayers().Remove(gameObject);
                 Destroy(gameObject, 0f);
+
+                if (_playersHandler.GetPlayers().Count == 1)
+                {
+                    resolutionScreen.text = _playersHandler.GetPlayers()[0].name + resolutionScreen.text;
+                    resolutionScreen.gameObject.SetActive(true);
+                }
                 return;
             }
             _rigidbody.velocity = Vector3.zero;
