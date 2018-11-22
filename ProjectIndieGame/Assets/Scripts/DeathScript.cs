@@ -2,27 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathScript : MonoBehaviour {
+public class DeathScript : MonoBehaviour
+{
+    Rigidbody _rigidbody;
+    Vector3 startPosition;
+    Vector3 zero;
 
-    [SerializeField]
-    Transform startPosition;
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+        startPosition = transform.position;
+        _rigidbody = GetComponent<Rigidbody>();
+        zero = new Vector3(0, 0, 0);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag.ToUpper() == "BOUNDARY")
+        if (other.tag.ToUpper() == "BOUNDARY")
         {
             Debug.Log("boop");
-            this.transform.position = startPosition.position;
+            _rigidbody.velocity = zero;
+            this.transform.position = startPosition;
         }
     }
 }

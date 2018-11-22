@@ -177,4 +177,11 @@ public class Vec2
         Subtract(pNormal.Clone().Scale((1 + pBounciness) * Dot(pNormal)));
         return this;
     }
+
+    public Vec2 ReflectJesse(Vec2 normal, float bounciness = 1)
+    {
+        x = x - (1 + bounciness) * (Dot(normal)) * normal.x;
+        y = y - (1 + bounciness) * (Dot(normal)) * normal.y;
+        return this;
+    }
 }
