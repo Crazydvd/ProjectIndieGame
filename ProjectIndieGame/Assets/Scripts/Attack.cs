@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public float Force = 10;
+
     void Update()
     {
         if (Input.GetButton("Fire1"))
