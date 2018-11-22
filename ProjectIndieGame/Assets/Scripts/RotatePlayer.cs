@@ -6,6 +6,11 @@ public class RotatePlayer : MonoBehaviour
 {
     void Update()
     {
+        if (Pause.Paused)
+        {
+            return;
+        }
+
         if (Input.GetJoystickNames().Length > 0) 
         {
             float horizontalInput = Input.GetAxis("RightHorizontal_P1");

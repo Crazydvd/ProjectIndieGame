@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 0.2f;
+    [Range(1,2)]
+    [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
     private Vector3 forward;
@@ -17,8 +19,9 @@ public class Movement : MonoBehaviour
     private Vector3 _walkVelocity;
     private Vector3 _flyVelocity;
 
-    private Vec2 _velocity;
-    private Vec2 _normal;
+    private Vector2 _velocity;
+    private Vector2 _lateVelocity;
+    private Vector2 _normal;
 
     void Start()
     {
@@ -29,33 +32,37 @@ public class Movement : MonoBehaviour
         left = new Vector3(-_speed, 0, 0);
         right = new Vector3(_speed, 0, 0);
 
-        _velocity = Vec2.zero;
-        _normal = Vec2.zero;
+        _velocity = Vector2.zero;
+        _lateVelocity = Vector2.zero;
+        _normal = Vector2.zero;
     }
 
     void Update()
     {
         if (CANTMOVE)
         {
+            Debug.Log(_rigidBody.velocity);
             return;
         }
 
-        if (Input.GetKey(KeyCode.W))
+        _walkVelocity = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.W) || Input.GetAxis("LeftVertical_P" + _playerID) > 0)
         {
             _walkVelocity += forward;
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetAxis("LeftVertical_P" + _playerID) < 0)
         {
             _walkVelocity += backward;
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
         {
             _walkVelocity += left;
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
         {
             _walkVelocity += right;
         }
@@ -69,43 +76,47 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
+        //print("VELOCITY: " + _rigidBody.velocity);
+
+
+        if (_rigidBody.velocity.magnitude > _speed)
+        {
+            _rigidBody.velocity += _walkVelocity;
+            _rigidBody.velocity *= 0.99f;
+        }
+        else
+        {
+            _rigidBody.velocity = _walkVelocity;
+        }
+        _lateVelocity.x = _rigidBody.velocity.x;
+        _lateVelocity.y = _rigidBody.velocity.z;
+        //_velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
     }
 
     private void LateUpdate()
     {
-        print("FLY: " + _flyVelocity.magnitude);
-        print("WALK: " + _walkVelocity.magnitude);
-        print(" ");
 
-        if (_flyVelocity.magnitude > 0.02f)
-        {
-            _flyVelocity *= 0.99f;
-            return;
-        }
-        else
-        {
-            _flyVelocity = Vector3.zero;
-        }
-
-        _rigidBody.velocity += _walkVelocity;
         //_rigidBody.velocity += _flyVelocity;
     }
 
     private void reflect(Vector3 pNormal)
     {
-        _normal.SetXY(pNormal.x, pNormal.z);
-
-        _velocity = _velocity.Reflect(_normal, 1);
+        _normal.Set(pNormal.x, pNormal.z);
+        _velocity = new Vector2(_rigidBody.velocity.x, _rigidBody.velocity.z);
+        _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
-        _flyVelocity = vector;
+        _rigidBody.velocity = vector;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.ToUpper() == "WALL")
         {
-            reflect(collision.contacts[0].normal);
+            //Debug.Log(_rigidBody.velocity + " - " + _rigidBody.velocity.magnitude + "mag" + _speed);
+            //if (_rigidBody.velocity.magnitude > _speed)
+            //{
+                reflect(collision.contacts[0].normal);
+            //}
         }
     }
 
@@ -113,11 +124,13 @@ public class Movement : MonoBehaviour
     {
         if (pOther.gameObject.tag.ToUpper() == "WEAPON")
         {
+            transform.GetChild(0).gameObject.SetActive(false);
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
 
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;
-            _rigidBody.velocity += delta;
+            //Debug.Log("DAMAGE:" + delta);
+            _rigidBody.velocity = delta;
         }
     }
 }
