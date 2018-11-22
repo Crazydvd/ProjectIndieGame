@@ -35,10 +35,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if (CANTMOVE)
+        if (CANTMOVE || Pause.Paused)
         {
             return;
         }
+
+        _walkVelocity = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -65,6 +67,8 @@ public class Movement : MonoBehaviour
             _walkVelocity = _walkVelocity.normalized;
             _walkVelocity = _walkVelocity * _speed;
         }
+
+        _rigidBody.velocity += _walkVelocity;
     }
 
     private void FixedUpdate()
@@ -74,9 +78,9 @@ public class Movement : MonoBehaviour
 
     private void LateUpdate()
     {
-        print("FLY: " + _flyVelocity.magnitude);
-        print("WALK: " + _walkVelocity.magnitude);
-        print(" ");
+        //print("FLY: " + _flyVelocity.magnitude);
+        //print("WALK: " + _walkVelocity.magnitude);
+        //print(" ");
 
         if (_flyVelocity.magnitude > 0.02f)
         {
@@ -88,8 +92,9 @@ public class Movement : MonoBehaviour
             _flyVelocity = Vector3.zero;
         }
 
-        _rigidBody.velocity += _walkVelocity;
         //_rigidBody.velocity += _flyVelocity;
+
+        _walkVelocity *= 0;
     }
 
     private void reflect(Vector3 pNormal)
@@ -98,7 +103,7 @@ public class Movement : MonoBehaviour
 
         _velocity = _velocity.Reflect(_normal, 1);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
-        _flyVelocity = vector;
+        //_flyVelocity = vector;
     }
 
     private void OnCollisionEnter(Collision collision)
