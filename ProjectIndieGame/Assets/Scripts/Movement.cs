@@ -66,7 +66,7 @@ public class Movement : MonoBehaviour
 
     private void LateUpdate()
     {
-        //_rigidBody.velocity *= 0;
+        _rigidBody.velocity *= 0;
     }
 
     private void reflect(Vector3 pNormal)
