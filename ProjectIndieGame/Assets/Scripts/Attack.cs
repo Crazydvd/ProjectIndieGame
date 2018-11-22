@@ -8,6 +8,11 @@ public class Attack : MonoBehaviour
 
     void Update()
     {
+        if (Pause.Paused)
+        {
+            return;
+        }
+
         if (Input.GetButton("Fire1"))
         {
             transform.GetChild(0).gameObject.SetActive(true);
