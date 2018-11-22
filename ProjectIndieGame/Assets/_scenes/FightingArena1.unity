@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c949c0a631d2d4747a9a0ece3327df3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pauseScreen: {fileID: 0}
+  _pauseScreen: {fileID: 1334871983}
 --- !u!114 &187046148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4960825635543320, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4960825635543320, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
       propertyPath: m_LocalPosition.z
@@ -882,6 +882,16 @@ Prefab:
       propertyPath: livesUI
       value: 
       objectReference: {fileID: 1028433793}
+    - target: {fileID: 114662540901518930, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _playerID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114499751513198330, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
   m_IsPrefabAsset: 0
@@ -1281,7 +1291,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4960825635543320, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.765235
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4960825635543320, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1319,7 +1329,7 @@ Prefab:
     - target: {fileID: 114123467531241490, guid: a02d0dfd1bc914946b59d77745a4af34,
         type: 2}
       propertyPath: CANTMOVE
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 54456816842307032, guid: a02d0dfd1bc914946b59d77745a4af34,
         type: 2}
@@ -1329,7 +1339,7 @@ Prefab:
     - target: {fileID: 114499751513198330, guid: a02d0dfd1bc914946b59d77745a4af34,
         type: 2}
       propertyPath: Force
-      value: 20
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 114560478409811234, guid: a02d0dfd1bc914946b59d77745a4af34,
         type: 2}
@@ -1341,6 +1351,36 @@ Prefab:
       propertyPath: resolutionScreen
       value: 
       objectReference: {fileID: 1334871985}
+    - target: {fileID: 114123467531241490, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _playerID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 54456816842307032, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662540901518930, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _playerID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114499751513198330, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _playerID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114123467531241490, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114499751513198330, guid: a02d0dfd1bc914946b59d77745a4af34,
+        type: 2}
+      propertyPath: _attackCooldown
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a02d0dfd1bc914946b59d77745a4af34, type: 2}
   m_IsPrefabAsset: 0

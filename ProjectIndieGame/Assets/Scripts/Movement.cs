@@ -7,9 +7,12 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 0.2f;
+    [SerializeField] private float _maxSpeed = 50f;
     [Range(1,2)]
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
+
+    private Attack _attackScript;
 
     private Vector3 forward;
     private Vector3 backward;
@@ -25,6 +28,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        _attackScript = GetComponent<Attack>();
         _rigidBody = GetComponent<Rigidbody>();
 
         forward = new Vector3(0, 0, _speed);
@@ -41,7 +45,6 @@ public class Movement : MonoBehaviour
     {
         if (CANTMOVE)
         {
-            Debug.Log(_rigidBody.velocity);
             return;
         }
 
@@ -56,12 +59,12 @@ public class Movement : MonoBehaviour
         {
             _walkVelocity += backward;
         }
-
+        
         if (Input.GetKey(KeyCode.A) || Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
         {
             _walkVelocity += left;
         }
-
+        
         if (Input.GetKey(KeyCode.D) || Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
         {
             _walkVelocity += right;
@@ -81,26 +84,26 @@ public class Movement : MonoBehaviour
 
         if (_rigidBody.velocity.magnitude > _speed)
         {
-            _rigidBody.velocity += _walkVelocity;
             _rigidBody.velocity *= 0.99f;
+            _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (1f - 0.5f / _maxSpeed * _rigidBody.velocity.magnitude), 0);
         }
         else
         {
             _rigidBody.velocity = _walkVelocity;
         }
+        
+        if(_rigidBody.velocity.magnitude > _maxSpeed)
+        {
+            _rigidBody.velocity = _rigidBody.velocity.normalized * _maxSpeed;
+        }
+
         _lateVelocity.x = _rigidBody.velocity.x;
         _lateVelocity.y = _rigidBody.velocity.z;
-        //_velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
-    }
-
-    private void LateUpdate()
-    {
-
-        //_rigidBody.velocity += _flyVelocity;
     }
 
     private void reflect(Vector3 pNormal)
     {
+        StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f,0.1f));
         _normal.Set(pNormal.x, pNormal.z);
         _velocity = new Vector2(_rigidBody.velocity.x, _rigidBody.velocity.z);
         _velocity = Vector2.Reflect(_lateVelocity, _normal);
@@ -110,22 +113,19 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.ToUpper() == "WALL")
-        {
             //Debug.Log(_rigidBody.velocity + " - " + _rigidBody.velocity.magnitude + "mag" + _speed);
-            //if (_rigidBody.velocity.magnitude > _speed)
-            //{
                 reflect(collision.contacts[0].normal);
-            //}
-        }
     }
 
     private void OnTriggerEnter(Collider pOther)
     {
         if (pOther.gameObject.tag.ToUpper() == "WEAPON")
         {
+            _attackScript.SetCooldown();
+            pOther.gameObject.SetActive(false);
             transform.GetChild(0).gameObject.SetActive(false);
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
+            
 
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;

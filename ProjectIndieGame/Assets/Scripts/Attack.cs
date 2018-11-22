@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    [Range(1,2)]
+    [SerializeField] int _playerID = 1;
+    [SerializeField] float _attackCooldown = 0.5f;
+    private float _timer = 0;
     public float Force = 10;
 
     void Update()
@@ -13,8 +17,15 @@ public class Attack : MonoBehaviour
             return;
         }
 
-        if (Input.GetButton("Fire1") || Input.GetButtonDown("Accept_P1"))
+        if(_timer > 0)
         {
+            _timer -= Time.deltaTime;
+            return;
+        }
+
+        if (Input.GetButton("Fire1") || Input.GetButtonDown("RightBumper_P" + _playerID))
+        {
+            SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);
             Invoke("DisableHitBox", 0.25f);
         }
@@ -23,5 +34,10 @@ public class Attack : MonoBehaviour
     void DisableHitBox()
     {
         transform.GetChild(0).gameObject.SetActive(false);
+    }
+
+    public void SetCooldown()
+    {
+        _timer = _attackCooldown;
     }
 }
