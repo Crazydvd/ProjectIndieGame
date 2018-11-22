@@ -15,7 +15,7 @@ public class AttackHitboxScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("I hit ur ass");
+            //Debug.Log("I hit ur ass");
             StartCoroutine(screenShake.Shake(0.2f, 0.1f));
         }
     }   

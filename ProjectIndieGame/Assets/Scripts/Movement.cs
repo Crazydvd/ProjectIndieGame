@@ -17,8 +17,9 @@ public class Movement : MonoBehaviour
     private Vector3 _walkVelocity;
     private Vector3 _flyVelocity;
 
-    private Vec2 _velocity;
-    private Vec2 _normal;
+    private Vector2 _velocity;
+    private Vector2 _lateVelocity;
+    private Vector2 _normal;
 
     void Start()
     {
@@ -29,16 +30,20 @@ public class Movement : MonoBehaviour
         left = new Vector3(-_speed, 0, 0);
         right = new Vector3(_speed, 0, 0);
 
-        _velocity = Vec2.zero;
-        _normal = Vec2.zero;
+        _velocity = Vector2.zero;
+        _lateVelocity = Vector2.zero;
+        _normal = Vector2.zero;
     }
 
     void Update()
     {
         if (CANTMOVE)
         {
+            Debug.Log(_rigidBody.velocity);
             return;
         }
+
+        _walkVelocity = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -69,43 +74,45 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
+        //print("VELOCITY: " + _rigidBody.velocity);
+
+
+        if (_rigidBody.velocity.magnitude > _speed)
+        {
+            _rigidBody.velocity += _walkVelocity;
+        }
+        else
+        {
+            _rigidBody.velocity = _walkVelocity;
+        }
+        _lateVelocity = _rigidBody.velocity;
+        //_velocity.SetXY(_rigidBody.velocity.x, _rigidBody.velocity.z);
     }
 
     private void LateUpdate()
     {
-        print("FLY: " + _flyVelocity.magnitude);
-        print("WALK: " + _walkVelocity.magnitude);
-        print(" ");
 
-        if (_flyVelocity.magnitude > 0.02f)
-        {
-            _flyVelocity *= 0.99f;
-            return;
-        }
-        else
-        {
-            _flyVelocity = Vector3.zero;
-        }
-
-        _rigidBody.velocity += _walkVelocity;
         //_rigidBody.velocity += _flyVelocity;
     }
 
     private void reflect(Vector3 pNormal)
     {
-        _normal.SetXY(pNormal.x, pNormal.z);
-
-        _velocity = _velocity.Reflect(_normal, 1);
+        _normal.Set(pNormal.x, pNormal.z);
+        _velocity = new Vector2(_rigidBody.velocity.x, _rigidBody.velocity.z);
+        _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
-        _flyVelocity = vector;
+        _rigidBody.velocity = vector;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag.ToUpper() == "WALL")
         {
-            reflect(collision.contacts[0].normal);
+            //Debug.Log(_rigidBody.velocity + " - " + _rigidBody.velocity.magnitude + "mag" + _speed);
+            //if (_rigidBody.velocity.magnitude > _speed)
+            //{
+                reflect(collision.contacts[0].normal);
+            //}
         }
     }
 
@@ -117,7 +124,8 @@ public class Movement : MonoBehaviour
 
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;
-            _rigidBody.velocity += delta;
+            //Debug.Log("DAMAGE:" + delta);
+            _rigidBody.velocity = delta;
         }
     }
 }
