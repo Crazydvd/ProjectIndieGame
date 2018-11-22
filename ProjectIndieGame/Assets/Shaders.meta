@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectIndieGame/Assets/Shaders.meta
 guid: 679f9b3a98b0e5e439cee12cdd0db89b
+=======
+<<<<<<< HEAD
+guid: 2ee0cd814c5828842af1f28bebb14a6d
+=======
+guid: 18be1fc97ab43c04c923253fbb055ce4
+>>>>>>> dce380544e23230392c60c864a90fb3c2e2e24b0
+>>>>>>> 95f40633261ca6504404ff8aa9f513cc7438f8b1:ProjectIndieGame/Assets/Material.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

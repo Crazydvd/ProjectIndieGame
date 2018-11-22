@@ -10,6 +10,7 @@ public class CharacterSelectScript : MonoBehaviour
     [SerializeField] GameObject _selectedSelector;
     [Range(1,2)]
     [SerializeField] int _playerID = 1;
+    [SerializeField] float _timeoutTime = 0.2f;
 
     GameObject _currentSelector;
     List<GameObject> _characters = new List<GameObject>();
@@ -17,7 +18,6 @@ public class CharacterSelectScript : MonoBehaviour
 
     int _index = 0;
     bool _selected = false;
-    float _timeoutTime = 0.15f;
     float _timeoutTimer;
 
     // Use this for initialization
@@ -40,6 +40,7 @@ public class CharacterSelectScript : MonoBehaviour
                 _models.Add(gObject.gameObject);
             }
         }
+
         _currentSelector = Instantiate(_selector, transform);
         SetCharacter();
 
@@ -56,24 +57,16 @@ public class CharacterSelectScript : MonoBehaviour
         {
             _modelsParent.transform.Rotate(0, 1, 0);
         }
-        /*if (Input.GetAxis("RightVertical_P" + _playerID) > 0)
-        {
-            _modelsParent.transform.Rotate(-1, 0, 0);
-        }
-        if (Input.GetAxis("RightVertical_P" + _playerID) < 0)
-        {
-            _modelsParent.transform.Rotate(1, 0, 0);
-        }*/
 
         if (Input.GetButtonDown("Accept_P" + _playerID))
         {
             _currentSelector.gameObject.GetComponent<Image>().sprite = _selectedSelector.GetComponent<Image>().sprite;
+            PlayerPrefs.SetInt("Char_P" + _playerID, _index);
             _selected = true;
         }
         else if (Input.GetButtonDown("Decline_P" + _playerID))
         {
-            _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
-            _selected = false;
+            Invoke("DeselectCharacter", 0.001f);
         }
 
         // selection timeout
@@ -117,5 +110,21 @@ public class CharacterSelectScript : MonoBehaviour
             }
         }
         _timeoutTimer = _timeoutTime;
+    }
+
+    void DeselectCharacter() {
+        PlayerPrefs.SetInt("Char_P" + _playerID, -1);
+        _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
+        _selected = false;
+    }
+
+    private void OnEnable()
+    {
+        _selected = false;
+        PlayerPrefs.SetInt("Char_P" + _playerID, -1);
+        if (_currentSelector != null)
+        {
+            _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
+        }
     }
 }
