@@ -4,37 +4,17 @@ using UnityEngine;
 
 public class Vec2
 {
-    static protected System.Random _random = new System.Random();
+    public static Vec2 zero { get { return new Vec2(0, 0); } }
 
     public float x = 0;
     public float y = 0;
 
-    public static Vec2 Zero
-    {
-        get
-        {
-            return new Vec2(0, 0);
-        }
-    }
+    private static System.Random _random = new System.Random();
 
-    public Vec2(float pX, float pY)
+    public Vec2(float pX = 0, float pY = 0)
     {
         x = pX;
         y = pY;
-    }
-
-    public Vec2 SetXY(float pX, float pY)
-    {
-        x = pX;
-        y = pY;
-        return this;
-    }
-
-    public Vec2 SetXY(Vec2 pVec2)
-    {
-        x = pVec2.x;
-        y = pVec2.y;
-        return this;
     }
 
     public override string ToString()
@@ -42,17 +22,17 @@ public class Vec2
         return string.Format("({0}, {1})", x, y);
     }
 
-    public Vec2 Add(Vec2 pVec2)
+    public Vec2 Add(Vec2 other)
     {
-        x += pVec2.x;
-        y += pVec2.y;
+        x += other.x;
+        y += other.y;
         return this;
     }
 
-    public Vec2 Subtract(Vec2 pVec2)
+    public Vec2 Subtract(Vec2 other)
     {
-        x -= pVec2.x;
-        y -= pVec2.y;
+        x -= other.x;
+        y -= other.y;
         return this;
     }
 
@@ -66,7 +46,7 @@ public class Vec2
     public float Length()
     {
         //x² + y² = lVec2²      ²root(x² + y²) = lVec2
-        return Mathf.Sqrt(Dot(this));
+        return Mathf.Sqrt(x * x + y * y);
     }
 
     public Vec2 Normalize()
@@ -81,6 +61,18 @@ public class Vec2
     public Vec2 Clone()
     {
         return new Vec2(x, y);
+    }
+
+    public void SetXY(float pX, float pY)
+    {
+        x = pX;
+        y = pY;
+    }
+
+    public void SetXY(Vec2 pVec2)
+    {
+        x = pVec2.x;
+        y = pVec2.y;
     }
 
     public static float Deg2Rad(float pDegrees)
@@ -184,20 +176,5 @@ public class Vec2
     {
         Subtract(pNormal.Clone().Scale((1 + pBounciness) * Dot(pNormal)));
         return this;
-    }
-
-    public static Vec2 operator+ (Vec2 pVec, Vec2 pVec2)
-    {
-        return pVec.Add(pVec2);
-    }
-
-    public static Vec2 operator- (Vec2 pVec, Vec2 pVec2)
-    {
-        return pVec.Subtract(pVec2);
-    }
-
-    public static Vec2 operator* (Vec2 pVec2, float pScalar)
-    {
-        return pVec2.Scale(pScalar);
     }
 }
