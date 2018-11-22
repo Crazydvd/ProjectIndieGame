@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Shake(0.2f, 0.1f));
-        }
-    }
-
 
     public IEnumerator Shake(float pDuration, float pMagnitude)
     {
