@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public GameObject Head;
+
     private Rigidbody _rigidBody;
 
     [SerializeField] private float _speed = 0.2f;
@@ -28,7 +30,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        _attackScript = GetComponent<Attack>();
+        _attackScript = Head.GetComponent<Attack>();
         _rigidBody = GetComponent<Rigidbody>();
 
         forward = new Vector3(0, 0, _speed);
@@ -123,7 +125,7 @@ public class Movement : MonoBehaviour
         {
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
-            transform.GetChild(0).gameObject.SetActive(false);
+            Head.transform.GetChild(0).gameObject.SetActive(false);
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
             
 

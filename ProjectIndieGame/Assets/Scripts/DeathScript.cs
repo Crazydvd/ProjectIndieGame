@@ -35,7 +35,7 @@ public class DeathScript : MonoBehaviour
 
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
-                    resolutionScreen.text = _playersHandler.GetPlayers()[0].name + resolutionScreen.text;
+                    resolutionScreen.text = _playersHandler.GetPlayers()[0].transform.parent.name + resolutionScreen.text;
                     resolutionScreen.gameObject.SetActive(true);
                 }
                 return;
