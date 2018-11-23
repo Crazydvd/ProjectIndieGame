@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerStatus : MonoBehaviour
 {
+    public Text damageUI;
     public Text livesUI;
 
     int damage = 0;
@@ -12,6 +13,7 @@ public class PlayerStatus : MonoBehaviour
 
     void Start()
     {
+        damageUI.text = damageUI.text + damage + " %";
         livesUI.text = livesUI.text + lives;
     }
 
@@ -23,6 +25,13 @@ public class PlayerStatus : MonoBehaviour
     public void IncreaseDamage(int pAmmount)
     {
         damage += pAmmount;
+        damageUI.text = "Damage : " + damage + " %";
+    }
+
+    public void ResetDamage()
+    {
+        damage = 0;
+        damageUI.text = "Damage : " + damage + " %";
     }
 
     public int GetLives()

@@ -26,6 +26,7 @@ public class DeathScript : MonoBehaviour
         {
             Debug.Log("boop");
             _playerStatus.DecreaseLives();
+            _playerStatus.ResetDamage();
 
             if (_playerStatus.GetLives() <= 0)
             {
@@ -33,6 +34,7 @@ public class DeathScript : MonoBehaviour
                 _playersHandler.GetPlayers().Remove(gameObject);
                 Destroy(gameObject, 0f);
 
+                //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
                     resolutionScreen.text = _playersHandler.GetPlayers()[0].transform.parent.name + resolutionScreen.text;
