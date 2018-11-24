@@ -10,13 +10,11 @@ public class Offset : MonoBehaviour
 
     public bool SetToPosition = false;
 
-    // Use this for initialization
     void Start()
     {
         _offset = transform.position - _gameObject.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_gameObject == null)
