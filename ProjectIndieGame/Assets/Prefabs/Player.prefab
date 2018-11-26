@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33565655872770060}
   - component: {fileID: 23098039409244288}
   - component: {fileID: 136159058635091474}
-  - component: {fileID: 114290546549992542}
   m_Layer: 0
   m_Name: AttackHitBox
   m_TagString: Weapon
@@ -91,10 +90,11 @@ GameObject:
   - component: {fileID: 54529337698771620}
   - component: {fileID: 33398116766189874}
   - component: {fileID: 23496804383688500}
+  - component: {fileID: 135302970085090642}
   - component: {fileID: 114069992901279892}
   - component: {fileID: 114770326281998066}
   - component: {fileID: 114291081489430524}
-  - component: {fileID: 135302970085090642}
+  - component: {fileID: 114001228409299754}
   m_Layer: 9
   m_Name: Player body
   m_TagString: Player
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1608738426264114}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.44, y: 1.18, z: -4.07}
+  m_LocalPosition: {x: -3.44, y: 0.755, z: -4.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4835947936187764}
@@ -312,6 +312,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &114001228409299754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959474608745586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d89822c52a6404c90d51573b1be2bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114069992901279892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -325,20 +336,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 1379468062307982}
   _speed: 5
-  _maxSpeed: 50
+  _maxSpeed: 100
+  _receivingDamage: 5
   _playerID: 1
   CANTMOVE: 0
---- !u!114 &114290546549992542
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123567130189410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74bfb776072765c42ab695e779b03213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114291081489430524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af19c6e4b9e1a2d4ab8614787cc3d41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageUI: {fileID: 0}
   livesUI: {fileID: 0}
 --- !u!114 &114292304352405636
 MonoBehaviour:
@@ -377,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerID: 1
   _attackCooldown: 0.5
-  Force: 10
+  Force: 1
 --- !u!114 &114770326281998066
 MonoBehaviour:
   m_ObjectHideFlags: 1

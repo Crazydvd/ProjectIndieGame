@@ -55,7 +55,8 @@ public class Movement : MonoBehaviour
             return;
         }
 
-        _walkVelocity = Vector3.zero;
+        //_walkVelocity = Vector3.zero;
+        _walkVelocity *= 0.95f;
 
         if (Input.GetKey(KeyCode.W) || Input.GetAxis("LeftVertical_P" + _playerID) > 0)
         {
@@ -111,7 +112,6 @@ public class Movement : MonoBehaviour
     {
         StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
         _normal.Set(pNormal.x, pNormal.z);
-        _velocity = new Vector2(_rigidBody.velocity.x, _rigidBody.velocity.z);
         _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
         _rigidBody.velocity = vector;
@@ -139,7 +139,7 @@ public class Movement : MonoBehaviour
             delta.y = 0;
             //Debug.Log("DAMAGE:" + delta);
             _rigidBody.velocity = delta * _playerStatus.GetDamage();
-            Debug.Log(_playerStatus.GetDamage() / 5f);
+            //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
     }
 }

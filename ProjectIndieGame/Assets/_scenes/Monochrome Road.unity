@@ -635,7 +635,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4756663315825064, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.431
+      value: 0.724
       objectReference: {fileID: 0}
     - target: {fileID: 4756663315825064, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
       propertyPath: m_LocalPosition.z
@@ -719,7 +719,7 @@ Prefab:
       value: 
       objectReference: {fileID: 2655734}
     m_RemovedComponents:
-    - {fileID: 114290546549992542, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &548450862 stripped
@@ -1497,7 +1497,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1427502620}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1445634768
+--- !u!1001 &1464974314
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1510,7 +1510,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4756663315825064, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: 0.755
       objectReference: {fileID: 0}
     - target: {fileID: 4756663315825064, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1536,49 +1536,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114770326281998066, guid: 39cc3460f0b1f94468287c87c3a34215,
-        type: 2}
-      propertyPath: resolutionScreen
-      value: 
-      objectReference: {fileID: 1243236271}
-    - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
-        type: 2}
-      propertyPath: livesUI
-      value: 
-      objectReference: {fileID: 1028433793}
-    - target: {fileID: 114395979952374234, guid: 39cc3460f0b1f94468287c87c3a34215,
-        type: 2}
-      propertyPath: Force
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608738426264114, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
-      propertyPath: m_Name
-      value: Player 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114069992901279892, guid: 39cc3460f0b1f94468287c87c3a34215,
-        type: 2}
-      propertyPath: _maxSpeed
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
-        type: 2}
-      propertyPath: health
-      value: 
-      objectReference: {fileID: 1134303877}
     - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
         type: 2}
       propertyPath: damageUI
       value: 
       objectReference: {fileID: 1134303877}
-    m_RemovedComponents:
-    - {fileID: 114290546549992542, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
+    - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: livesUI
+      value: 
+      objectReference: {fileID: 1028433793}
+    - target: {fileID: 114770326281998066, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: resolutionScreen
+      value: 
+      objectReference: {fileID: 1243236271}
+    - target: {fileID: 1608738426264114, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
+      propertyPath: m_Name
+      value: Player 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1647734125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1959474608745586, guid: 39cc3460f0b1f94468287c87c3a34215,
     type: 2}
-  m_PrefabInternal: {fileID: 1445634768}
+  m_PrefabInternal: {fileID: 1464974314}
 --- !u!1 &1902983102
 GameObject:
   m_ObjectHideFlags: 0
