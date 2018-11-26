@@ -4,26 +4,33 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    [Range(1,2)]
+    [Range(1, 2)]
     [SerializeField] int _playerID = 1;
     [SerializeField] float _attackCooldown = 0.5f;
     private float _timer = 0;
     public float Force = 10;
 
+    private Movement _playerMovement;
+
+    void Start()
+    {
+        _playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
+    }
+
     void Update()
     {
-        if (Pause.Paused)
-        {
-            return;
-        }
-
-        if(_timer > 0)
+        if (_timer > 0)
         {
             _timer -= Time.deltaTime;
             return;
         }
 
-        if (Input.GetButton("Fire1") || Input.GetButtonDown("RightBumper_P" + _playerID))
+        if (Pause.Paused || _playerMovement.GetDodging())
+        {
+            return;
+        }
+
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _playerID))
         {
             SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);

@@ -925,6 +925,11 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114069992901279892, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: _dodgeCooldown
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
@@ -2051,6 +2056,11 @@ Prefab:
         type: 2}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 114069992901279892, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: _dodgeCooldown
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
