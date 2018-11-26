@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageSelectorScript : MonoBehaviour {
 
@@ -45,7 +46,7 @@ public class StageSelectorScript : MonoBehaviour {
     {
         if (_selected && Input.GetButtonDown("Start_P" + _playerID))
         {
-            Debug.Log("kek");
+            SceneManager.LoadScene(1);
         }
 
         if (Input.GetButtonDown("Accept_P" + _playerID))
@@ -61,7 +62,7 @@ public class StageSelectorScript : MonoBehaviour {
 
         if (_rectTransform.localPosition.x != _targetOffset)
         {
-            MoveWindow();
+            MoveWindow(); 
         }
 
         // selection timeout

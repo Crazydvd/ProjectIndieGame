@@ -89,7 +89,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(_walkVelocity.magnitude);
+
         //print("VELOCITY: " + _rigidBody.velocity);
         if (_rigidBody.velocity.magnitude > _speed && _walkVelocity.magnitude <= 0f)
         {

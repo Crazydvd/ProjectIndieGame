@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114265352185753842}
   - component: {fileID: 114219710893834192}
   - component: {fileID: 114033496999047764}
+  - component: {fileID: 114240052804459818}
   - component: {fileID: 114684041591089904}
   m_Layer: 9
   m_Name: Player body
@@ -351,6 +352,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionScreen: {fileID: 0}
+--- !u!114 &114240052804459818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333101068229054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9822cb89135584fa36d19b63764925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopRotationLimit: 0.15
 --- !u!114 &114265352185753842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -365,6 +378,8 @@ MonoBehaviour:
   Head: {fileID: 1076818653597608}
   _speed: 5
   _maxSpeed: 100
+  _bendingPower: 1
+  _bendingPowerDecrease: 0.5
   _receivingDamage: 5
   _playerID: 2
   CANTMOVE: 1
