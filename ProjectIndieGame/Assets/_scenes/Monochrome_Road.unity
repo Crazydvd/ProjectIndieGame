@@ -2069,6 +2069,21 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 45.178
       objectReference: {fileID: 0}
+    - target: {fileID: 114770326281998066, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: resolutionScreen
+      value: 
+      objectReference: {fileID: 1243236271}
+    - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: damageUI
+      value: 
+      objectReference: {fileID: 1134303877}
+    - target: {fileID: 114291081489430524, guid: 39cc3460f0b1f94468287c87c3a34215,
+        type: 2}
+      propertyPath: livesUI
+      value: 
+      objectReference: {fileID: 1028433793}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cc3460f0b1f94468287c87c3a34215, type: 2}
   m_IsPrefabAsset: 0
