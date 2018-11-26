@@ -18,7 +18,7 @@ public class PlayerCollision : MonoBehaviour
             Rigidbody rigidbody2 = collision.gameObject.GetComponent<Rigidbody>();
             if (rigidbody2.velocity.magnitude > _rigidbody.velocity.magnitude)
             {
-                _rigidbody.velocity = rigidbody2.velocity;
+                _rigidbody.velocity = rigidbody2.velocity * 0.5f;
             }
         }
     }
