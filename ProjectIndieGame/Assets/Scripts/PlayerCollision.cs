@@ -13,6 +13,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        /*
         if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
             Rigidbody rigidbody2 = collision.gameObject.GetComponent<Rigidbody>();
@@ -20,6 +21,6 @@ public class PlayerCollision : MonoBehaviour
             {
                 _rigidbody.velocity = rigidbody2.velocity * 0.5f;
             }
-        }
+        }*/
     }
 }
