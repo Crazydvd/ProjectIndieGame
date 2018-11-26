@@ -12,6 +12,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _maxSpeed = 50f;
+    [SerializeField] private float _bendingPower = 1f;
+    [SerializeField] private float _bendingPowerDecrease = 0.5f;
     [SerializeField] private int _receivingDamage= 5;
     [Range(1, 2)]
     [SerializeField] private int _playerID = 1;
@@ -55,8 +57,8 @@ public class Movement : MonoBehaviour
             return;
         }
 
-        //_walkVelocity = Vector3.zero;
-        _walkVelocity *= 0.95f;
+        _walkVelocity = Vector3.zero;
+        //_walkVelocity *= 0.95f;
 
         if (Input.GetKey(KeyCode.W) || Input.GetAxis("LeftVertical_P" + _playerID) > 0)
         {
@@ -87,17 +89,26 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log(_walkVelocity.magnitude);
         //print("VELOCITY: " + _rigidBody.velocity);
-
-        if (_rigidBody.velocity.magnitude > _speed)
+        if (_rigidBody.velocity.magnitude > _speed && _walkVelocity.magnitude <= 0f)
         {
             _rigidBody.velocity *= 0.99f;
-            _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (1f - 0.5f / _maxSpeed * _rigidBody.velocity.magnitude), 0);
+        }
+        else if (_rigidBody.velocity.magnitude > _speed)
+        {
+            _rigidBody.velocity *= 0.99f;
+            _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (_bendingPower - _bendingPowerDecrease / _maxSpeed * _rigidBody.velocity.magnitude), 0);
+        }
+        else if (_walkVelocity.magnitude <= 0f)
+        {
+            _rigidBody.velocity *= 0.9f;
         }
         else
         {
             _rigidBody.velocity = _walkVelocity;
         }
+
 
         if (_rigidBody.velocity.magnitude > _maxSpeed)
         {
@@ -110,7 +121,10 @@ public class Movement : MonoBehaviour
 
     private void reflect(Vector3 pNormal)
     {
-        StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
+        if (_rigidBody.velocity.magnitude > _speed)
+        {
+            StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
+        }
         _normal.Set(pNormal.x, pNormal.z);
         _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
@@ -125,7 +139,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter(Collider pOther)
     {
-        if (pOther.gameObject.tag.ToUpper() == "WEAPON")
+        if (pOther.gameObject.tag.ToUpper() == "WEAPON" && pOther.transform.root != transform.root)
         {
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
             _playerStatus.IncreaseDamage(_receivingDamage);

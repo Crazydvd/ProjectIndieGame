@@ -13,6 +13,7 @@ public class PlayerCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
             Rigidbody rigidbody2 = collision.gameObject.GetComponent<Rigidbody>();
