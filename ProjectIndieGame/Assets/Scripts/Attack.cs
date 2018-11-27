@@ -10,12 +10,12 @@ public class Attack : MonoBehaviour
     private float _timer = 0;
     public float Force = 10;
 
-    private Movement _playerMovement;
+    //private Movement _playerMovement;
 
-    void Start()
-    {
-        _playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
-    }
+    //void Start()
+    //{
+    //    _playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
+    //}
 
     void Update()
     {
@@ -24,8 +24,9 @@ public class Attack : MonoBehaviour
             _timer -= Time.deltaTime;
             return;
         }
-
-        if (Pause.Paused || _playerMovement.GetDodging())
+        
+        
+        if (Pause.Paused /* || _playerMovement.GetDodging()*/)
         {
             return;
         }
