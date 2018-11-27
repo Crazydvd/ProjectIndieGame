@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
+    private PlayerSound _playerSound;
 
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _maxSpeed = 50f;
@@ -39,6 +40,7 @@ public class Movement : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody>();
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
+        _playerSound = GetComponent<PlayerSound>();
 
         forward = new Vector3(0, 0, _speed);
         backward = new Vector3(0, 0, -_speed);
@@ -117,6 +119,18 @@ public class Movement : MonoBehaviour
 
         _lateVelocity.x = _rigidBody.velocity.x;
         _lateVelocity.y = _rigidBody.velocity.z;
+    }
+
+    private void LateUpdate()
+    {
+        if (_rigidBody.velocity.magnitude > 0)
+        {
+            _playerSound.playRollingSound();
+        }
+        else
+        {
+            _playerSound.stopRollingSound();
+        }
     }
 
     private void reflect(Vector3 pNormal)
