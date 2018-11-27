@@ -32,7 +32,6 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _playerID))
         {
-            transform.root.GetComponentInChildren<PlayerSound>().playAttackingSound();
             SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);
             Invoke("DisableHitBox", 0.25f);
