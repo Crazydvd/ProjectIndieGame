@@ -10,6 +10,8 @@ public class CharacterSelectWindowScript : MonoBehaviour {
 	void Start () {
         PlayerPrefs.SetInt("Char_P1", -1);
         PlayerPrefs.SetInt("Char_P2", -1);
+        PlayerPrefs.SetInt("Color_P1", -1);
+        PlayerPrefs.SetInt("Color_P2", -1);
     }
 	
 	// Update is called once per frame

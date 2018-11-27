@@ -34,11 +34,9 @@ public class LoadPlayerSettings : MonoBehaviour {
 
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         MeshFilter meshFilter = GetComponent<MeshFilter>();
-        Shader shader = GetComponent<Shader>();
 
         meshRenderer.material = _usedModel.GetComponent<MeshRenderer>().sharedMaterial;
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
-        shader = _usedModel.GetComponent<Shader>();
 	}
 	
 	// Update is called once per frame
