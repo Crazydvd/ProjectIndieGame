@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
     <Compile Include="Assets\Scripts\DeathScript.cs" />
+    <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Offset.cs" />

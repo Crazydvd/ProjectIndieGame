@@ -13,12 +13,16 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _maxSpeed = 50f;
+    [SerializeField] private float _dodgeCooldown = 1f;
     [SerializeField] private float _bendingPower = 1f;
     [SerializeField] private float _bendingPowerDecrease = 0.5f;
-    [SerializeField] private int _receivingDamage= 5;
+    [SerializeField] private int _receivingDamage = 5;
     [Range(1, 2)]
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
+
+    private bool _dodging;
+    private float _timer;
 
     private Attack _attackScript;
 
@@ -30,7 +34,6 @@ public class Movement : MonoBehaviour
     private Vector3 _walkVelocity;
     private Vector3 _flyVelocity;
 
-    private Vector2 _velocity;
     private Vector2 _lateVelocity;
     private Vector2 _normal;
 
@@ -47,18 +50,16 @@ public class Movement : MonoBehaviour
         left = new Vector3(-_speed, 0, 0);
         right = new Vector3(_speed, 0, 0);
 
-        _velocity = Vector2.zero;
         _lateVelocity = Vector2.zero;
         _normal = Vector2.zero;
     }
 
     void Update()
     {
-        if (CANTMOVE)
+        if (CANTMOVE || _dodging)
         {
             return;
         }
-
         _walkVelocity = Vector3.zero;
         //_walkVelocity *= 0.95f;
 
@@ -87,30 +88,47 @@ public class Movement : MonoBehaviour
             _walkVelocity = _walkVelocity.normalized;
             _walkVelocity = _walkVelocity * _speed;
         }
+
+        if (_timer > 0)
+        {
+            _timer -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
     {
-        Debug.Log(_walkVelocity.magnitude);
-        //print("VELOCITY: " + _rigidBody.velocity);
+        //Player flying
         if (_rigidBody.velocity.magnitude > _speed && _walkVelocity.magnitude <= 0f)
         {
             _rigidBody.velocity *= 0.99f;
         }
+        //Player flying and controling
         else if (_rigidBody.velocity.magnitude > _speed)
         {
             _rigidBody.velocity *= 0.99f;
             _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (_bendingPower - _bendingPowerDecrease / _maxSpeed * _rigidBody.velocity.magnitude), 0);
         }
-        else if (_walkVelocity.magnitude <= 0f)
+        //Player stops moving
+        else if (_walkVelocity.magnitude <= 0f && _rigidBody.velocity.magnitude > 0.01f)
         {
             _rigidBody.velocity *= 0.9f;
         }
-        else
+        //Player walks around
+        else if (_rigidBody.velocity.magnitude <= _speed)
         {
             _rigidBody.velocity = _walkVelocity;
-        }
 
+            if (_dodging)
+            {
+                _dodging = false;
+                GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0);
+            }
+
+            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _playerID)))
+            {
+                dodge();
+            }
+        }
 
         if (_rigidBody.velocity.magnitude > _maxSpeed)
         {
@@ -135,25 +153,38 @@ public class Movement : MonoBehaviour
 
     private void reflect(Vector3 pNormal)
     {
+        if (_dodging)
+            return;
+
         if (_rigidBody.velocity.magnitude > _speed)
         {
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
         }
         _normal.Set(pNormal.x, pNormal.z);
-        _velocity = Vector2.Reflect(_lateVelocity, _normal);
+        Vector2 _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
         _rigidBody.velocity = vector;
     }
 
+    private void dodge()
+    {
+        if (_timer <= 0 && _rigidBody.velocity.magnitude > 0.1f)
+        {
+            _timer = _dodgeCooldown;
+            _rigidBody.velocity = _walkVelocity * 2;
+            GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0);
+            _dodging = true;
+        }              
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log(_rigidBody.velocity + " - " + _rigidBody.velocity.magnitude + "mag" + _speed);
         reflect(collision.contacts[0].normal);
     }
 
     private void OnTriggerEnter(Collider pOther)
     {
-        if (pOther.gameObject.tag.ToUpper() == "WEAPON" && pOther.transform.root != transform.root)
+        if (pOther.gameObject.tag.ToUpper() == "WEAPON" && pOther.transform.root != transform.root && !_dodging)
         {
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
             _playerStatus.IncreaseDamage(_receivingDamage);
@@ -169,5 +200,10 @@ public class Movement : MonoBehaviour
             _rigidBody.velocity = delta * _playerStatus.GetDamage();
             //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
+    }
+
+    public bool GetDodging()
+    {
+        return _dodging;
     }
 }

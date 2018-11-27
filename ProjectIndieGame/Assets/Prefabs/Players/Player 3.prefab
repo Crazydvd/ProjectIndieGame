@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 114431024433861266}
   - component: {fileID: 114323114529012572}
   - component: {fileID: 114509378255976690}
+  - component: {fileID: 114343441733173222}
   - component: {fileID: 114770193593036298}
   - component: {fileID: 114206635241674944}
   - component: {fileID: 82679949433418910}
@@ -449,6 +450,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionScreen: {fileID: 0}
+--- !u!114 &114343441733173222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747811642339468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9822cb89135584fa36d19b63764925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopRotationLimit: 0.15
 --- !u!114 &114431024433861266
 MonoBehaviour:
   m_ObjectHideFlags: 1
