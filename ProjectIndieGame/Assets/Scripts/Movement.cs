@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _maxSpeed = 50f;
     [SerializeField] private float _dodgeCooldown = 1f;
+    [SerializeField] private float _dodgeSpeed = 2.5f;
+    [SerializeField] private float _dodgeDuration = 0.3f;
     [SerializeField] private float _bendingPower = 1f;
     [SerializeField] private float _bendingPowerDecrease = 0.5f;
     [SerializeField] private int _receivingDamage = 5;
@@ -61,25 +63,15 @@ public class Movement : MonoBehaviour
         _walkVelocity = Vector3.zero;
         //_walkVelocity *= 0.95f;
 
-        if (Input.GetKey(KeyCode.W) || Input.GetAxis("LeftVertical_P" + _playerID) > 0)
-        {
-            _walkVelocity += forward;
-        }
+        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _playerID), Input.GetAxis("LeftVertical_P" + _playerID));
+        if (stickInput.magnitude < 0.25f)
+            stickInput = Vector2.zero;
 
-        if (Input.GetKey(KeyCode.S) || Input.GetAxis("LeftVertical_P" + _playerID) < 0)
-        {
-            _walkVelocity += backward;
-        }
+        _walkVelocity.x = stickInput.x;
+        _walkVelocity.z = stickInput.y;
 
-        if (Input.GetKey(KeyCode.A) || Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
-        {
-            _walkVelocity += left;
-        }
-
-        if (Input.GetKey(KeyCode.D) || Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
-        {
-            _walkVelocity += right;
-        }
+        _walkVelocity = _walkVelocity.normalized;
+        _walkVelocity = _walkVelocity * _speed;
 
         if (_walkVelocity.magnitude > _speed)
         {
@@ -98,29 +90,27 @@ public class Movement : MonoBehaviour
         //Player flying
         if (_rigidBody.velocity.magnitude > _speed && _walkVelocity.magnitude <= 0f)
         {
+            Debug.Log("1");
             _rigidBody.velocity *= 0.99f;
         }
         //Player flying and controling
-        else if (_rigidBody.velocity.magnitude > _speed)
+        else if (_rigidBody.velocity.magnitude > _speed && !_dodging)
         {
+            Debug.Log("2");
             _rigidBody.velocity *= 0.99f;
             _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (_bendingPower - _bendingPowerDecrease / _maxSpeed * _rigidBody.velocity.magnitude), 0);
         }
         //Player stops moving
         else if (_walkVelocity.magnitude <= 0f && _rigidBody.velocity.magnitude > 0.01f)
         {
+            Debug.Log("3");
             _rigidBody.velocity *= 0.9f;
         }
         //Player walks around
         else if (_rigidBody.velocity.magnitude <= _speed)
         {
+            Debug.Log("4");
             _rigidBody.velocity = _walkVelocity;
-
-            if (_dodging)
-            {
-                _dodging = false;
-                GetComponent<MeshRenderer>().material.color = new Color(0, 1, 0);
-            }
 
             if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _playerID)))
             {
@@ -157,10 +147,20 @@ public class Movement : MonoBehaviour
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0.1f)
         {
             _timer = _dodgeCooldown;
-            _rigidBody.velocity = _walkVelocity * 2;
-            GetComponent<MeshRenderer>().material.color = new Color(1, 0, 0);
+            _rigidBody.velocity = _walkVelocity * 2.5f;
+            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            gameObject.layer = 10;
             _dodging = true;
-        }              
+            Invoke("StopDodge", _dodgeDuration);
+        }
+    }
+
+    private void StopDodge()
+    {
+        _dodging = false;
+        _rigidBody.velocity = _walkVelocity;
+        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1f);
+        gameObject.layer = 9;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -187,6 +187,7 @@ public class Movement : MonoBehaviour
             //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
     }
+
 
     public bool GetDodging()
     {
