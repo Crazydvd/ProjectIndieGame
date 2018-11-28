@@ -42,8 +42,8 @@ public class DeathScript : MonoBehaviour
                 }
                 return;
             }
-            _rigidbody.velocity = Vector3.zero;
             transform.position = startPosition;
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 }
