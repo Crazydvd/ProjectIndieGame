@@ -54,14 +54,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
+<<<<<<< HEAD
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+=======
+      <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+>>>>>>> 35ecd7703cfb69aeabf291a15920c0e561531eb7
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerParameters.cs" />
     <Compile Include="Assets\Scripts\Attack.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
@@ -73,6 +79,7 @@
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
     <Compile Include="Assets\Scripts\PlayerCollision.cs" />
+    <Compile Include="Assets\Scripts\PlayerParameters.cs" />
     <Compile Include="Assets\Scripts\PlayerRotationScript.cs" />
     <Compile Include="Assets\Scripts\PlayersHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerSound.cs" />
@@ -92,7 +99,11 @@
     <None Include="Assets\Shaders\HandoutShaders\WorldPositionShader.shader" />
     <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
       <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+=======
+      <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+>>>>>>> 35ecd7703cfb69aeabf291a15920c0e561531eb7
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -332,7 +343,11 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
+<<<<<<< HEAD
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+=======
+      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+>>>>>>> 35ecd7703cfb69aeabf291a15920c0e561531eb7
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
