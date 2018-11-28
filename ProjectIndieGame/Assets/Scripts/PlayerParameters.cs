@@ -7,7 +7,7 @@ public class PlayerParameters : MonoBehaviour
     [Header("Which player you are")]
     [Range(1, 4)]
     public int PLAYER = 1;
-
+    [Header("------------------------")]
     [Space(3)]
     [Header("How much the % will go up")]
     [Range(0, 100)]
@@ -17,7 +17,7 @@ public class PlayerParameters : MonoBehaviour
     [Range(0, 10)]
     public float SPEED = 5f;
 
-    [Header("The % of how much slower you get tossed around")]
+    [Header("The % slower you get tossed around")]
     [Range(0, 100)]
     public int DAMAGE_ABSORPTION;
 }
