@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
         }
         _walkVelocity = Vector3.zero;
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _playerID), Input.GetAxis("LeftVertical_P" + _playerID));
+        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
         if (stickInput.magnitude < 0.25f)
             stickInput = Vector2.zero;
 
@@ -103,7 +103,7 @@ public class Movement : MonoBehaviour
             Debug.Log("4");
             _rigidBody.velocity = _walkVelocity;
 
-            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _playerID)))
+            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _parameters.PLAYER)))
             {
                 dodge();
             }

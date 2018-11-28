@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerParameters : MonoBehaviour
 {
+    [Header("Which player you are")]
+    [Range(1, 4)]
+    public int PLAYER = 1;
+
+    [Space(3)]
     [Header("How much the % will go up")]
     [Range(0, 100)]
     public int ATTACK = 5;
