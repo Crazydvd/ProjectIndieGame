@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
     private PlayerParameters _parameters;
-    private TrailRenderer _renderer;
+    private TrailRenderer _trailRenderer;
 
     [SerializeField] private float _maxSpeed = 50f;
     [SerializeField] private float _dodgeCooldown = 1f;
@@ -43,10 +43,12 @@ public class Movement : MonoBehaviour
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
-        _renderer = GetComponent<TrailRenderer>();
+        _trailRenderer = GetComponent<TrailRenderer>();
 
         _lateVelocity = Vector2.zero;
         _normal = Vector2.zero;
+
+        TrailTransparency(0f);
     }
 
     void Update()
@@ -102,7 +104,7 @@ public class Movement : MonoBehaviour
         {
             _rigidBody.velocity = _walkVelocity;
 
-            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _parameters.PLAYER)))
+            if ((Input.GetButton("Fire2") || Input.GetButton("LeftBumper_P" + _parameters.PLAYER)))
             {
                 dodge();
             }
@@ -135,7 +137,7 @@ public class Movement : MonoBehaviour
 
     private void dodge()
     {
-        if (_timer <= 0 && _rigidBody.velocity.magnitude > 0.1f)
+        if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * 2.5f;
@@ -144,14 +146,16 @@ public class Movement : MonoBehaviour
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
-            _renderer.time = 5;
+            TrailTransparency(1f);
+            _trailRenderer.time = 5f;
         }
     }
 
     private void StopDodge()
     {
         _dodging = false;
-        _renderer.time = 0;
+        TrailTransparency(0f);
+        _trailRenderer.time = 0;
         _rigidBody.velocity = _walkVelocity;
         normalColours();
         gameObject.layer = 9;
@@ -197,5 +201,11 @@ public class Movement : MonoBehaviour
     public bool GetDodging()
     {
         return _dodging;
+    }
+
+    private void TrailTransparency(float pTransparency)
+    {
+        _trailRenderer.startColor = new Color(1, 1, 1, pTransparency);
+        _trailRenderer.endColor = new Color(1, 1, 1, pTransparency);
     }
 }

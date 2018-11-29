@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 114307400915111004}
   - component: {fileID: 114733430267646936}
   - component: {fileID: 114804473761043310}
+  - component: {fileID: 114762045145940036}
   - component: {fileID: 96172439962986350}
   m_Layer: 9
   m_Name: Body
@@ -582,6 +583,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stopRotationLimit: 0.15
+--- !u!114 &114762045145940036
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556374533285228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f407cd19beeb498f41efd91ff442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114804473761043310
 MonoBehaviour:
   m_ObjectHideFlags: 1
