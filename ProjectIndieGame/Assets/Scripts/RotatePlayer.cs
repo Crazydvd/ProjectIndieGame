@@ -23,7 +23,7 @@ public class RotatePlayer : MonoBehaviour
             return;
         }
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _playerID), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
+        Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _parameters.PLAYER), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
         if (stickInput.magnitude < _deadzone)
             stickInput = Vector2.zero;
 
