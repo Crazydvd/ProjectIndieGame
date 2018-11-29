@@ -8,6 +8,13 @@ public class RotatePlayer : MonoBehaviour
     [SerializeField] int _playerID = 1;   
     [SerializeField] float _deadzone = 0.25f;
 
+    private PlayerParameters _parameters;
+
+    private void Start()
+    {
+        _parameters = transform.root.GetComponent<PlayerParameters>();
+    }
+
 
     void Update()
     {
@@ -16,7 +23,7 @@ public class RotatePlayer : MonoBehaviour
             return;
         }
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _playerID), Input.GetAxis("RightVertical_P" + _playerID));
+        Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _parameters.PLAYER), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
         if (stickInput.magnitude < _deadzone)
             stickInput = Vector2.zero;
 

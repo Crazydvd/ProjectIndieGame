@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class DeathScript : MonoBehaviour
 {
-    public Text resolutionScreen;
+    public GameObject _resolutionScreen;
+    public Text resolutionScreenText;
     Rigidbody _rigidbody;
     Vector3 startPosition;
     PlayerStatus _playerStatus;
@@ -32,18 +33,19 @@ public class DeathScript : MonoBehaviour
             {
                 Debug.Log("You just fucking died");
                 _playersHandler.GetPlayers().Remove(transform.parent.gameObject);
-                Destroy(gameObject, 0f);
+                Destroy(gameObject, 0.1f);
+                Debug.Log(_playersHandler.GetPlayers().Count);
 
                 //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
-                    resolutionScreen.text = _playersHandler.GetPlayers()[0].name + resolutionScreen.text;
-                    resolutionScreen.gameObject.SetActive(true);
+                    resolutionScreenText.text = _playersHandler.GetPlayers()[0].name + resolutionScreenText.text;
+                    resolutionScreenText.gameObject.SetActive(true);
                 }
                 return;
             }
-            _rigidbody.velocity = Vector3.zero;
             transform.position = startPosition;
+            _rigidbody.velocity = Vector3.zero;
         }
     }
 }

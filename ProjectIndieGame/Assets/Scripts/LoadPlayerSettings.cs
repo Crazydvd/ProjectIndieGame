@@ -10,11 +10,15 @@ public class LoadPlayerSettings : MonoBehaviour {
     [SerializeField] GameObject _character2;
     [SerializeField] GameObject _character3;
 
+    private PlayerParameters _parameters;
+
     GameObject _usedModel;
 
     // Use this for initialization
     void Start () {
-        int ID = PlayerPrefs.GetInt("Char_P" + _playerID);
+
+        _parameters = transform.root.GetComponent<PlayerParameters>();
+        int ID = PlayerPrefs.GetInt("Char_P" + _parameters.PLAYER);
         switch (ID)
         {
             case 0:
@@ -37,10 +41,5 @@ public class LoadPlayerSettings : MonoBehaviour {
 
         meshRenderer.material = _usedModel.GetComponent<MeshRenderer>().sharedMaterial;
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 }
