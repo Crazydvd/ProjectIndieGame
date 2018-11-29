@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 114670438317608152}
   - component: {fileID: 114102542037753936}
   - component: {fileID: 114754385462715794}
+  - component: {fileID: 114673897384894216}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -448,6 +449,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageUI: {fileID: 0}
   livesUI: {fileID: 0}
+--- !u!114 &114673897384894216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133139438538994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f407cd19beeb498f41efd91ff442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114720200100459936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -497,7 +509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aecd59f4470dfa4aa5e26ab549ee0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionScreen: {fileID: 0}
+  _resolutionScreen: {fileID: 0}
+  resolutionScreenText: {fileID: 0}
 --- !u!135 &135695038749706892
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -80,6 +80,7 @@ GameObject:
   - component: {fileID: 114307400915111004}
   - component: {fileID: 114733430267646936}
   - component: {fileID: 114804473761043310}
+  - component: {fileID: 114294118671659084}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -405,6 +406,17 @@ MonoBehaviour:
   _playerID: 1
   _attackCooldown: 0.5
   Force: 1
+--- !u!114 &114294118671659084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556374533285228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f407cd19beeb498f41efd91ff442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114299667575033354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -416,7 +428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aecd59f4470dfa4aa5e26ab549ee0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionScreen: {fileID: 0}
+  _resolutionScreen: {fileID: 0}
+  resolutionScreenText: {fileID: 0}
 --- !u!114 &114307400915111004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,7 +469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718121cedc84b1c4c98fceb895502e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Head: {fileID: 1252210777744698}
+  RotationPoint: {fileID: 0}
   _maxSpeed: 100
   _dodgeCooldown: 1
   _dodgeSpeed: 2.5
