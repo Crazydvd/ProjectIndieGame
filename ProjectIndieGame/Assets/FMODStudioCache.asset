@@ -13,12 +13,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114211795058927082}
+<<<<<<< HEAD
   - {fileID: 114009633397558826}
   EditorEvents:
   - {fileID: 114640495453790016}
   MasterBankRef: {fileID: 114009633397558826}
   StringsBankRef: {fileID: 114211795058927082}
   stringsBankWriteTime: 636791016792555617
+=======
+  - {fileID: 114949407915212582}
+  EditorEvents:
+  - {fileID: 114640495453790016}
+  MasterBankRef: {fileID: 114949407915212582}
+  StringsBankRef: {fileID: 114211795058927082}
+  stringsBankWriteTime: 636791012911945837
+>>>>>>> e5142b0522d4b18ffc4601f9f839d78bfdc44a2f
   cacheVersion: 2
 --- !u!114 &114009633397558826
 MonoBehaviour:
@@ -133,7 +142,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD_rolling\Build\Desktop\Master Bank.strings.bank
+<<<<<<< HEAD
   lastModified: 636791016792555617
+=======
+  lastModified: 636791012911945837
+>>>>>>> e5142b0522d4b18ffc4601f9f839d78bfdc44a2f
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -281,15 +294,38 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
+<<<<<<< HEAD
   - {fileID: 114009633397558826}
+=======
+  - {fileID: 114949407915212582}
+>>>>>>> e5142b0522d4b18ffc4601f9f839d78bfdc44a2f
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 114568798310207236}
+=======
+  - {fileID: 114649218956242812}
+>>>>>>> e5142b0522d4b18ffc4601f9f839d78bfdc44a2f
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114649218956242812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114680898043821446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +461,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114949407915212582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Stack\Saxion\Q2.2\Project Indie\Git\ProjectIndieGame\Assets\FMOD\FMOD_rolling\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636791012911925799
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 48736
+  Exists: 1
 --- !u!114 &114957822128592868
 MonoBehaviour:
   m_ObjectHideFlags: 0
