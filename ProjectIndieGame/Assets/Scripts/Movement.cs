@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public GameObject Head;
+    public GameObject RotationPoint;
 
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        _attackScript = Head.GetComponent<Attack>();
+        _attackScript = RotationPoint.GetComponent<Attack>();
         _rigidBody = GetComponent<Rigidbody>();
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
@@ -168,7 +168,7 @@ public class Movement : MonoBehaviour
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
-            Head.transform.GetChild(0).gameObject.SetActive(false);
+            RotationPoint.transform.GetChild(0).gameObject.SetActive(false);
 
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;

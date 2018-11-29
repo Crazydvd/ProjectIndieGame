@@ -27,8 +27,8 @@ public class Attack : MonoBehaviour
             _timer -= Time.deltaTime;
             return;
         }
-        
-        
+
+
         if (Pause.Paused /* || _playerMovement.GetDodging()*/)
         {
             return;
@@ -40,11 +40,8 @@ public class Attack : MonoBehaviour
             transform.GetChild(0).gameObject.SetActive(true);
 
             //TODO: MAKE IT DO IT FOR EVERYONE
-            if (transform.root.name == "Ram")
-            {
-                AnimationScript animation = transform.root.GetComponentInChildren<AnimationScript>();
-                animation.PlayAttackAnimation();
-            }
+            AnimationScript animation = transform.root.GetComponentInChildren<AnimationScript>();
+            animation.PlayAttackAnimation();
 
             Invoke("DisableHitBox", 0.25f);
         }
