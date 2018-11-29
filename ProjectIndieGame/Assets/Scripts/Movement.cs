@@ -82,7 +82,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }
+        }     
     }
 
     private void FixedUpdate()
@@ -125,6 +125,7 @@ public class Movement : MonoBehaviour
 
         _lateVelocity.x = _rigidBody.velocity.x;
         _lateVelocity.y = _rigidBody.velocity.z;
+
     }
 
     private void reflect(Vector3 pNormal)
@@ -162,7 +163,7 @@ public class Movement : MonoBehaviour
         GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1f);
         gameObject.layer = 9;
     }
-
+  
     private void OnCollisionEnter(Collision collision)
     {
         reflect(collision.contacts[0].normal);

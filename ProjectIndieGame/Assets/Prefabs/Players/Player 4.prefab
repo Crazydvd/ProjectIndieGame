@@ -60,6 +60,8 @@ GameObject:
   - component: {fileID: 114428331437706744}
   - component: {fileID: 114985426819892136}
   - component: {fileID: 114863433592211300}
+  - component: {fileID: 114321486376344996}
+  - component: {fileID: 114598237254603350}
   m_Layer: 9
   m_Name: Player body
   m_TagString: Player
@@ -339,6 +341,11 @@ MonoBehaviour:
   Head: {fileID: 1330605815069542}
   _speed: 5
   _maxSpeed: 100
+  _dodgeCooldown: 1
+  _dodgeSpeed: 2.5
+  _dodgeDuration: 0.3
+  _bendingPower: 1
+  _bendingPowerDecrease: 0.5
   _receivingDamage: 5
   _playerID: 2
   CANTMOVE: 1
@@ -355,6 +362,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerID: 2
   _deadzone: 0.25
+--- !u!114 &114321486376344996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394081448984452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9822cb89135584fa36d19b63764925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stopRotationLimit: 0.1
 --- !u!114 &114428331437706744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,6 +386,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resolutionScreen: {fileID: 0}
+--- !u!114 &114598237254603350
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394081448984452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586f407cd19beeb498f41efd91ff442f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114739284077642100
 MonoBehaviour:
   m_ObjectHideFlags: 1
