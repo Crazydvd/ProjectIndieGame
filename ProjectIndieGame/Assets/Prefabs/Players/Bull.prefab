@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114740699080199468}
   - component: {fileID: 114461140636018314}
   - component: {fileID: 114720200100459936}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RotationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 114670438317608152}
   - component: {fileID: 114102542037753936}
   - component: {fileID: 114754385462715794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 33740364841335200}
   - component: {fileID: 23271011528656316}
   - component: {fileID: 136545667765392526}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackHitBox
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4101296617937906}
   - component: {fileID: 114586449570711818}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Bull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 4759136067675574}
   - component: {fileID: 33738379189311908}
   - component: {fileID: 23745099044078728}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 4453168429698366}
   - component: {fileID: 95573304156227804}
   - component: {fileID: 114117892258757892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: headRotationPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1253225756993828}
   m_LocalRotation: {x: -0, y: -0.9659258, z: -0, w: 0.25881916}
-  m_LocalPosition: {x: 4.07, y: 0.913, z: -12.47}
+  m_LocalPosition: {x: 3.941, y: 0.943, z: -13.178}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4452809450000202}
@@ -210,7 +210,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156365766857526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -397,15 +397,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 718121cedc84b1c4c98fceb895502e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationPoint: {fileID: 0}
+  RotationPoint: {fileID: 1080602218654834}
+  Head: {fileID: 1715327320628266}
   _maxSpeed: 100
-  _dodgeCooldown: 1
+  _dodgeCooldown: 0.2
   _dodgeSpeed: 2.5
   _dodgeDuration: 0.3
   _bendingPower: 1
   _bendingPowerDecrease: 0.5
   _receivingDamage: 5
-  _playerID: 1
+  _playerID: 2
   CANTMOVE: 0
 --- !u!114 &114461140636018314
 MonoBehaviour:
@@ -418,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ac354e391babd46882d9abed20b712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerID: 1
+  _playerID: 2
   _deadzone: 0.25
 --- !u!114 &114586449570711818
 MonoBehaviour:
@@ -459,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf1bb164d4b7a045975cc4af036af4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerID: 1
+  _playerID: 2
   _attackCooldown: 0.5
   Force: 1
 --- !u!114 &114740699080199468
@@ -497,7 +498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aecd59f4470dfa4aa5e26ab549ee0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolutionScreen: {fileID: 0}
+  _resolutionScreen: {fileID: 0}
+  resolutionScreenText: {fileID: 0}
 --- !u!135 &135695038749706892
 SphereCollider:
   m_ObjectHideFlags: 1

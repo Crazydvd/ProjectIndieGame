@@ -5,11 +5,13 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public GameObject RotationPoint;
+    public GameObject Head;
 
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
     private PlayerParameters _parameters;
+    private TrailRenderer _renderer;
 
     [SerializeField] private float _maxSpeed = 50f;
     [SerializeField] private float _dodgeCooldown = 1f;
@@ -41,6 +43,7 @@ public class Movement : MonoBehaviour
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
+        _renderer = GetComponent<TrailRenderer>();
 
         _lateVelocity = Vector2.zero;
         _normal = Vector2.zero;
@@ -140,17 +143,20 @@ public class Movement : MonoBehaviour
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * 2.5f;
             GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
+            _renderer.time = 5;
         }
     }
 
     private void StopDodge()
     {
         _dodging = false;
+        _renderer.time = 0;
         _rigidBody.velocity = _walkVelocity;
-        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1f);
+        normalColours();
         gameObject.layer = 9;
     }
 
@@ -165,6 +171,10 @@ public class Movement : MonoBehaviour
         {
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
             _playerStatus.IncreaseDamage(pOther.transform.root.GetComponent<PlayerParameters>().ATTACK);
+            GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
+            Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
+            Invoke("normalColours", 0.1f);
+
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
@@ -178,6 +188,12 @@ public class Movement : MonoBehaviour
             _rigidBody.velocity -= _rigidBody.velocity * (_parameters.DAMAGE_ABSORPTION / 100);
             //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
+    }
+
+    private void normalColours()
+    {
+        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+        Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
     }
 
 
