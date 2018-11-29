@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2041,6 +2041,11 @@ Prefab:
     - {fileID: 114288699329462190, guid: 45d6764e9d036734da619855423e13e7, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 45d6764e9d036734da619855423e13e7, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1462253452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1388324064700382, guid: 45d6764e9d036734da619855423e13e7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1462253451}
 --- !u!4 &1614540231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: a23f7ecb923df9a4f95af23721bc1755,
@@ -2113,6 +2118,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232d3738cf59ba2499e59762506c72b6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1849410866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1253225756993828, guid: 232d3738cf59ba2499e59762506c72b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1849410865}
 --- !u!1 &1902983102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,9 +2132,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1902983105}
   - component: {fileID: 1902983104}
-  - component: {fileID: 1902983103}
   - component: {fileID: 1902983106}
   - component: {fileID: 1902983107}
+  - component: {fileID: 1902983103}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2132,13 +2142,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1902983103
-AudioListener:
+--- !u!114 &1902983103
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1902983102}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!20 &1902983104
 Camera:
   m_ObjectHideFlags: 0
@@ -2215,8 +2230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1462253452}
+  - {fileID: 1849410866}
 --- !u!1 &1962135002
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DeathScript : MonoBehaviour
 {
-    public GameObject _resolutionScreen;
-    public Text resolutionScreenText;
+    [SerializeField] private GameObject _resolutionScreen;
+    [SerializeField] private Text resolutionScreenText;
+    [SerializeField] private GameObject _firstButton;
+
     Rigidbody _rigidbody;
     Vector3 startPosition;
     PlayerStatus _playerStatus;
@@ -39,8 +42,10 @@ public class DeathScript : MonoBehaviour
                 //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
+                    Time.timeScale = 0;
                     resolutionScreenText.text = _playersHandler.GetPlayers()[0].name + resolutionScreenText.text;
-                    resolutionScreenText.gameObject.SetActive(true);
+                    _resolutionScreen.gameObject.SetActive(true);
+                    EventSystem.current.SetSelectedGameObject(_firstButton);
                 }
                 return;
             }
