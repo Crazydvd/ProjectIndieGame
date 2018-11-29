@@ -76,7 +76,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }
+        }     
     }
 
     private void FixedUpdate()
@@ -84,26 +84,22 @@ public class Movement : MonoBehaviour
         //Player flying
         if (_rigidBody.velocity.magnitude > _parameters.SPEED && _walkVelocity.magnitude <= 0f)
         {
-            Debug.Log("1");
             _rigidBody.velocity *= 0.99f;
         }
         //Player flying and controling
         else if (_rigidBody.velocity.magnitude > _parameters.SPEED && !_dodging)
         {
-            Debug.Log("2");
             _rigidBody.velocity *= 0.99f;
             _rigidBody.velocity = Vector3.RotateTowards(_rigidBody.velocity, _walkVelocity, Time.deltaTime * (_bendingPower - _bendingPowerDecrease / _maxSpeed * _rigidBody.velocity.magnitude), 0);
         }
         //Player stops moving
         else if (_walkVelocity.magnitude <= 0f && _rigidBody.velocity.magnitude > 0.01f)
         {
-            Debug.Log("3");
             _rigidBody.velocity *= 0.9f;
         }
         //Player walks around
         else if (_rigidBody.velocity.magnitude <= _parameters.SPEED)
         {
-            Debug.Log("4");
             _rigidBody.velocity = _walkVelocity;
 
             if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _parameters.PLAYER)))
@@ -119,6 +115,7 @@ public class Movement : MonoBehaviour
 
         _lateVelocity.x = _rigidBody.velocity.x;
         _lateVelocity.y = _rigidBody.velocity.z;
+
     }
 
     private void reflect(Vector3 pNormal)
@@ -159,7 +156,7 @@ public class Movement : MonoBehaviour
         normalColours();
         gameObject.layer = 9;
     }
-
+  
     private void OnCollisionEnter(Collision collision)
     {
         reflect(collision.contacts[0].normal);
