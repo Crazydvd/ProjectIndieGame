@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public GameObject Head;
+    public GameObject RotationPoint;
 
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
+    private PlayerParameters _parameters;
 
-    [SerializeField] private float _speed = 0.2f;
     [SerializeField] private float _maxSpeed = 50f;
     [SerializeField] private float _dodgeCooldown = 1f;
     [SerializeField] private float _dodgeSpeed = 2.5f;
@@ -18,6 +18,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _bendingPower = 1f;
     [SerializeField] private float _bendingPowerDecrease = 0.5f;
     [SerializeField] private int _receivingDamage = 5;
+
     [Range(1, 2)]
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
@@ -27,11 +28,6 @@ public class Movement : MonoBehaviour
 
     private Attack _attackScript;
 
-    private Vector3 forward;
-    private Vector3 backward;
-    private Vector3 left;
-    private Vector3 right;
-
     private Vector3 _walkVelocity;
     private Vector3 _flyVelocity;
 
@@ -40,15 +36,11 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        _attackScript = Head.GetComponent<Attack>();
+        _attackScript = RotationPoint.GetComponent<Attack>();
         _rigidBody = GetComponent<Rigidbody>();
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
-
-        forward = new Vector3(0, 0, _speed);
-        backward = new Vector3(0, 0, -_speed);
-        left = new Vector3(-_speed, 0, 0);
-        right = new Vector3(_speed, 0, 0);
+        _parameters = transform.root.GetComponent<PlayerParameters>();
 
         _lateVelocity = Vector2.zero;
         _normal = Vector2.zero;
@@ -61,9 +53,8 @@ public class Movement : MonoBehaviour
             return;
         }
         _walkVelocity = Vector3.zero;
-        //_walkVelocity *= 0.95f;
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _playerID), Input.GetAxis("LeftVertical_P" + _playerID));
+        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
         if (stickInput.magnitude < 0.25f)
             stickInput = Vector2.zero;
 
@@ -71,12 +62,12 @@ public class Movement : MonoBehaviour
         _walkVelocity.z = stickInput.y;
 
         _walkVelocity = _walkVelocity.normalized;
-        _walkVelocity = _walkVelocity * _speed;
+        _walkVelocity = _walkVelocity * _parameters.SPEED;
 
-        if (_walkVelocity.magnitude > _speed)
+        if (_walkVelocity.magnitude > _parameters.SPEED)
         {
             _walkVelocity = _walkVelocity.normalized;
-            _walkVelocity = _walkVelocity * _speed;
+            _walkVelocity = _walkVelocity * _parameters.SPEED;
         }
 
         if (_timer > 0)
@@ -88,13 +79,13 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         //Player flying
-        if (_rigidBody.velocity.magnitude > _speed && _walkVelocity.magnitude <= 0f)
+        if (_rigidBody.velocity.magnitude > _parameters.SPEED && _walkVelocity.magnitude <= 0f)
         {
             Debug.Log("1");
             _rigidBody.velocity *= 0.99f;
         }
         //Player flying and controling
-        else if (_rigidBody.velocity.magnitude > _speed && !_dodging)
+        else if (_rigidBody.velocity.magnitude > _parameters.SPEED && !_dodging)
         {
             Debug.Log("2");
             _rigidBody.velocity *= 0.99f;
@@ -107,12 +98,12 @@ public class Movement : MonoBehaviour
             _rigidBody.velocity *= 0.9f;
         }
         //Player walks around
-        else if (_rigidBody.velocity.magnitude <= _speed)
+        else if (_rigidBody.velocity.magnitude <= _parameters.SPEED)
         {
             Debug.Log("4");
             _rigidBody.velocity = _walkVelocity;
 
-            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _playerID)))
+            if ((Input.GetButtonDown("Fire2") || Input.GetButtonDown("LeftBumper_P" + _parameters.PLAYER)))
             {
                 dodge();
             }
@@ -132,7 +123,7 @@ public class Movement : MonoBehaviour
         if (_dodging)
             return;
 
-        if (_rigidBody.velocity.magnitude > _speed)
+        if (_rigidBody.velocity.magnitude > _parameters.SPEED)
         {
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
         }
@@ -173,17 +164,18 @@ public class Movement : MonoBehaviour
         if (pOther.gameObject.tag.ToUpper() == "WEAPON" && pOther.transform.root != transform.root && !_dodging)
         {
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
-            _playerStatus.IncreaseDamage(_receivingDamage);
+            _playerStatus.IncreaseDamage(pOther.transform.root.GetComponent<PlayerParameters>().ATTACK);
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
-            Head.transform.GetChild(0).gameObject.SetActive(false);
+            RotationPoint.transform.GetChild(0).gameObject.SetActive(false);
 
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;
             //Debug.Log("DAMAGE:" + delta);
             _rigidBody.velocity = delta * _playerStatus.GetDamage();
+            _rigidBody.velocity -= _rigidBody.velocity * (_parameters.DAMAGE_ABSORPTION / 100);
             //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
     }

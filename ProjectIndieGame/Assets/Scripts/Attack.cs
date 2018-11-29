@@ -10,12 +10,15 @@ public class Attack : MonoBehaviour
     private float _timer = 0;
     public float Force = 10;
 
+    private PlayerParameters _parameters;
+
     //private Movement _playerMovement;
 
-    //void Start()
-    //{
-    //    _playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
-    //}
+    void Start()
+    {
+        //_playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
+        _parameters = transform.root.GetComponent<PlayerParameters>();
+    }
 
     void Update()
     {
@@ -24,17 +27,22 @@ public class Attack : MonoBehaviour
             _timer -= Time.deltaTime;
             return;
         }
-        
-        
+
+
         if (Pause.Paused /* || _playerMovement.GetDodging()*/)
         {
             return;
         }
 
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _playerID))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _parameters.PLAYER))
         {
             SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);
+
+            //TODO: MAKE IT DO IT FOR EVERYONE
+            AnimationScript animation = transform.root.GetComponentInChildren<AnimationScript>();
+            animation.PlayAttackAnimation();
+
             Invoke("DisableHitBox", 0.25f);
         }
     }

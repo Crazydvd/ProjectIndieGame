@@ -25,6 +25,8 @@ public class PlayerStatus : MonoBehaviour
     public void IncreaseDamage(int pAmmount)
     {
         damage += pAmmount;
+        damage = (damage > 999) ? 999 : damage;
+
         damageUI.text = "Damage : " + damage + " %";
     }
 
