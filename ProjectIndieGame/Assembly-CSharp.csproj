@@ -54,11 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-<<<<<<< HEAD
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-=======
-      <HintPath>D:\Unity 3D\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
->>>>>>> 6df194a30465da6f615615fc7400d5c7d59914ce
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
@@ -227,11 +223,7 @@
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-=======
-      <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
->>>>>>> 6df194a30465da6f615615fc7400d5c7d59914ce
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -471,11 +463,7 @@
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-<<<<<<< HEAD
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
-=======
-      <HintPath>D:/Unity 3D/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
->>>>>>> 6df194a30465da6f615615fc7400d5c7d59914ce
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
