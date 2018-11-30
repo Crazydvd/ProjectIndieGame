@@ -146,7 +146,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252210777744698}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 72.50637, z: -0}
+  m_LocalPosition: {x: 0, y: 76.8, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4753452947944228}
@@ -257,7 +257,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 82afa6d31a3418a49aa94ad64d2be85c, type: 2}
+  - {fileID: 2100000, guid: 4e4e642bd78f467499b3e64bb22b62b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,7 +318,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252210777744698}
-  m_Mesh: {fileID: 4300000, guid: 0121afcff568a2a449a91e8fd35f7b47, type: 3}
+  m_Mesh: {fileID: 4300000, guid: d29596f80f375134fb4f17ac74f51295, type: 3}
 --- !u!33 &33575084584133132
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -521,6 +521,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resolutionScreen: {fileID: 0}
   resolutionScreenText: {fileID: 0}
+  _firstButton: {fileID: 0}
 --- !u!114 &114307400915111004
 MonoBehaviour:
   m_ObjectHideFlags: 1

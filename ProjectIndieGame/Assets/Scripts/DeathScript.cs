@@ -42,10 +42,10 @@ public class DeathScript : MonoBehaviour
                 //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
-                    Time.timeScale = 0;
                     resolutionScreenText.text = _playersHandler.GetPlayers()[0].name + resolutionScreenText.text;
                     _resolutionScreen.gameObject.SetActive(true);
                     EventSystem.current.SetSelectedGameObject(_firstButton);
+                    Time.timeScale = 0;
                 }
                 return;
             }

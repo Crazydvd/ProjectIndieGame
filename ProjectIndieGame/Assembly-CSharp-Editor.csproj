@@ -414,7 +414,11 @@
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
+<<<<<<< HEAD
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll</HintPath>
+=======
+      <HintPath>D:/Unity 3D/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll</HintPath>
+>>>>>>> 6df194a30465da6f615615fc7400d5c7d59914ce
     </Reference>
   </ItemGroup>
   <ItemGroup>
