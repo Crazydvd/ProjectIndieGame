@@ -13,7 +13,7 @@ public class RollingSound : MonoBehaviour
 
     void Start()
     {
-        _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rolling");
+        _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rollingv2");
         _rollSound.getParameter("speed", out _speed);
         _rigidbody = GetComponent<Rigidbody>();
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(_rollSound, GetComponent<Transform>(), GetComponent<Rigidbody>());
@@ -35,7 +35,7 @@ public class RollingSound : MonoBehaviour
         }
         else if (_paused)
         {
-            _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rolling");
+            _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rollingv2");
             _rollSound.getParameter("speed", out _speed);
             _rollSound.start();
             _rollSound.release();

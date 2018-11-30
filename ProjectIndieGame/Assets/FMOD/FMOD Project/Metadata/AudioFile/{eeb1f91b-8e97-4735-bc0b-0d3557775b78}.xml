@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{eeb1f91b-8e97-4735-bc0b-0d3557775b78}">
+        <property name="assetPath">
+            <value>pig3.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.45757369614512472</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{3349a0b7-2bd8-4ab0-8484-ac843ebb8f6c}</destination>
+        </relationship>
+    </object>
+</objects>

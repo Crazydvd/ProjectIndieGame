@@ -25,6 +25,7 @@ public class DeathScript : MonoBehaviour
         {
             _playerStatus.DecreaseLives();
             _playerStatus.ResetDamage();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/loosing live");
 
             if (_playerStatus.GetLives() <= 0)
             {
