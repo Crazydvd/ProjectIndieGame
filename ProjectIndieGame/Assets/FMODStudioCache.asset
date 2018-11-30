@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114568399731637656}
-  - {fileID: 114751750639690716}
+  - {fileID: 114697886438333840}
   EditorEvents:
   - {fileID: 114202040386365738}
-  MasterBankRef: {fileID: 114751750639690716}
+  MasterBankRef: {fileID: 114697886438333840}
   StringsBankRef: {fileID: 114568399731637656}
-  stringsBankWriteTime: 636790957653599951
+  stringsBankWriteTime: 636791016792555617
   cacheVersion: 2
 --- !u!114 &114202040386365738
 MonoBehaviour:
@@ -34,12 +34,12 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-  - {fileID: 114751750639690716}
+  - {fileID: 114697886438333840}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114234439125094458}
+  - {fileID: 114893007015046180}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -70,11 +70,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD_rolling\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636790957653599951
+  lastModified: 636791016792555617
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 718
+  Exists: 1
+--- !u!114 &114697886438333840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Project Indie\ProjectIndieGame\Assets\FMOD\FMOD_rolling\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636791016792535375
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 48736
   Exists: 1
 --- !u!114 &114751750639690716
 MonoBehaviour:
@@ -94,4 +113,19 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 48736
-  Exists: 1
+  Exists: 0
+--- !u!114 &114893007015046180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
