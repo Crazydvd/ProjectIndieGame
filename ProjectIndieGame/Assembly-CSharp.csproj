@@ -151,6 +151,7 @@
     <Compile Include="Assets\Scripts\PopulatePreviewScript.cs" />
     <Compile Include="Assets\Scripts\RollingSound.cs" />
     <Compile Include="Assets\Scripts\RotatePlayer.cs" />
+    <Compile Include="Assets\Scripts\Rotation.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <Compile Include="Assets\Scripts\StageSelectorScript.cs" />
     <Compile Include="Assets\Scripts\StageSelectWindowScript.cs" />
