@@ -1,14 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class DeathScript : MonoBehaviour
 {
-    [SerializeField] private GameObject _resolutionScreen;
-    [SerializeField] private Text resolutionScreenText;
-    [SerializeField] private GameObject _firstButton;
 
     Rigidbody _rigidbody;
     Vector3 startPosition;
@@ -28,27 +23,23 @@ public class DeathScript : MonoBehaviour
     {
         if (other.tag.ToUpper() == "BOUNDARY")
         {
-            Debug.Log("boop");
             _playerStatus.DecreaseLives();
             _playerStatus.ResetDamage();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/loosing live");
 
             if (_playerStatus.GetLives() <= 0)
             {
-                Debug.Log("You just fucking died");
                 _playersHandler.GetPlayers().Remove(transform.parent.gameObject);
-                Destroy(gameObject, 0.1f);
-                Debug.Log(_playersHandler.GetPlayers().Count);
+                Destroy(gameObject, 0);
 
                 //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
-                    resolutionScreenText.text = _playersHandler.GetPlayers()[0].name + resolutionScreenText.text;
-                    _resolutionScreen.gameObject.SetActive(true);
-                    EventSystem.current.SetSelectedGameObject(_firstButton);
-                    Time.timeScale = 0;
+                    _playersHandler.EndGame(_playersHandler.GetPlayers()[0].name);
                 }
                 return;
             }
+
             transform.position = startPosition;
             _rigidbody.velocity = Vector3.zero;
         }

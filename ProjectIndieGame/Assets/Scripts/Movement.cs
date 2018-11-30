@@ -148,6 +148,7 @@ public class Movement : MonoBehaviour
             Invoke("StopDodge", _dodgeDuration);
             TrailTransparency(1f);
             _trailRenderer.time = 5f;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/dodge");
         }
     }
 
@@ -175,7 +176,7 @@ public class Movement : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Invoke("normalColours", 0.1f);
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/" + transform.root.name + " gets hit");
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
@@ -184,10 +185,8 @@ public class Movement : MonoBehaviour
             Vector3 delta = transform.position - pOther.gameObject.transform.position;
             delta = delta.normalized * pOther.GetComponentInParent<Attack>().Force;
             delta.y = 0;
-            //Debug.Log("DAMAGE:" + delta);
             _rigidBody.velocity = delta * _playerStatus.GetDamage();
             _rigidBody.velocity -= _rigidBody.velocity * (_parameters.DAMAGE_ABSORPTION / 100);
-            //Debug.Log(_playerStatus.GetDamage() / 5f);
         }
     }
 
