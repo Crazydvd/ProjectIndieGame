@@ -191,7 +191,7 @@ Prefab:
         type: 2}
       propertyPath: _resolutionScreen
       value: 
-      objectReference: {fileID: 626379894}
+      objectReference: {fileID: 626379898}
     - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
         type: 2}
       propertyPath: _firstButton
@@ -5500,11 +5500,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 626379892}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
---- !u!1 &626379894 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1648892198046946, guid: 2ee03b8ba738fe244b8abe7bae182366,
-    type: 2}
-  m_PrefabInternal: {fileID: 626379892}
 --- !u!114 &626379895 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114826540053915726, guid: 2ee03b8ba738fe244b8abe7bae182366,
