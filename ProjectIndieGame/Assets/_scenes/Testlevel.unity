@@ -5394,11 +5394,6 @@ Prefab:
     m_Modifications:
     - target: {fileID: 224368463336567540, guid: 2ee03b8ba738fe244b8abe7bae182366,
         type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224368463336567540, guid: 2ee03b8ba738fe244b8abe7bae182366,
-        type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5487,9 +5482,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1647091330333720, guid: 2ee03b8ba738fe244b8abe7bae182366, type: 2}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 114555295107667896, guid: 2ee03b8ba738fe244b8abe7bae182366,
+        type: 2}
+      propertyPath: _givenTime
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee03b8ba738fe244b8abe7bae182366, type: 2}
@@ -14785,6 +14781,9 @@ MonoBehaviour:
   players:
   - {fileID: 862016797}
   - {fileID: 2075289718}
+  _resolutionScreen: {fileID: 626379898}
+  resolutionScreenText: {fileID: 626379895}
+  _firstButton: {fileID: 626379897}
 --- !u!114 &1902983108
 MonoBehaviour:
   m_ObjectHideFlags: 0
