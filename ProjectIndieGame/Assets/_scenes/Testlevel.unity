@@ -152,11 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
-        type: 2}
-      propertyPath: resolutionScreen
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 114307400915111004, guid: 45d6764e9d036734da619855423e13e7,
         type: 2}
       propertyPath: damageUI
@@ -167,31 +162,16 @@ Prefab:
       propertyPath: livesUI
       value: 
       objectReference: {fileID: 626379893}
-    - target: {fileID: 114673730717956804, guid: 45d6764e9d036734da619855423e13e7,
-        type: 2}
-      propertyPath: RotationPoint
-      value: 
-      objectReference: {fileID: 511955523}
-    - target: {fileID: 23984909260829356, guid: 45d6764e9d036734da619855423e13e7,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114673730717956804, guid: 45d6764e9d036734da619855423e13e7,
-        type: 2}
-      propertyPath: _dodgeCooldown
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
-        type: 2}
-      propertyPath: resolutionScreenText
-      value: 
-      objectReference: {fileID: 626379895}
     - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
         type: 2}
       propertyPath: _resolutionScreen
       value: 
       objectReference: {fileID: 626379898}
+    - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
+        type: 2}
+      propertyPath: resolutionScreenText
+      value: 
+      objectReference: {fileID: 626379895}
     - target: {fileID: 114299667575033354, guid: 45d6764e9d036734da619855423e13e7,
         type: 2}
       propertyPath: _firstButton
@@ -4591,11 +4571,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5ccfb971cea60574b87a736c5fb5366c,
     type: 3}
   m_PrefabInternal: {fileID: 21383665}
---- !u!1 &511955523 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1316873368949336, guid: 45d6764e9d036734da619855423e13e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 8430702}
 --- !u!1 &512538827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1417974444101506, guid: 3663032b611a00f4e9b39338e512b052,
