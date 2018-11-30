@@ -13,12 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114211795058927082}
-  - {fileID: 114093517224523972}
+  - {fileID: 114168649073504614}
   EditorEvents:
   - {fileID: 114640495453790016}
-  MasterBankRef: {fileID: 114093517224523972}
+  MasterBankRef: {fileID: 114168649073504614}
   StringsBankRef: {fileID: 114211795058927082}
-  stringsBankWriteTime: 636790934137622597
+  stringsBankWriteTime: 636790957653599951
   cacheVersion: 2
 --- !u!114 &114009978353121362
 MonoBehaviour:
@@ -71,7 +71,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 48736
-  Exists: 1
+  Exists: 0
 --- !u!114 &114136599829370058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +87,25 @@ MonoBehaviour:
   Min: 0
   Max: 100
   Default: 0
+--- !u!114 &114168649073504614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\SCHOOL\Projects\PROJECT INDIE GAME\ProjectIndieGame\Assets\FMOD\FMOD_rolling\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636790957653590239
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 48736
+  Exists: 1
 --- !u!114 &114201559511521110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD_rolling\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636790934137622597
+  lastModified: 636790957653599951
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -247,12 +266,12 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-  - {fileID: 114093517224523972}
+  - {fileID: 114168649073504614}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114725912164634812}
+  - {fileID: 114980966153913210}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -410,6 +429,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 48736
   Exists: 1
+--- !u!114 &114980966153913210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114990553625176562
 MonoBehaviour:
   m_ObjectHideFlags: 0
