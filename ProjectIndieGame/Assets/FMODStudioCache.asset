@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
   - {fileID: 114713470031869462}
   - {fileID: 114790416031205922}
   EditorEvents:
@@ -25,6 +26,15 @@ MonoBehaviour:
   MasterBankRef: {fileID: 114790416031205922}
   StringsBankRef: {fileID: 114713470031869462}
   stringsBankWriteTime: 636791897326860260
+=======
+  - {fileID: 114568399731637656}
+  - {fileID: 114697886438333840}
+  EditorEvents:
+  - {fileID: 114202040386365738}
+  MasterBankRef: {fileID: 114697886438333840}
+  StringsBankRef: {fileID: 114568399731637656}
+  stringsBankWriteTime: 636791016792555617
+>>>>>>> 4511f64c4b78b247f39cef3cb2bcc6239b6c8ee0
   cacheVersion: 2
 --- !u!114 &114073790387458822
 MonoBehaviour:
@@ -129,12 +139,12 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-  - {fileID: 114751750639690716}
+  - {fileID: 114697886438333840}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114234439125094458}
+  - {fileID: 114893007015046180}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -388,13 +398,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD_rolling\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636790957653599951
+  lastModified: 636791016792555617
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 718
   Exists: 1
+<<<<<<< HEAD
 --- !u!114 &114594095782580160
+=======
+--- !u!114 &114697886438333840
+>>>>>>> 4511f64c4b78b247f39cef3cb2bcc6239b6c8ee0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Path: C:\My courses\2st year\Project Indie Game\ProjectIndieGame\Assets\FMOD\FMOD
     Project\Build\Desktop\Master Bank.bank
   lastModified: 636791893233373148
@@ -498,6 +513,16 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1624
+=======
+  Path: D:\Project Indie\ProjectIndieGame\Assets\FMOD\FMOD_rolling\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636791016792535375
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 48736
+  Exists: 1
+>>>>>>> 4511f64c4b78b247f39cef3cb2bcc6239b6c8ee0
 --- !u!114 &114751750639690716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,8 +541,13 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 48736
+<<<<<<< HEAD
   Exists: 1
 --- !u!114 &114758923877522938
+=======
+  Exists: 0
+--- !u!114 &114893007015046180
+>>>>>>> 4511f64c4b78b247f39cef3cb2bcc6239b6c8ee0
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -532,6 +562,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+<<<<<<< HEAD
 --- !u!114 &114770973057116152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,3 +628,5 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+=======
+>>>>>>> 4511f64c4b78b247f39cef3cb2bcc6239b6c8ee0
