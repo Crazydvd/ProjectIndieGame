@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{0746bf8b-453c-4e25-b207-d23fb6d6a5a7}">
+        <property name="name">
+            <value>Lifes</value>
+        </property>
+        <relationship name="folder">
+            <destination>{62faa572-ede5-4cfc-a2c2-6ef166bb8b42}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{2ec37c9a-6139-4ae3-912b-b31c0048714c}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{2ec37c9a-6139-4ae3-912b-b31c0048714c}">
+        <property name="minimum">
+            <value>1</value>
+        </property>
+        <property name="maximum">
+            <value>3</value>
+        </property>
+        <property name="initialValue">
+            <value>1</value>
+        </property>
+    </object>
+</objects>

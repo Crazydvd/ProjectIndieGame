@@ -146,7 +146,7 @@
     </object>
     <object class="SFXReverbEffect" id="{38ecad5a-ae7f-4930-8c6b-6ab8d0db4798}">
         <property name="decayTime">
-            <value>4400</value>
+            <value>850</value>
         </property>
         <property name="highCut">
             <value>2000</value>

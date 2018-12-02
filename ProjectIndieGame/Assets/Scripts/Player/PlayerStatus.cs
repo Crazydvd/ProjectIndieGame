@@ -8,6 +8,8 @@ public class PlayerStatus : MonoBehaviour
     public Text damageUI;
     public Text livesUI;
 
+    private BackgroundMusic _bgMusic;
+
     int damage = 0;
     int lives = 3;
 
@@ -15,6 +17,7 @@ public class PlayerStatus : MonoBehaviour
     {
         damageUI.text = damageUI.text + damage + " %";
         livesUI.text = livesUI.text + lives;
+        _bgMusic = Camera.main.GetComponent<BackgroundMusic>();
     }
 
     public int GetDamage()
@@ -45,5 +48,6 @@ public class PlayerStatus : MonoBehaviour
     {
         lives--;
         livesUI.text = livesUI.text.Remove(livesUI.text.Length - 1) + lives;
+        _bgMusic.SetLifesParameter(4 - lives);
     }
 }
