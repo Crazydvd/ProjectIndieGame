@@ -12,6 +12,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
+<<<<<<< HEAD
+  - {fileID: 114310254933735340}
+  - {fileID: 114742774697995522}
+  EditorEvents:
+  - {fileID: 114344095592867972}
+  - {fileID: 114142705766785762}
+  - {fileID: 114920174537842308}
+  - {fileID: 114219940488302740}
+  - {fileID: 114661224496370406}
+  - {fileID: 114628352346082502}
+  - {fileID: 114006127814255110}
+  MasterBankRef: {fileID: 114742774697995522}
+  StringsBankRef: {fileID: 114310254933735340}
+  stringsBankWriteTime: 636791907200326994
+  cacheVersion: 2
+--- !u!114 &114006127814255110
+=======
   - {fileID: 114752771471286914}
   - {fileID: 114437869230160334}
   EditorEvents:
@@ -28,6 +45,7 @@ MonoBehaviour:
   stringsBankWriteTime: 636794305741836219
   cacheVersion: 2
 --- !u!114 &114012833467467948
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,16 +56,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: event:/rollingv2
+  guid: db1fa2c3272caa43a49338c543072479
+  Banks:
+  - {fileID: 114742774697995522}
+=======
   Path: event:/dodge
   guid: 4aa474c44a27b14cb9f31d61ca73a066
   Banks:
   - {fileID: 114437869230160334}
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114218364582197210}
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
+  Length: 0
+--- !u!114 &114142705766785762
+=======
   Length: 445
 --- !u!114 &114032219594040514
 MonoBehaviour:
@@ -87,6 +117,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114046886841046316
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,11 +128,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: event:/Pig gets hit
+  guid: 52d103664363c9499006f8d490daa7f0
+  Banks:
+  - {fileID: 114742774697995522}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 625
+--- !u!114 &114218364582197210
+=======
   Name: Lifes
   Min: 1
   Max: 3
   Default: 1
 --- !u!114 &114047299758378718
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +162,11 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+<<<<<<< HEAD
+--- !u!114 &114219940488302740
+=======
 --- !u!114 &114054818558103236
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,6 +177,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: event:/rolling
+  guid: 6a76d0b50dba0e40ab57f0f81db7de62
+  Banks:
+  - {fileID: 114742774697995522}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114599033551135176}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114310254933735340
+=======
   Name: speed
   Min: 0
   Max: 1
@@ -177,6 +242,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114256206608521710
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,6 +253,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: Assets\FMOD\FMOD Project\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636791907200326994
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 994
+  Exists: 1
+--- !u!114 &114344095592867972
+=======
   Name: speed
   Min: 0
   Max: 1
@@ -207,6 +283,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114332224048940496
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,7 +297,11 @@ MonoBehaviour:
   Path: event:/Soundtrack
   guid: ea62085378103646b2c6ae99d96de6b1
   Banks:
+<<<<<<< HEAD
+  - {fileID: 114742774697995522}
+=======
   - {fileID: 114437869230160334}
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -228,6 +309,10 @@ MonoBehaviour:
   - {fileID: 114423108741489032}
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
+  Length: 445
+--- !u!114 &114599033551135176
+=======
   Length: 0
 --- !u!114 &114387220361113944
 MonoBehaviour:
@@ -245,6 +330,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114423108741489032
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,11 +341,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114628352346082502
+=======
   Name: Lifes
   Min: 1
   Max: 3
   Default: 1
 --- !u!114 &114437869230160334
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,6 +364,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: event:/ram gets hit
+  guid: c06a307d0c65ca4f90c64f93ed4cf626
+  Banks:
+  - {fileID: 114742774697995522}
+=======
   Path: D:\Project Indie\ProjectIndieGame\Assets\FMOD\FMOD Project\Build\Desktop\Master
     Bank.bank
   lastModified: 636794305741826249
@@ -316,14 +416,20 @@ MonoBehaviour:
   guid: 7b3357b5f839d647a08d83c197c028de
   Banks:
   - {fileID: 114437869230160334}
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
+  Length: 1000
+--- !u!114 &114661224496370406
+=======
   Length: 1101
 --- !u!114 &114636664576629212
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,13 +443,21 @@ MonoBehaviour:
   Path: event:/Bull gets hit
   guid: 596b599ca604af4ab1f7ecf3fe8714cf
   Banks:
+<<<<<<< HEAD
+  - {fileID: 114742774697995522}
+=======
   - {fileID: 114437869230160334}
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
+  Length: 1101
+--- !u!114 &114742774697995522
+=======
   Length: 1624
 --- !u!114 &114640600158703596
 MonoBehaviour:
@@ -424,6 +538,7 @@ MonoBehaviour:
     Value: 1034
   Exists: 1
 --- !u!114 &114803307228228790
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,11 +549,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  Path: D:\Stack\Saxion\Q2.2\Project Indie\Git\ProjectIndieGame\Assets\FMOD\FMOD Project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636791907200306940
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 247104
+  Exists: 1
+--- !u!114 &114920174537842308
+=======
   Name: speed
   Min: 0
   Max: 1
   Default: 0
 --- !u!114 &114837809379479016
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -452,13 +579,20 @@ MonoBehaviour:
   Path: event:/Pig gets hit
   guid: 52d103664363c9499006f8d490daa7f0
   Banks:
+<<<<<<< HEAD
+  - {fileID: 114742774697995522}
+=======
   - {fileID: 114437869230160334}
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
+<<<<<<< HEAD
+  Length: 1624
+=======
   Length: 625
 --- !u!114 &114865026702695632
 MonoBehaviour:
@@ -566,3 +700,4 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
