@@ -15,7 +15,7 @@ public class PlayerStatus : MonoBehaviour
 
     void Start()
     {
-        damageUI.text = damageUI.text + damage + " %";
+        damageUI.text = damageUI.text + damage + "%";
         _bgMusic = Camera.main.GetComponent<BackgroundMusic>();
     }
 
@@ -29,13 +29,13 @@ public class PlayerStatus : MonoBehaviour
         damage += pAmmount;
         damage = (damage > 999) ? 999 : damage;
 
-        damageUI.text = damage + " %";
+        damageUI.text = damage + "%";
     }
 
     public void ResetDamage()
     {
         damage = 0;
-        damageUI.text = damage + " %";
+        damageUI.text = damage + "%";
     }
 
     public int GetLives()
