@@ -31,8 +31,13 @@ public class BackgroundMusic : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    public void StopMusic()
     {
         _bgMusic.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    void OnDestroy()
+    {
+        StopMusic();
     }
 }
