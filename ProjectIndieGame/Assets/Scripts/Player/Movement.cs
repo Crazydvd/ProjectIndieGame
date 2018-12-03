@@ -7,6 +7,8 @@ public class Movement : MonoBehaviour
     public GameObject RotationPoint;
     public GameObject Head;
 
+    public GameObject PREFAB;
+
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
@@ -133,7 +135,7 @@ public class Movement : MonoBehaviour
         if (_dodging)
             return;
 
-        if (_rigidBody.velocity.magnitude > _parameters.SPEED)
+        if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
         {
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
         }
@@ -179,6 +181,11 @@ public class Movement : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         reflect(collision.contacts[0].normal);
+
+        print(_rigidBody.velocity);
+
+        if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
+        Instantiate(PREFAB, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
     }
 
     private void OnTriggerEnter(Collider pOther)
@@ -261,8 +268,7 @@ public class Movement : MonoBehaviour
     {
         if (_immortal)
         {
-            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
-            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+            normalColours();
             Invoke("toggleTransparant", 0.1f);
         }
         else
