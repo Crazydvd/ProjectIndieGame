@@ -9,11 +9,13 @@ public class Movement : MonoBehaviour
 
     public GameObject SmokeParticle;
 
+    private GameObject _dirtParticle;
+    private GameObject _dashParticle;
+
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
     private PlayerStatus _playerStatus;
     private PlayerParameters _parameters;
-    private TrailRenderer _trailRenderer;
 
     [SerializeField] private float _maxSpeed = 50f;
     [SerializeField] private float _dodgeCooldown = 1f;
@@ -53,12 +55,14 @@ public class Movement : MonoBehaviour
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
-        _trailRenderer = GetComponent<TrailRenderer>();
+        _dirtParticle = transform.Find("DirtTrail").gameObject;
+        _dashParticle = transform.Find("DashTrail").gameObject;
+
+        _dashParticle.SetActive(false);
+        _dirtParticle.SetActive(true);
 
         _lateVelocity = Vector2.zero;
         _normal = Vector2.zero;
-
-        TrailTransparency(0f);
     }
 
     void Update()
@@ -88,7 +92,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }     
+        }
     }
 
     private void FixedUpdate()
@@ -152,8 +156,11 @@ public class Movement : MonoBehaviour
             return;
         }
 
+
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
+            _dashParticle.SetActive(true);
+            _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * 2.5f;
             GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
@@ -161,17 +168,16 @@ public class Movement : MonoBehaviour
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
-            TrailTransparency(1f);
-            _trailRenderer.time = 5f;
             FMODUnity.RuntimeManager.PlayOneShot("event:/dodge");
         }
     }
 
     private void StopDodge()
     {
+        _dashParticle.SetActive(false);
+        _dirtParticle.SetActive(true);
+
         _dodging = false;
-        TrailTransparency(0f);
-        _trailRenderer.time = 0;
         _rigidBody.velocity = _walkVelocity;
         normalColours();
         gameObject.layer = 9;
@@ -182,7 +188,7 @@ public class Movement : MonoBehaviour
         reflect(collision.contacts[0].normal);
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
-        Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+            Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
 
         if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
@@ -230,12 +236,6 @@ public class Movement : MonoBehaviour
     public bool GetDodging()
     {
         return _dodging;
-    }
-
-    private void TrailTransparency(float pTransparency)
-    {
-        _trailRenderer.startColor = new Color(1, 1, 1, pTransparency);
-        _trailRenderer.endColor = new Color(1, 1, 1, pTransparency);
     }
 
     public bool Immortal
