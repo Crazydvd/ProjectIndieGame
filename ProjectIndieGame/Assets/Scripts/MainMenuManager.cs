@@ -12,6 +12,7 @@ public class MainMenuManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _menuLevel = PlayerPrefs.GetInt("MainMenu");
+        Debug.Log(_menuLevel);
 
         if (_menuLevel == 1)
         {
@@ -34,9 +35,9 @@ public class MainMenuManager : MonoBehaviour {
             PlayerPrefs.SetInt("Char_P2", -1);
         }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteAll();
+    }
 }
