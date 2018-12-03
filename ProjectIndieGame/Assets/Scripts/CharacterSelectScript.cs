@@ -67,6 +67,7 @@ public class CharacterSelectScript : MonoBehaviour
         if (Input.GetButtonDown("Accept_P" + _playerID))
         {
             _currentSelector.gameObject.GetComponent<Image>().sprite = _selectedSelector.GetComponent<Image>().sprite;
+            PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
             PlayerPrefs.SetInt("Char_P" + _playerID, _char);
             _selected = true;
         }
@@ -152,6 +153,7 @@ public class CharacterSelectScript : MonoBehaviour
 
     void DeselectCharacter() {
         PlayerPrefs.SetInt("Char_P" + _playerID, -1);
+        PlayerPrefs.SetInt("Char_color_P" + _playerID, -1);
         _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
         _selected = false;
     }
