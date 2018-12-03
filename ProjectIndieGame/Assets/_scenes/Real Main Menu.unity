@@ -7530,7 +7530,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4072413226036464, guid: 3663032b611a00f4e9b39338e512b052, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1417974444101506, guid: 3663032b611a00f4e9b39338e512b052, type: 2}
       propertyPath: m_Name
