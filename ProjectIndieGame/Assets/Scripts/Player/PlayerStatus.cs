@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerStatus : MonoBehaviour
 {
     public Text damageUI;
-    public Text livesUI;
+    public Image[] _livesUI_full;
 
     private BackgroundMusic _bgMusic;
 
@@ -16,7 +16,6 @@ public class PlayerStatus : MonoBehaviour
     void Start()
     {
         damageUI.text = damageUI.text + damage + " %";
-        livesUI.text = livesUI.text + lives;
         _bgMusic = Camera.main.GetComponent<BackgroundMusic>();
     }
 
@@ -30,13 +29,13 @@ public class PlayerStatus : MonoBehaviour
         damage += pAmmount;
         damage = (damage > 999) ? 999 : damage;
 
-        damageUI.text = "Damage : " + damage + " %";
+        damageUI.text = damage + " %";
     }
 
     public void ResetDamage()
     {
         damage = 0;
-        damageUI.text = "Damage : " + damage + " %";
+        damageUI.text = damage + " %";
     }
 
     public int GetLives()
@@ -47,7 +46,17 @@ public class PlayerStatus : MonoBehaviour
     public void DecreaseLives()
     {
         lives--;
-        livesUI.text = livesUI.text.Remove(livesUI.text.Length - 1) + lives;
+        for(int i = 0; i < _livesUI_full.Length; i++)
+        {
+            if (i == 3 - lives)
+            {
+                _livesUI_full[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                _livesUI_full[i].gameObject.SetActive(false);
+            }
+        }
         _bgMusic.SetLifesParameter(4 - lives);
     }
 }

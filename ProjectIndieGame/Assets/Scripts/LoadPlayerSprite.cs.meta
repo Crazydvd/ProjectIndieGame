@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 518f4e7d716529b4495eed8cab5bd899
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _char1Alt1: {fileID: 21300000, guid: 184f0ce49c5dece418f97bed9b7a8c22, type: 3}
+  - _char1Alt2: {fileID: 21300000, guid: 42b098fdae250c94b8d44a7e0232326c, type: 3}
+  - _char1Alt3: {fileID: 21300000, guid: ad76fa4984b42db40a25c355a1a0db56, type: 3}
+  - _char1Alt4: {fileID: 21300000, guid: 0668e1894d1662245a05b224fefc9178, type: 3}
+  - _char2Alt1: {fileID: 21300000, guid: 64a12a098f9d622499e553a22ac7eb74, type: 3}
+  - _char2Alt2: {fileID: 21300000, guid: d23d26392b87b9d42be1db86c922c8a3, type: 3}
+  - _char2Alt3: {fileID: 21300000, guid: 5a39241f337d97644835f079ac355d86, type: 3}
+  - _char2Alt4: {fileID: 21300000, guid: a234fd23ef37e614f96811d4e1596e84, type: 3}
+  - _char3Alt1: {fileID: 21300000, guid: 2729cd16ad020814098ec93823168850, type: 3}
+  - _char3Alt2: {fileID: 21300000, guid: 9cb4d5c3d05feae48ad105e098a70b1b, type: 3}
+  - _char3Alt3: {fileID: 21300000, guid: 8b43369ce0b0fed4b8acd1379cdc1fd6, type: 3}
+  - _char3Alt4: {fileID: 21300000, guid: 1c083e633ea1b7041afa01780cb47053, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
