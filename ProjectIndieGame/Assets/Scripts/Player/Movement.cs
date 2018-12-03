@@ -25,7 +25,11 @@ public class Movement : MonoBehaviour
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
+    [Header("The amount of seconds that the immortality lasts")]
     public float IMMORTALITY_TIME = 2;
+
+    [Header("How much seconds are between turning transparent and normal when immortal")]
+    public float transparency_interval = 0.1f;
 
     private bool _dodging;
     private float _timer;
@@ -239,9 +243,9 @@ public class Movement : MonoBehaviour
         _walkVelocity = Vector3.zero;
         _flyVelocity = Vector3.zero;
 
-        GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0.8f, 1);
-        Head.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0.8f, 1);
-
+        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+        Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+        toggleTransparant();
         Invoke("endImmortality", IMMORTALITY_TIME);
     }
 
@@ -250,6 +254,34 @@ public class Movement : MonoBehaviour
         normalColours();
 
         _immortal = false;
+    }
+
+    private void toggleNormal()
+    {
+        if (_immortal)
+        {
+            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+            Invoke("toggleTransparant", 0.1f);
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void toggleTransparant()
+    {
+        if (_immortal)
+        {
+            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            Invoke("toggleNormal", 0.1f);
+        }
+        else
+        {
+            return;
+        }
     }
 
     public Vector3 WalkVelocity

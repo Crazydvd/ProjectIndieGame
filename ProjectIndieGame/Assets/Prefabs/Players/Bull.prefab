@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 114102542037753936}
   - component: {fileID: 114754385462715794}
   - component: {fileID: 114429205030236094}
+  - component: {fileID: 114658516971854884}
   - component: {fileID: 96989021856394674}
   m_Layer: 9
   m_Name: Body
@@ -511,6 +512,7 @@ MonoBehaviour:
   _receivingDamage: 5
   _playerID: 2
   CANTMOVE: 0
+  IMMORTALITY_TIME: 2
 --- !u!114 &114429205030236094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -550,6 +552,29 @@ MonoBehaviour:
   ATTACK: 5
   SPEED: 5
   DAMAGE_ABSORPTION: 0
+--- !u!114 &114658516971854884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133139438538994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7127085d72e084182e76f9843665ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _character1: {fileID: 0}
+  _char1Alt1: {fileID: 0}
+  _char1Alt2: {fileID: 0}
+  _char1Alt3: {fileID: 0}
+  _character2: {fileID: 0}
+  _char2Alt1: {fileID: 0}
+  _char2Alt2: {fileID: 0}
+  _char2Alt3: {fileID: 0}
+  _character3: {fileID: 0}
+  _char3Alt1: {fileID: 0}
+  _char3Alt2: {fileID: 0}
+  _char3Alt3: {fileID: 0}
 --- !u!114 &114670438317608152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -562,7 +587,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageUI: {fileID: 0}
-  livesUI: {fileID: 0}
+  _livesUI_full:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114720200100459936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -612,8 +641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aecd59f4470dfa4aa5e26ab549ee0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resolutionScreen: {fileID: 0}
-  resolutionScreenText: {fileID: 0}
 --- !u!135 &135695038749706892
 SphereCollider:
   m_ObjectHideFlags: 1

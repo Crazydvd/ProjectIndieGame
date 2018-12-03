@@ -54,17 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-<<<<<<< HEAD
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
-=======
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
->>>>>>> cc83bd763afc6e6c74dd6133071ca6a403b15432
     </Reference>
   </ItemGroup>
   <ItemGroup>
