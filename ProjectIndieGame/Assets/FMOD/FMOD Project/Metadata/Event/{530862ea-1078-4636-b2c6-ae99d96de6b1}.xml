@@ -254,6 +254,9 @@
         </relationship>
     </object>
     <object class="SingleSound" id="{c2642324-0987-407f-a616-3d2487c238de}">
+        <property name="isCutoff">
+            <value>true</value>
+        </property>
         <property name="start">
             <value>1</value>
         </property>
@@ -294,6 +297,9 @@
         </relationship>
     </object>
     <object class="SingleSound" id="{4a342fde-ca97-40ed-90bb-200a9566769a}">
+        <property name="isCutoff">
+            <value>true</value>
+        </property>
         <property name="start">
             <value>1.9000000000000001</value>
         </property>
