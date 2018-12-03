@@ -70,9 +70,6 @@
         <relationship name="modules">
             <destination>{743b06b0-2e79-4382-9835-82d4c22c70ca}</destination>
         </relationship>
-        <relationship name="markers">
-            <destination>{9d32319f-6a7d-415f-8242-2a85f56287a1}</destination>
-        </relationship>
     </object>
     <object class="EventMixerMaster" id="{acec064e-a744-4cb2-b909-90f678902e65}">
         <relationship name="effectChain">
@@ -94,6 +91,12 @@
     <object class="MultiSound" id="{743b06b0-2e79-4382-9835-82d4c22c70ca}">
         <property name="length">
             <value>0.488843537414966</value>
+        </property>
+        <property name="randomized">
+            <value>false</value>
+        </property>
+        <property name="playlistMode">
+            <value>1</value>
         </property>
         <relationship name="modulators">
             <destination>{1d206f87-631a-4afc-bf9a-b147e2132953}</destination>
@@ -118,20 +121,6 @@
             <destination>{acec064e-a744-4cb2-b909-90f678902e65}</destination>
         </relationship>
     </object>
-    <object class="LoopRegion" id="{9d32319f-6a7d-415f-8242-2a85f56287a1}">
-        <property name="position">
-            <value>0</value>
-        </property>
-        <property name="length">
-            <value>0.488843537414966</value>
-        </property>
-        <relationship name="timeline">
-            <destination>{6f5064c7-a281-45ae-a3c6-874319dfb57b}</destination>
-        </relationship>
-        <relationship name="markerTrack">
-            <destination>{08bdbf73-c03d-49c7-8cd8-72db9acca473}</destination>
-        </relationship>
-    </object>
     <object class="MixerBusEffectChain" id="{b4004084-9db8-4b64-9a26-0778b517e6b8}">
         <relationship name="effects">
             <destination>{9de7d5f8-6a60-42af-b762-866411f74552}</destination>
@@ -152,7 +141,7 @@
             <value>pitch</value>
         </property>
         <property name="amount">
-            <value>18.5</value>
+            <value>32</value>
         </property>
     </object>
     <object class="SingleSound" id="{08d9a997-8102-47dc-ad86-a5ed03c40702}">
