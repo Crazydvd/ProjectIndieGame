@@ -352,6 +352,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -952,9 +957,9 @@ Transform:
   m_LocalPosition: {x: 5.7, y: 0.73361015, z: -2}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
-  - {fileID: 1903274144}
   - {fileID: 1248481590}
   - {fileID: 253602564}
+  - {fileID: 1903274144}
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -2049,6 +2054,11 @@ Prefab:
     - target: {fileID: 4361203596454598, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -4709,6 +4719,11 @@ Prefab:
     - target: {fileID: 1737369255096422, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_Name
       value: Fence_MiddlePole (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -8743,6 +8758,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -8995,6 +9015,11 @@ Prefab:
     - target: {fileID: 4361203596454598, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -9475,6 +9500,11 @@ Prefab:
     - target: {fileID: 4361203596454598, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -13233,6 +13263,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -15427,6 +15462,11 @@ Prefab:
       propertyPath: m_Name
       value: Fence_MiddlePole (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -16230,6 +16270,11 @@ Prefab:
       propertyPath: m_Name
       value: Fence_MiddlePole (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -16275,6 +16320,11 @@ Prefab:
     - target: {fileID: 1737369255096422, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_Name
       value: Fence_MiddlePole (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -17810,6 +17860,11 @@ Prefab:
       propertyPath: m_Name
       value: Fence_MiddlePole (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -18325,6 +18380,11 @@ Prefab:
     - target: {fileID: 1737369255096422, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_Name
       value: Fence_MiddlePole (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -18889,6 +18949,11 @@ Prefab:
     - target: {fileID: 4361203596454598, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -21880,6 +21945,11 @@ Prefab:
       propertyPath: m_Name
       value: Fence_MiddlePole (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -23082,6 +23152,11 @@ Prefab:
     - target: {fileID: 1737369255096422, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
       propertyPath: m_Name
       value: Fence_MiddlePole (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
@@ -25687,6 +25762,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -26491,6 +26571,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 65558804346695100, guid: 7764291a7244280479455ed1e3ee286b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7764291a7244280479455ed1e3ee286b, type: 2}
   m_IsPrefabAsset: 0
@@ -27228,6 +27313,11 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}

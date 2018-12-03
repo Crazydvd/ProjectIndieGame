@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }     
+        }
     }
 
     private void FixedUpdate()
@@ -138,6 +138,7 @@ public class Movement : MonoBehaviour
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
         {
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
+            FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
         }
         _normal.Set(pNormal.x, pNormal.z);
         Vector2 _velocity = Vector2.Reflect(_lateVelocity, _normal);
@@ -181,8 +182,15 @@ public class Movement : MonoBehaviour
     {
         reflect(collision.contacts[0].normal);
 
-        if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
-        Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+        if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
+        {
+            Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+
+            if (collision.gameObject.GetComponent<BreakFences>() != null && !_dodging)
+            {
+                collision.gameObject.GetComponent<BreakFences>().DecreaseDurability();
+            }
+        }
 
         if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
