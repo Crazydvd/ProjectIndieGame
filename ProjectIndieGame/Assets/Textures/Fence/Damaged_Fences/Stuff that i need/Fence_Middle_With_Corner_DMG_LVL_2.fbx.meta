@@ -1,14 +1,16 @@
 fileFormatVersion: 2
-guid: df3f89573a9d6414989ac95197e503bc
+guid: 5d8b3c6d9d1aa8e49bf927277a69e135
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Fence_Middle_With_Corner_DMG_LVL_2
+    100002: //RootNode
+    400000: Fence_Middle_With_Corner_DMG_LVL_2
+    400002: //RootNode
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Fence_Middle2
+    2300000: Fence_Middle_With_Corner_DMG_LVL_2
+    3300000: Fence_Middle_With_Corner_DMG_LVL_2
+    4300000: Fence_Middle_With_Corner_DMG_LVL_2
   externalObjects: {}
   materials:
     importMaterials: 1
