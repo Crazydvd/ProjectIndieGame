@@ -10,6 +10,8 @@ public class Attack : MonoBehaviour
     private float _timer = 0;
     public float Force = 10;
 
+    private Movement _movement;
+
     private PlayerParameters _parameters;
 
     //private Movement _playerMovement;
@@ -18,6 +20,7 @@ public class Attack : MonoBehaviour
     {
         //_playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
+        _movement = transform.root.GetComponentInChildren<Movement>();
     }
 
     void Update()
@@ -36,6 +39,11 @@ public class Attack : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _parameters.PLAYER))
         {
+            if (_movement.Immortal)
+            {
+                return;
+            }
+
             SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);
 
