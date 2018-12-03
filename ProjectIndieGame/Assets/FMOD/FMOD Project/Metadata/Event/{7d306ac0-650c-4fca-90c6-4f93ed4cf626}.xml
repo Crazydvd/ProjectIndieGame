@@ -89,6 +89,12 @@
     </object>
     <object class="MixerBusPanner" id="{0cfe10e2-e382-4102-a0c8-d8ab8ef95ba2}"/>
     <object class="MultiSound" id="{1b530dbd-b5df-47c5-b78d-73dfb4ba36d4}">
+        <property name="randomized">
+            <value>false</value>
+        </property>
+        <property name="playlistMode">
+            <value>1</value>
+        </property>
         <relationship name="modulators">
             <destination>{779dc8ba-ea1c-44dd-bc04-83bee89802bd}</destination>
             <destination>{da672342-df90-4dc6-bbaf-b0d821fa9c96}</destination>

@@ -141,6 +141,7 @@ public class Movement : MonoBehaviour
         Vector2 _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
         _rigidBody.velocity = vector;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
     }
 
     private void dodge()

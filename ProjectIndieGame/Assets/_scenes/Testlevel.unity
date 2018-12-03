@@ -1421,6 +1421,11 @@ Transform:
   m_Father: {fileID: 1392339202}
   m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 24.231, z: 8.407001}
+--- !u!1 &117367150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1253225756993828, guid: 232d3738cf59ba2499e59762506c72b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1380579004}
 --- !u!1 &118776295
 GameObject:
   m_ObjectHideFlags: 0
@@ -29927,7 +29932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players:
   - {fileID: 862016797}
-  - {fileID: 0}
+  - {fileID: 117367150}
   _resolutionScreen: {fileID: 626379898}
   resolutionScreenText: {fileID: 626379895}
   _firstButton: {fileID: 626379897}

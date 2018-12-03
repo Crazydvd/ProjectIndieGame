@@ -92,6 +92,12 @@
         <property name="length">
             <value>1.6247845804988663</value>
         </property>
+        <property name="randomized">
+            <value>false</value>
+        </property>
+        <property name="playlistMode">
+            <value>1</value>
+        </property>
         <relationship name="modulators">
             <destination>{a948f810-f0fe-41ef-aaa8-cb947341f28e}</destination>
             <destination>{482bcb26-732b-47fe-8378-5e6ecf5a8186}</destination>
