@@ -13,6 +13,13 @@ public class PlayersHandler : MonoBehaviour
     [SerializeField] private Text resolutionScreenText;
     [SerializeField] private GameObject _firstButton;
 
+    private BackgroundMusic _bgMusic;
+
+    void Start()
+    {
+        _bgMusic = Camera.main.GetComponent<BackgroundMusic>();
+    }
+
     public List<GameObject> GetPlayers()
     {
         return players;
@@ -24,5 +31,7 @@ public class PlayersHandler : MonoBehaviour
         _resolutionScreen.gameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(_firstButton);
         Time.timeScale = 0;
+        _bgMusic.StopMusic();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/end game");
     }
 }
