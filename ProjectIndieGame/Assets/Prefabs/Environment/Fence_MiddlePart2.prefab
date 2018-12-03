@@ -22,12 +22,13 @@ GameObject:
   - component: {fileID: 33897553607017826}
   - component: {fileID: 23146986855978864}
   - component: {fileID: 65338333769472410}
+  - component: {fileID: 65589295473917452}
   m_Layer: 0
   m_Name: Fence_MiddlePart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4072413226036464
 Transform:
@@ -35,13 +36,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417974444101506}
-  m_LocalRotation: {x: -0, y: 0.7125589, z: -0, w: 0.70161235}
-  m_LocalPosition: {x: -1188.285, y: -13.9, z: 336.13147}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -808.4, y: -15, z: -63.325882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90.887, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!23 &23146986855978864
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -96,3 +97,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 204.92253, y: 105.27614, z: 19.915348}
   m_Center: {x: -98.61471, y: 0, z: 0.000091552734}
+--- !u!65 &65589295473917452
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1417974444101506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 204.92249, y: 105.27614, z: 19.915344}
+  m_Center: {x: -98.6148, y: 0, z: 0}
