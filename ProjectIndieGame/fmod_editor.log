@@ -7,114 +7,17 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-<<<<<<< HEAD
-[LOG] AsyncManager::init                       : manager 000000004DA72F78 isAsync 0 updatePeriod 0.02
-=======
-<<<<<<< HEAD
-[LOG] AsyncManager::init                       : manager 0000000013710F58 isAsync 0 updatePeriod 0.02
-=======
-<<<<<<< HEAD
-[LOG] AsyncManager::init                       : manager 0000000044D70008 isAsync 0 updatePeriod 0.02
-=======
-<<<<<<< HEAD
-[LOG] AsyncManager::init                       : manager 000000004BFFE058 isAsync 0 updatePeriod 0.02
-=======
-<<<<<<< HEAD
-[LOG] AsyncManager::init                       : manager 000000006AD84B28 isAsync 0 updatePeriod 0.02
-=======
-[LOG] AsyncManager::init                       : manager 0000000070D64A88 isAsync 0 updatePeriod 0.02
->>>>>>> 85ccdb5fc8881980c4e08a62c7bd5a58923d9fb3
->>>>>>> 7900f937843f4b659017914da81fe2c1e67e3b22
->>>>>>> dc422fe0dc81d422bd370c75a722165edc68b8a1
->>>>>>> affb572756ba64f73b1492cc9961daeea1561826
->>>>>>> fb0ddd5fe9641355074bd37b1289dc9df9a3089d
+[LOG] AsyncManager::init                       : manager 0000000048611798 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-<<<<<<< HEAD
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 100, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-=======
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-<<<<<<< HEAD
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-=======
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-=======
-[LOG] SoundI::release                          :  (000000004D542D58)
-[LOG] SoundI::release                          :     losing live (0000000070EB1D68)
-[LOG] SoundI::release                          :  (0000000070206CC8)
-[LOG] SoundI::release                          :     1live (000000004CFC8928)
-[LOG] SoundI::release                          :  (0000000070207E08)
-[LOG] SoundI::release                          :     soundtrackbuildup_1 (000000004D23FC28)
-[LOG] SoundI::release                          :  (00000000702079B8)
-[LOG] SoundI::release                          :     3to2live (000000004CFC7748)
-[LOG] SoundI::release                          :  (0000000070206E38)
-[LOG] SoundI::release                          :     soundtrackintro (000000004D23F268)
-[LOG] SoundI::release                          :  (0000000070206708)
-[LOG] SoundI::release                          :     2to1live (000000004D91F7E8)
-[LOG] SoundI::release                          :  (0000000070206FA8)
-[LOG] SoundI::release                          :     3lives (000000004CFC8C68)
-[LOG] SoundI::release                          :  (0000000070206878)
-[LOG] SoundI::release                          :     2lives (000000004D91FE68)
-[LOG] SoundI::release                          :  (0000000070207C98)
-[LOG] SoundI::release                          :     rollingv2 (000000004CFC8AC8)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
->>>>>>> 7900f937843f4b659017914da81fe2c1e67e3b22
->>>>>>> dc422fe0dc81d422bd370c75a722165edc68b8a1
->>>>>>> fb0ddd5fe9641355074bd37b1289dc9df9a3089d
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> affb572756ba64f73b1492cc9961daeea1561826
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-<<<<<<< HEAD
-=======
-[LOG] Manager::readBank                        : fileversion = 101, compatVersion = 99 (oldest = 44, newest = 101)
->>>>>>> 7900f937843f4b659017914da81fe2c1e67e3b22
->>>>>>> dc422fe0dc81d422bd370c75a722165edc68b8a1
->>>>>>> affb572756ba64f73b1492cc9961daeea1561826
->>>>>>> fb0ddd5fe9641355074bd37b1289dc9df9a3089d

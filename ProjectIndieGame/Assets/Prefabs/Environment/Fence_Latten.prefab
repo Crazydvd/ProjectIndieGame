@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4311868886029002}
   - component: {fileID: 33252452390770500}
   - component: {fileID: 23390552635318314}
+  - component: {fileID: 65441715778260914}
   m_Layer: 0
   m_Name: Fence_Latten
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996265667138966}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -84, y: 6, z: 171.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.87, y: 0.617, z: -13.599}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1996265667138966}
   m_Mesh: {fileID: 4300000, guid: 089f940aebc9da847a87b7a1506ed9d1, type: 3}
+--- !u!65 &65441715778260914
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996265667138966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 187.11185, y: 64.645515, z: 13.983475}
+  m_Center: {x: 0, y: 0, z: 0}
