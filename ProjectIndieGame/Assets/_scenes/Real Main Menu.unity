@@ -3527,34 +3527,6 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Gate (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4865229847981530, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalScale.x
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4983141320862156, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -34.4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7615811d5beabb4b9eb2c79135a4e52, type: 2}
   m_IsPrefabAsset: 0
