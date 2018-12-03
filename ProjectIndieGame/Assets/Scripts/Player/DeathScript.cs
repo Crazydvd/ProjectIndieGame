@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class DeathScript : MonoBehaviour
 {
-
-    Rigidbody _rigidbody;
     Vector3 startPosition;
     PlayerStatus _playerStatus;
     PlayersHandler _playersHandler;
+    Movement _movement;
 
     // Use this for initialization
     void Start()
     {
-        startPosition = transform.position;
-        _rigidbody = GetComponent<Rigidbody>();
+        startPosition = transform.position;;
         _playerStatus = GetComponent<PlayerStatus>();
         _playersHandler = Camera.main.GetComponent<PlayersHandler>();
+        _movement = GetComponent<Movement>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -41,7 +40,7 @@ public class DeathScript : MonoBehaviour
             }
 
             transform.position = startPosition;
-            _rigidbody.velocity = Vector3.zero;
+            _movement.startImmortality();
         }
     }
 }

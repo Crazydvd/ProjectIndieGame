@@ -569,6 +569,7 @@ MonoBehaviour:
   _receivingDamage: 5
   _playerID: 1
   CANTMOVE: 0
+  IMMORTALITY_TIME: 2
 --- !u!114 &114733430267646936
 MonoBehaviour:
   m_ObjectHideFlags: 1

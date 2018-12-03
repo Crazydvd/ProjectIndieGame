@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
     [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
+    public float IMMORTALITY_TIME = 2;
+
     private bool _dodging;
     private float _timer;
 
@@ -35,6 +37,8 @@ public class Movement : MonoBehaviour
 
     private Vector2 _lateVelocity;
     private Vector2 _normal;
+
+    private bool _immortal = false;
 
     void Start()
     {
@@ -137,6 +141,11 @@ public class Movement : MonoBehaviour
 
     private void dodge()
     {
+        if (_immortal)
+        {
+            return;
+        }
+
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
             _timer = _dodgeCooldown;
@@ -161,7 +170,7 @@ public class Movement : MonoBehaviour
         normalColours();
         gameObject.layer = 9;
     }
-  
+
     private void OnCollisionEnter(Collision collision)
     {
         reflect(collision.contacts[0].normal);
@@ -171,6 +180,11 @@ public class Movement : MonoBehaviour
     {
         if (pOther.gameObject.tag.ToUpper() == "WEAPON" && pOther.transform.root != transform.root && !_dodging)
         {
+            if (_immortal)
+            {
+                return;
+            }
+
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
             _playerStatus.IncreaseDamage(pOther.transform.root.GetComponent<PlayerParameters>().ATTACK);
             GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
@@ -206,5 +220,59 @@ public class Movement : MonoBehaviour
     {
         _trailRenderer.startColor = new Color(1, 1, 1, pTransparency);
         _trailRenderer.endColor = new Color(1, 1, 1, pTransparency);
+    }
+
+    public bool Immortal
+    {
+        get
+        {
+            return _immortal;
+        }
+    }
+
+    public void startImmortality()
+    {
+        _immortal = true;
+
+
+        _rigidBody.velocity = Vector3.zero;
+        _walkVelocity = Vector3.zero;
+        _flyVelocity = Vector3.zero;
+
+        GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0.8f, 1);
+        Head.GetComponent<MeshRenderer>().material.color = new Color(0, 0, 0.8f, 1);
+
+        Invoke("endImmortality", IMMORTALITY_TIME);
+    }
+
+    private void endImmortality()
+    {
+        normalColours();
+
+        _immortal = false;
+    }
+
+    public Vector3 WalkVelocity
+    {
+        get
+        {
+            return _walkVelocity;
+        }
+        set
+        {
+            _walkVelocity = value;
+        }
+    }
+
+    public Vector3 FlyVelocity
+    {
+        get
+        {
+            return _flyVelocity;
+        }
+        set
+        {
+            _flyVelocity = value;
+        }
     }
 }

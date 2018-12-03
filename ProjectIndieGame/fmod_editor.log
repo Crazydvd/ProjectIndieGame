@@ -7,7 +7,15 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
+<<<<<<< HEAD
 [LOG] AsyncManager::init                       : manager 00000000487D4398 isAsync 0 updatePeriod 0.02
+=======
+<<<<<<< HEAD
+[LOG] AsyncManager::init                       : manager 000000004B49D458 isAsync 0 updatePeriod 0.02
+=======
+[LOG] AsyncManager::init                       : manager 000000004A6E2378 isAsync 0 updatePeriod 0.02
+>>>>>>> d7b24e8bb046f4e4a06485b068ccd69fb18bcf41
+>>>>>>> cc83bd763afc6e6c74dd6133071ca6a403b15432
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
