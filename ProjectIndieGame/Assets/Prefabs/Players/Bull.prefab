@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 114586449570711818}
   m_Layer: 9
   m_Name: Bull
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,6 +503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationPoint: {fileID: 1080602218654834}
   Head: {fileID: 1715327320628266}
+  SmokeParticle: {fileID: 1801190564836712, guid: 37dc78db3bb40784aa255186489f1110,
+    type: 2}
   _maxSpeed: 100
   _dodgeCooldown: 0.2
   _dodgeSpeed: 2.5
@@ -513,6 +515,7 @@ MonoBehaviour:
   _playerID: 2
   CANTMOVE: 0
   IMMORTALITY_TIME: 2
+  transparency_interval: 0.1
 --- !u!114 &114429205030236094
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -558,7 +561,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133139438538994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e7127085d72e084182e76f9843665ab, type: 3}
   m_Name: 

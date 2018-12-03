@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     public GameObject RotationPoint;
     public GameObject Head;
 
-    public GameObject PREFAB;
+    public GameObject SmokeParticle;
 
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }
+        }     
     }
 
     private void FixedUpdate()
@@ -182,9 +182,13 @@ public class Movement : MonoBehaviour
         reflect(collision.contacts[0].normal);
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
+        Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+
+        if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
-            Instantiate(PREFAB, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
-            FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
+            Vector3 point = collision.contacts[0].point;
+            Vector3 position = new Vector3(point.x, 0.1f, point.z);
+            Instantiate(SmokeParticle, position, Quaternion.LookRotation(Vector3.up));
         }
     }
 

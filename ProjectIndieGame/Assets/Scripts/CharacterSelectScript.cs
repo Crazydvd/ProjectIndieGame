@@ -6,15 +6,15 @@ using UnityEngine.UI;
 public class CharacterSelectScript : MonoBehaviour
 {
     [SerializeField] GameObject _modelsParent;
-    [SerializeField] GameObject _selector;
-    [SerializeField] GameObject _selectedSelector;
+
+    [SerializeField] GameObject[] _namesDeselected;
+    [SerializeField] GameObject[] _namesSelected;
+
     [Range(1,2)]
     [SerializeField] int _playerID = 1;
     [SerializeField] float _timeoutTime = 0.2f;
 
     PopulatePreviewScript _populatePreviewScript;
-    GameObject _currentSelector;
-    List<GameObject> _characters = new List<GameObject>();
 
     int _char = 0;
     int _color = 0;
@@ -29,15 +29,6 @@ public class CharacterSelectScript : MonoBehaviour
         _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
         _enemyPlayerID = _playerID == 1 ? 2 : 1;
 
-        // populate list with portraits
-        foreach (Transform gObject in gameObject.GetComponentInChildren<Transform>())
-        {
-            if (gObject != gameObject)
-            {
-                _characters.Add(gObject.gameObject);
-            }
-        }
-
         _color = _playerID - 1;
 
         int oldSelect = PlayerPrefs.GetInt("Char_P" + _playerID);
@@ -47,9 +38,8 @@ public class CharacterSelectScript : MonoBehaviour
         }
         PlayerPrefs.SetInt("Preselect_char_P" + _playerID, _char);
         PlayerPrefs.SetInt("Preselect_color_P" + _playerID, _color);
-
-        _currentSelector = Instantiate(_selector, transform);
         SetCharacter();
+        SetNameDeselected();
     }
 
     // Update is called once per frame
@@ -66,10 +56,11 @@ public class CharacterSelectScript : MonoBehaviour
 
         if (Input.GetButtonDown("Accept_P" + _playerID))
         {
-            _currentSelector.gameObject.GetComponent<Image>().sprite = _selectedSelector.GetComponent<Image>().sprite;
             PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
             PlayerPrefs.SetInt("Char_P" + _playerID, _char);
             _selected = true;
+
+            SetNameSelected();
         }
         else if (Input.GetButtonDown("Decline_P" + _playerID))
         {
@@ -113,36 +104,49 @@ public class CharacterSelectScript : MonoBehaviour
             if (Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
             {    
                 _char++;
-                if (_char > _characters.Count - 1) _char = 0;
+                if (_char > _namesSelected.Length - 1) _char = 0;
                 resetColor();
                 SetCharacter();
+
+                SetNameDeselected();
             }
             if (Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
             {
                 _char--;
-                if (_char < 0) _char = _characters.Count - 1;
+                if (_char < 0) _char = _namesSelected.Length - 1;
                 resetColor();
                 SetCharacter();
+
+                SetNameDeselected();
             }
         }
     }
 
     void resetColor()
     {
-        Debug.Log(PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) + " - " + PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID));
-        Debug.Log(_char + " - " + _color);
         _color = 0;
         if (PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) == _char && PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID) == _color)
         {
-            Debug.Log(PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) + " - " + PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID));
-            Debug.Log("heh");
             _color++;
         }
     }
 
+    void SetNameDeselected()
+    {
+        // remove Children
+        RemoveChildren();
+        Instantiate(_namesDeselected[_char], transform); // initiate new name
+    }
+
+    void SetNameSelected()
+    {
+        // remove Children
+        RemoveChildren();
+        Instantiate(_namesSelected[_char], transform); // initiate new name
+    }
+
     void SetCharacter()
     {
-        _currentSelector.transform.position = _characters[_char].transform.position;
         PlayerPrefs.SetInt("Preselect_color_P" + _playerID, _color);
         PlayerPrefs.SetInt("Preselect_char_P" + _playerID, _char);
 
@@ -151,20 +155,25 @@ public class CharacterSelectScript : MonoBehaviour
         _timeoutTimer = _timeoutTime;
     }
 
+    void RemoveChildren()
+    {
+        for (int i = transform.childCount; i > 0; i--)
+        {
+            Destroy(transform.GetChild(i - 1).gameObject);
+        }
+    }
+
     void DeselectCharacter() {
         PlayerPrefs.SetInt("Char_P" + _playerID, -1);
         PlayerPrefs.SetInt("Char_color_P" + _playerID, -1);
-        _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
         _selected = false;
+
+        SetNameDeselected();
     }
 
     private void OnEnable()
     {
         _selected = false;
         PlayerPrefs.SetInt("Char_P" + _playerID, -1);
-        if (_currentSelector != null)
-        {
-            _currentSelector.gameObject.GetComponent<Image>().sprite = _selector.GetComponent<Image>().sprite;
-        }
     }
 }

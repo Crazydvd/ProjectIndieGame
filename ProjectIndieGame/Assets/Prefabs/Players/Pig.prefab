@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114862569485347798}
   m_Layer: 9
   m_Name: Pig
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 96150003690634968}
   m_Layer: 9
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -513,8 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aecd59f4470dfa4aa5e26ab549ee0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _resolutionScreen: {fileID: 0}
-  resolutionScreenText: {fileID: 0}
 --- !u!114 &114532598943499032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -563,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageUI: {fileID: 0}
-  livesUI: {fileID: 0}
+  _livesUI_full: []
 --- !u!114 &114832167761209156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -605,6 +603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationPoint: {fileID: 1468924333327678}
   Head: {fileID: 1953033446727242}
+  SmokeParticle: {fileID: 1801190564836712, guid: 37dc78db3bb40784aa255186489f1110,
+    type: 2}
   _maxSpeed: 100
   _dodgeCooldown: 1
   _dodgeSpeed: 2.5
@@ -614,6 +614,8 @@ MonoBehaviour:
   _receivingDamage: 5
   _playerID: 1
   CANTMOVE: 0
+  IMMORTALITY_TIME: 2
+  transparency_interval: 0.1
 --- !u!135 &135891877651269504
 SphereCollider:
   m_ObjectHideFlags: 1
