@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="MixerGroup" id="{726f0d85-a60b-48f9-aee9-67cfedce45e0}">
+        <property name="volume">
+            <value>-19.8000011</value>
+        </property>
+        <property name="name">
+            <value>dodge</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{dfb6a5fc-cc29-4575-a7fb-af605b088aa0}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{c98edac9-9240-4b26-87bc-8f87e31bf37e}</destination>
+        </relationship>
+        <relationship name="output">
+            <destination>{3629d67f-8dec-49ed-822a-647e8d09378b}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{dfb6a5fc-cc29-4575-a7fb-af605b088aa0}">
+        <relationship name="effects">
+            <destination>{79d9e8bd-7db5-4594-8c03-d174e6793da1}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{c98edac9-9240-4b26-87bc-8f87e31bf37e}"/>
+    <object class="MixerBusFader" id="{79d9e8bd-7db5-4594-8c03-d174e6793da1}"/>
+</objects>
