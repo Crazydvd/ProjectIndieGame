@@ -157,6 +157,7 @@
      <None Include="Assets\Shaders\HandoutShaders\RedShader.shader" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{c30a0a6e-f15f-4d19-830c-a6d2926fb832}.xml" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{f76164c2-1864-4fa5-a673-2de856b42340}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{b3bb3b62-de14-43b0-a345-b14f2f8bfcaa}.xml" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
@@ -178,11 +179,13 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b5d0766a-ba0d-400e-ab57-f0f81db7de62}.xml" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52f67d28-5444-44e9-b99c-1a85bf0ba932}.xml" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\Platform\{9bc46831-809b-4623-90fd-85579b1ef23f}.xml" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <None Include="Assets\Shaders\HandoutShaders\UVcycleShader.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9e55a0c9-e352-4e49-b6c0-fca57b7156da}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{a741277a-830c-4dce-ab4f-164ee120d5fd}.xml" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{2c81661b-665f-474e-9c84-4568a385ca2e}.xml" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
@@ -197,6 +200,7 @@
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{682f8507-3e62-426e-b26c-f812a71efe56}.xml" />
      <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ace2153b-51fd-4599-84e1-f43ac7b977fc}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9fb2479d-7d03-485c-a8d7-1347d14ad39d}.xml" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\Bank\{190993ff-971d-468d-a06c-102ff4caeec5}.xml" />
      <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52865590-69d0-4c40-9000-ee7bd43c1037}.xml" />
      <None Include="Assets\Shaders\HandoutShaders\WoodShader.shader" />
