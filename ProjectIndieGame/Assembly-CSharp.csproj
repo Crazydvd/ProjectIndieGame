@@ -85,7 +85,6 @@
     <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_studio.cs" />
     <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
     <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
-    <Compile Include="Assets\PlaySecretAnimation.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -138,6 +137,7 @@
     <Compile Include="Assets\Scripts\GameMenuManager.cs" />
     <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
     <Compile Include="Assets\Scripts\LoadPlayerSprite.cs" />
+    <Compile Include="Assets\Scripts\MainMenuCameraScript.cs" />
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
     <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\Player\RollingSound.cs" />
     <Compile Include="Assets\Scripts\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayersHandler.cs" />
+    <Compile Include="Assets\Scripts\PlaySecretAnimation.cs" />
     <Compile Include="Assets\Scripts\PopulatePreviewScript.cs" />
     <Compile Include="Assets\Scripts\Rotation.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
