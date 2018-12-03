@@ -449,10 +449,11 @@ GameObject:
   m_Component:
   - component: {fileID: 97309839}
   - component: {fileID: 97309838}
-  - component: {fileID: 97309837}
   - component: {fileID: 97309836}
   - component: {fileID: 97309835}
   - component: {fileID: 97309834}
+  - component: {fileID: 97309841}
+  - component: {fileID: 97309837}
   - component: {fileID: 97309840}
   m_Layer: 0
   m_Name: Main Camera
@@ -501,13 +502,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7842efae2d4124b8cbb2feb8fa820f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!81 &97309837
-AudioListener:
+--- !u!114 &97309837
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 97309833}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1be319ea5b528d840ad7362ee5c1d16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &97309838
 Camera:
   m_ObjectHideFlags: 0
@@ -579,6 +584,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &97309841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 97309833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1001 &158048579
 Prefab:
   m_ObjectHideFlags: 0
@@ -6621,7 +6638,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1659199407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7530,7 +7547,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4072413226036464, guid: 3663032b611a00f4e9b39338e512b052, type: 2}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 1417974444101506, guid: 3663032b611a00f4e9b39338e512b052, type: 2}
       propertyPath: m_Name
