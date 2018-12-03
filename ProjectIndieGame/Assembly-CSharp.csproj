@@ -54,10 +54,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
+<<<<<<< HEAD
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+=======
+      <HintPath>D:\Unity 3D\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Unity 3D\Editor\Data\Managed/UnityEditor.dll</HintPath>
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -131,30 +138,36 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Animations\AnimationScript.cs" />
-    <Compile Include="Assets\Scripts\Attack.cs" />
+    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
-    <Compile Include="Assets\Scripts\DeathScript.cs" />
     <Compile Include="Assets\Scripts\GameMenuManager.cs" />
     <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
-    <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\Offset.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
-    <Compile Include="Assets\Scripts\PlayerCollision.cs" />
-    <Compile Include="Assets\Scripts\PlayerParameters.cs" />
-    <Compile Include="Assets\Scripts\PlayerRotationScript.cs" />
+    <Compile Include="Assets\Scripts\Player\Attack.cs" />
+    <Compile Include="Assets\Scripts\Player\DeathScript.cs" />
+    <Compile Include="Assets\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Scripts\Player\Offset.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerParameters.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerRotationScript.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerSound.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
+    <Compile Include="Assets\Scripts\Player\RollingSound.cs" />
+    <Compile Include="Assets\Scripts\Player\RotatePlayer.cs" />
     <Compile Include="Assets\Scripts\PlayersHandler.cs" />
-    <Compile Include="Assets\Scripts\PlayerSound.cs" />
-    <Compile Include="Assets\Scripts\PlayerStatus.cs" />
     <Compile Include="Assets\Scripts\PopulatePreviewScript.cs" />
-    <Compile Include="Assets\Scripts\RollingSound.cs" />
-    <Compile Include="Assets\Scripts\RotatePlayer.cs" />
+    <Compile Include="Assets\Scripts\Rotation.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
     <Compile Include="Assets\Scripts\StageSelectorScript.cs" />
     <Compile Include="Assets\Scripts\StageSelectWindowScript.cs" />
     <Compile Include="Assets\Scripts\TimerScript.cs" />
+<<<<<<< HEAD
+=======
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{8c70b091-610e-4ddc-a5e9-712d0a99e8a4}.xml" />
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{12f19629-b022-4a67-9b34-3c9887f5d733}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{9c596b59-04a6-4aaf-b1f7-ecf3fe8714cf}.xml" />
@@ -192,6 +205,7 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{0b2f405f-e803-4671-a132-97491d1e8bb6}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\EffectPresetFolder\{62725d03-9564-4a00-b35d-837416262702}.xml" />
@@ -200,6 +214,10 @@
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{682f8507-3e62-426e-b26c-f812a71efe56}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+<<<<<<< HEAD
+=======
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ace2153b-51fd-4599-84e1-f43ac7b977fc}.xml" />
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
     <None Include="Assets\FMOD\FMOD Project\Metadata\Bank\{190993ff-971d-468d-a06c-102ff4caeec5}.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52865590-69d0-4c40-9000-ee7bd43c1037}.xml" />
     <None Include="Assets\Shaders\HandoutShaders\WoodShader.shader" />
@@ -228,9 +246,17 @@
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{4e1f4421-042c-402d-9e7a-869795e92b49}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Master.xml" />
+<<<<<<< HEAD
     <None Include="Assets\FMOD\FMOD Project\Metadata\Tags.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{7d306ac0-650c-4fca-90c6-4f93ed4cf626}.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
+=======
+    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{530862ea-1078-4636-b2c6-ae99d96de6b1}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\Tags.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{7d306ac0-650c-4fca-90c6-4f93ed4cf626}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{5dfcc289-400d-4238-a7d9-979630e9fdba}.xml" />
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{92e51ae5-5bdd-4a1c-bf17-ae834df3a2d6}.xml" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
@@ -241,11 +267,22 @@
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b557337b-39f8-47d6-a08d-83c197c028de}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{658c7b25-dd41-4e19-b711-f42403510528}.xml" />
+<<<<<<< HEAD
     <None Include="Assets\FMOD\FMOD Project\Metadata\SnapshotGroup\{cb3d15b0-8048-4886-832d-b322d6483211}.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{eeb1f91b-8e97-4735-bc0b-0d3557775b78}.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c474a44a-274a-4cb1-b9f3-1d61ca73a066}.xml" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
     <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
+=======
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{bd86cb8d-cd46-4896-adf1-a1cd56337b40}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\SnapshotGroup\{cb3d15b0-8048-4886-832d-b322d6483211}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{eeb1f91b-8e97-4735-bc0b-0d3557775b78}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPreset\{0746bf8b-453c-4e25-b207-d23fb6d6a5a7}.xml" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c474a44a-274a-4cb1-b9f3-1d61ca73a066}.xml" />
+    <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
+    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{a31cc860-9e7c-4516-93e0-9c18816d5c1c}.xml" />
+>>>>>>> c3328c70a5fe55b490c29d19ed415dfa3e63528e
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{6603d152-6343-49c9-9006-f8d490daa7f0}.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
