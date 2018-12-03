@@ -95,6 +95,9 @@
         <property name="length">
             <value>0.488843537414966</value>
         </property>
+        <property name="looping">
+            <value>true</value>
+        </property>
         <relationship name="modulators">
             <destination>{1d206f87-631a-4afc-bf9a-b147e2132953}</destination>
             <destination>{dc1d3fd4-3799-4984-90cf-c0559da3f5d4}</destination>
@@ -152,7 +155,7 @@
             <value>pitch</value>
         </property>
         <property name="amount">
-            <value>18.5</value>
+            <value>60.5</value>
         </property>
     </object>
     <object class="SingleSound" id="{08d9a997-8102-47dc-ad86-a5ed03c40702}">
