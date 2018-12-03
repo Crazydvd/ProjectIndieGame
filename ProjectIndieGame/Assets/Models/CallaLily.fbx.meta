@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df3f89573a9d6414989ac95197e503bc
+guid: 7d73973b7dd1001499406dcab02fb6c2
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Fence_Middle2
+    4300000: CallaLily
   externalObjects: {}
   materials:
     importMaterials: 1
