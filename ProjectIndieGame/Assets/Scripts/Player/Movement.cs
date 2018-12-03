@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
         if (_timer > 0)
         {
             _timer -= Time.deltaTime;
-        }     
+        }
     }
 
     private void FixedUpdate()
@@ -143,7 +143,6 @@ public class Movement : MonoBehaviour
         Vector2 _velocity = Vector2.Reflect(_lateVelocity, _normal);
         Vector3 vector = new Vector3(_velocity.x, 0, _velocity.y);
         _rigidBody.velocity = vector;
-        FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
     }
 
     private void dodge()
@@ -182,10 +181,11 @@ public class Movement : MonoBehaviour
     {
         reflect(collision.contacts[0].normal);
 
-        print(_rigidBody.velocity);
-
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
-        Instantiate(PREFAB, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+        {
+            Instantiate(PREFAB, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+            FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
+        }
     }
 
     private void OnTriggerEnter(Collider pOther)

@@ -13562,6 +13562,12 @@ Prefab:
       propertyPath: _livesUI_full.Array.data[3]
       value: 
       objectReference: {fileID: 1605081713}
+    - target: {fileID: 114673730717956804, guid: 45d6764e9d036734da619855423e13e7,
+        type: 2}
+      propertyPath: PREFAB
+      value: 
+      objectReference: {fileID: 1801190564836712, guid: 37dc78db3bb40784aa255186489f1110,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45d6764e9d036734da619855423e13e7, type: 2}
   m_IsPrefabAsset: 0
@@ -22106,6 +22112,12 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114259588950105608, guid: 232d3738cf59ba2499e59762506c72b6,
+        type: 2}
+      propertyPath: PREFAB
+      value: 
+      objectReference: {fileID: 1801190564836712, guid: 37dc78db3bb40784aa255186489f1110,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232d3738cf59ba2499e59762506c72b6, type: 2}
   m_IsPrefabAsset: 0
