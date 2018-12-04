@@ -5,7 +5,7 @@ using UnityEngine;
 public class BreakFences : MonoBehaviour
 {
     [SerializeField] private bool _breakable;
-    [SerializeField] private int _durability = 20;
+    [SerializeField] private int _durability = 12;
 
     //All the meshes
     [SerializeField] private Mesh _broken1;
@@ -28,16 +28,20 @@ public class BreakFences : MonoBehaviour
 
         switch (_durability)
         {
-            case 15:
+            case 9:
                 _mesh.mesh = _broken1;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
-            case 10:
+            case 6:
                 _mesh.mesh = _broken2;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
-            case 5:
+            case 3:
                 _mesh.mesh = _broken3;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 0:
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 Destroy(gameObject, 0f);
                 break;
             default:

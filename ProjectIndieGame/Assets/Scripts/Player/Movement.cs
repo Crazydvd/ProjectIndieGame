@@ -135,7 +135,7 @@ public class Movement : MonoBehaviour
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
         {
             StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
-            FMODUnity.RuntimeManager.PlayOneShot("event:/bounce");
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/bounce", gameObject);
         }
         _normal.Set(pNormal.x, pNormal.z);
         Vector2 _velocity = Vector2.Reflect(_lateVelocity, _normal);
@@ -161,7 +161,7 @@ public class Movement : MonoBehaviour
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/dodge");
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/dodge", gameObject);
         }
     }
 
@@ -178,6 +178,11 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!CameraAnimation.Finished)
+        {
+            return;
+        }
+
         reflect(collision.contacts[0].normal);
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
@@ -213,7 +218,7 @@ public class Movement : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Invoke("normalColours", 0.1f);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/" + transform.root.name + " gets hit");
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + transform.root.name + " gets hit", gameObject);
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);

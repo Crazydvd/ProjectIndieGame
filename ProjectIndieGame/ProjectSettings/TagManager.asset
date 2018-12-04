@@ -7,6 +7,8 @@ TagManager:
   - Boundary
   - Wall
   - Weapon
+  - Light
+  - Canvas
   layers:
   - Default
   - TransparentFX

@@ -7,18 +7,39 @@ public class TimerScript : MonoBehaviour
 {
     [SerializeField] private float _givenTime = 180;
 
+    [Header("What the rotation of the light will be at when the timer runs out")]
+    public Vector3 _targetRotation = new Vector3(-3f, -30f, 0);
+
     private Text _timerUI;
     private PlayersHandler _playerHandler;
+    private GameObject _light;
+
+    private Vector3 _originalRotation;
+    private Vector3 _delta;
+
+    private float _scalar = 0;
+    private float _time;
 
     void Start()
     {
         _timerUI = GetComponent<Text>();
         _playerHandler = Camera.main.GetComponent<PlayersHandler>();
         _timerUI.text = ((int)_givenTime).ToString();
+        _light = GameObject.FindWithTag("Light");
+        if (_light == null)
+        {
+            throw new System.Exception("YOU DIDN'T APPLY A TAG TO THE LIGHT");
+        }
+
+        _originalRotation = _light.transform.rotation.eulerAngles;
+        _time = _givenTime;
+        _delta = _targetRotation - _originalRotation;
     }
-    
+
     void Update()
     {
+        rotateLight();
+
         if (_givenTime <= 0)
         {
             string winner = "No one";
@@ -40,7 +61,7 @@ public class TimerScript : MonoBehaviour
                     bestPlayerStats = playerStats;
                     winner = player.name;
                 }
-                else if(playerStats.GetLives() == bestPlayerStats.GetLives())
+                else if (playerStats.GetLives() == bestPlayerStats.GetLives())
                 {
                     if (playerStats.GetDamage() < bestPlayerStats.GetDamage())
                     {
@@ -59,6 +80,12 @@ public class TimerScript : MonoBehaviour
         }
 
         _givenTime -= Time.deltaTime;
-        _timerUI.text = ((int)_givenTime).ToString(); 
+        _timerUI.text = ((int)_givenTime).ToString();
+    }
+
+    private void rotateLight()
+    {
+        _scalar += (1 / _time) * Time.deltaTime;
+        _light.transform.rotation = Quaternion.Euler(_originalRotation + _delta * _scalar);
     }
 }
