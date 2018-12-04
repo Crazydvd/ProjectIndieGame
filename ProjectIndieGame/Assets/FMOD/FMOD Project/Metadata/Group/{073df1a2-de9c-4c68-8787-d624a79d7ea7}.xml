@@ -7,6 +7,9 @@
         <property name="name">
             <value>bounce</value>
         </property>
+        <relationship name="masters">
+            <destination>{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{bfe06b1e-a439-45a1-af9c-c7bfb0ea3afc}</destination>
         </relationship>
