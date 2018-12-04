@@ -7,6 +7,9 @@
         <property name="name">
             <value>moving</value>
         </property>
+        <relationship name="masters">
+            <destination>{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{0ae38f0a-bd95-4ac1-971b-8b3e98ee5715}</destination>
         </relationship>

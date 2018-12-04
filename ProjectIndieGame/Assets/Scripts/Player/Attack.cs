@@ -48,7 +48,7 @@ public class Attack : MonoBehaviour
             //TODO: MAKE IT DO IT FOR EVERYONE
             AnimationScript animation = transform.root.GetComponentInChildren<AnimationScript>();
             animation.PlayAttackAnimation();
-            FMODUnity.RuntimeManager.PlayOneShot("event:/attack");
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/attack", gameObject);
 
             Invoke("DisableHitBox", 0.25f);
         }

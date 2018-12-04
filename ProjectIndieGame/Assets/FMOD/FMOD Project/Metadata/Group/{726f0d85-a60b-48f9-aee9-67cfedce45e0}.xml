@@ -7,6 +7,9 @@
         <property name="name">
             <value>dodge</value>
         </property>
+        <relationship name="masters">
+            <destination>{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{dfb6a5fc-cc29-4575-a7fb-af605b088aa0}</destination>
         </relationship>
