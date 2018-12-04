@@ -178,6 +178,11 @@ public class Movement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!CameraAnimation.Finished)
+        {
+            return;
+        }
+
         reflect(collision.contacts[0].normal);
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)

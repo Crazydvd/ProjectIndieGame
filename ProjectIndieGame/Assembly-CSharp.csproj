@@ -132,6 +132,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\Animations\AnimationScript.cs" />
+    <Compile Include="Assets\Scripts\Animations\CameraAnimation.cs" />
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\BreakFences.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />

@@ -11,6 +11,11 @@ public class PlaySecretAnimation : MonoBehaviour
 
     bool turnWhite = false;
 
+    private void Start()
+    {
+        GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +25,6 @@ public class PlaySecretAnimation : MonoBehaviour
             GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             animator.enabled = true;
             Invoke("ActivateSword", 4.5f);
-
         }
 
         if (turnWhite)
@@ -28,7 +32,6 @@ public class PlaySecretAnimation : MonoBehaviour
             Color newcolor = new Color(_white.color.r, _white.color.g, _white.color.b, _white.color.a + 0.004f);
             _white.color = newcolor;
         }
-        Color color = new Color(_white.color.r, _white.color.g, _white.color.b, _white.color.a);
     }
 
     void ActivateSword()
