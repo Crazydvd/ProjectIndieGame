@@ -6,7 +6,6 @@ public class CameraAnimation : MonoBehaviour
 {
     private Animator _animator;
     private bool _played = false;
-    private bool _done;
 
     private GameObject[] _players;
     private GameObject _canvas;
@@ -28,19 +27,6 @@ public class CameraAnimation : MonoBehaviour
         toggleHUD();
         togglePlayerRotationAndMovement();
         playMoveAnimation();
-    }
-
-    private void Update()
-    {
-        if (_done) return;
-        
-        AnimatorStateInfo currentState = _animator.GetCurrentAnimatorStateInfo(0);
-
-        if (currentState.IsName("CameraMove"))
-        {
-            _played = true;
-            return;
-        }
     }
 
     private void toggleHUD()
@@ -65,7 +51,6 @@ public class CameraAnimation : MonoBehaviour
     public void EndOfAnimation()
     {
         Finished = true;
-        _done = true;
 
         toggleHUD();
         togglePlayerRotationAndMovement();
