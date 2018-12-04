@@ -51,12 +51,12 @@ public class CameraAnimation : MonoBehaviour
 
     private void playMoveAnimation()
     {
+        _canvas.GetComponent<CountdownScript>().StartTimer();
         _animator.Play("CameraMove");
     }
 
     public void PlayInverseMoveAnimation(GameObject pResolutionScreen)
     {
-        print("It will move now");
         _resolutionScreen = pResolutionScreen;
         _animator.Play("CameraMove Inverse");
     }
@@ -76,6 +76,11 @@ public class CameraAnimation : MonoBehaviour
 
         toggleHUD();
         togglePlayerRotationAndMovement();
+    }
+
+    public void StartTimer()
+    {
+        _canvas.GetComponent<CountdownScript>().StartTimer();
     }
 
     public static bool Finished { get; set; }

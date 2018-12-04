@@ -137,6 +137,7 @@
     <Compile Include="Assets\Scripts\BreakFences.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
+    <Compile Include="Assets\Scripts\CountdownScript.cs" />
     <Compile Include="Assets\Scripts\GameMenuManager.cs" />
     <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
     <Compile Include="Assets\Scripts\LoadPlayerSprite.cs" />

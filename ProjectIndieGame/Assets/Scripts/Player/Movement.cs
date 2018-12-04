@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public GameObject SmokeParticle;
 
     private GameObject _dirtParticle;
-    private GameObject _dashParticle;
+    private TrailRenderer _trail;
 
     private Rigidbody _rigidBody;
     private ScreenShake _screenShake;
@@ -55,9 +55,9 @@ public class Movement : MonoBehaviour
         _playerStatus = GetComponent<PlayerStatus>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
         _dirtParticle = transform.Find("DirtTrail").gameObject;
-        _dashParticle = transform.Find("DashTrail").gameObject;
+        _trail = GetComponent<TrailRenderer>();
 
-        _dashParticle.SetActive(false);
+        _trail.time = 0;
         _dirtParticle.SetActive(true);
 
         _lateVelocity = Vector2.zero;
@@ -152,7 +152,7 @@ public class Movement : MonoBehaviour
 
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
-            _dashParticle.SetActive(true);
+            _trail.time = 5;
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * _dodgeSpeed;
@@ -167,7 +167,7 @@ public class Movement : MonoBehaviour
 
     private void StopDodge()
     {
-        _dashParticle.SetActive(false);
+        _trail.time = 0;
         _dirtParticle.SetActive(true);
 
         _dodging = false;
@@ -252,7 +252,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public void startImmortality()
+    public void StartImmortality()
     {
         _immortal = true;
 
