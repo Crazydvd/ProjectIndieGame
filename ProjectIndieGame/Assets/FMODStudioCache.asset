@@ -12,51 +12,116 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-<<<<<<< HEAD
-  - {fileID: 114589419577452886}
-  - {fileID: 114999312032718162}
+  - {fileID: 114782640705818598}
+  - {fileID: 114908811835512310}
   EditorEvents:
-  - {fileID: 114651236368938244}
-  - {fileID: 114006945533097684}
-  - {fileID: 114575089341065348}
-  - {fileID: 114995812363590480}
-  - {fileID: 114350300548334382}
-  - {fileID: 114776646105468536}
-  - {fileID: 114205591565098150}
-  - {fileID: 114970217601465274}
-  - {fileID: 114200309556452614}
-  - {fileID: 114995224023348628}
-  - {fileID: 114561328451484682}
-  - {fileID: 114545179410116318}
-  - {fileID: 114682135493423094}
-  - {fileID: 114822286905148594}
-  MasterBankRef: {fileID: 114999312032718162}
-  StringsBankRef: {fileID: 114589419577452886}
+  - {fileID: 114118046753690462}
+  - {fileID: 114112954616988264}
+  - {fileID: 114151387236515246}
+  - {fileID: 114013046295250758}
+  - {fileID: 114964934929831142}
+  - {fileID: 114328917169991134}
+  - {fileID: 114858283795044990}
+  - {fileID: 114248195917437768}
+  - {fileID: 114826977448605326}
+  - {fileID: 114042623966586084}
+  - {fileID: 114860731022647248}
+  - {fileID: 114760616987236706}
+  - {fileID: 114551635791244132}
+  - {fileID: 114755842577017744}
+  MasterBankRef: {fileID: 114908811835512310}
+  StringsBankRef: {fileID: 114782640705818598}
   stringsBankWriteTime: 636795328355108010
-=======
-  - {fileID: 114531437320544974}
-  - {fileID: 114417875486554702}
-  EditorEvents:
-  - {fileID: 114775719274032820}
-  - {fileID: 114840953674893378}
-  - {fileID: 114110024128798760}
-  - {fileID: 114761987671521826}
-  - {fileID: 114936610036390842}
-  - {fileID: 114424224228146984}
-  - {fileID: 114687131118210864}
-  - {fileID: 114448236238540954}
-  - {fileID: 114110153712079066}
-  - {fileID: 114958366104071902}
-  - {fileID: 114335641229318572}
-  - {fileID: 114714529679209644}
-  - {fileID: 114805625673881802}
-  - {fileID: 114901825280984684}
-  MasterBankRef: {fileID: 114417875486554702}
-  StringsBankRef: {fileID: 114531437320544974}
-  stringsBankWriteTime: 636795329172383463
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
   cacheVersion: 2
---- !u!114 &114110024128798760
+--- !u!114 &114013046295250758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Pig gets hit
+  guid: 52d103664363c9499006f8d490daa7f0
+  Banks:
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 625
+--- !u!114 &114042623966586084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/end game
+  guid: 9400b8634fb2cc498c76457a755671cf
+  Banks:
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3483
+--- !u!114 &114112954616988264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/dodge
+  guid: 4aa474c44a27b14cb9f31d61ca73a066
+  Banks:
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 445
+--- !u!114 &114118046753690462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/attack
+  guid: 0bd46ae5e4e4f54685b945ba0ecb89e1
+  Banks:
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 488
+--- !u!114 &114151387236515246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,11 +135,7 @@ MonoBehaviour:
   Path: event:/bounce
   guid: 51d31ce4af1e944aac00eb5c3a4cde74
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -82,101 +143,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 461
---- !u!114 &114110153712079066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Fence break
-  guid: 85fc52267e01854bacdc739eaa163612
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 1604
---- !u!114 &114335641229318572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/doom
-  guid: b11259b8113a4d4c832c0a9caa958237
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 12853
---- !u!114 &114417875486554702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\lmwel\Documents\ProjectIndieGame\ProjectIndieGame\Assets\FMOD\FMOD
-    Project\Build\Desktop\Master Bank.bank
-  lastModified: 636795329172313344
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1567616
-  Exists: 1
---- !u!114 &114424224228146984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/rolling
-  guid: 6a76d0b50dba0e40ab57f0f81db7de62
-  Banks:
-  - {fileID: 114417875486554702}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 114900357760279894}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114448236238540954
+--- !u!114 &114248195917437768
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,11 +157,7 @@ MonoBehaviour:
   Path: event:/loosing live
   guid: 7b3357b5f839d647a08d83c197c028de
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -202,25 +165,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1101
---- !u!114 &114531437320544974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: Assets\FMOD\FMOD Project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636795329172383463
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1688
-  Exists: 1
---- !u!114 &114687131118210864
+--- !u!114 &114328917169991134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,27 +176,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/menu
-  guid: 7a2741a70c83ce4dab4f164ee120d5fd
+  Path: event:/rolling
+  guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114983431420119378}
-=======
-  - {fileID: 114417875486554702}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114634185842084952}
   MinDistance: 0
   MaxDistance: 0
-  Length: 51414
---- !u!114 &114714529679209644
+  Length: 0
+--- !u!114 &114551635791244132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -262,22 +199,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/ram gets hit
-  guid: c06a307d0c65ca4f90c64f93ed4cf626
+  Path: event:/rollingv2
+  guid: db1fa2c3272caa43a49338c543072479
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114612373754926134}
   MinDistance: 0
   MaxDistance: 0
-  Length: 1000
---- !u!114 &114743084841451932
+  Length: 0
+--- !u!114 &114612373754926134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +226,37 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
---- !u!114 &114761987671521826
+--- !u!114 &114634185842084952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114729730268442788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Lifes
+  Min: 1
+  Max: 3
+  Default: 1
+--- !u!114 &114755842577017744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,23 +267,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Pig gets hit
-  guid: 52d103664363c9499006f8d490daa7f0
+  Path: event:/Soundtrack
+  guid: ea62085378103646b2c6ae99d96de6b1
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114729730268442788}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &114760616987236706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ram gets hit
+  guid: c06a307d0c65ca4f90c64f93ed4cf626
+  Banks:
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-<<<<<<< HEAD
-  Length: 461
---- !u!114 &114589419577452886
+  Length: 1000
+--- !u!114 &114782640705818598
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,41 +319,7 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1688
   Exists: 1
---- !u!114 &114634460148714500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Lifes
-  Min: 1
-  Max: 3
-  Default: 1
---- !u!114 &114642047076014996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Lifes
-  Min: 1
-  Max: 3
-  Default: 1
---- !u!114 &114651236368938244
-=======
-  Length: 625
---- !u!114 &114775719274032820
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+--- !u!114 &114826977448605326
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,194 +330,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/attack
-  guid: 0bd46ae5e4e4f54685b945ba0ecb89e1
+  Path: event:/Fence break
+  guid: 85fc52267e01854bacdc739eaa163612
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  - {fileID: 114908811835512310}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 488
-<<<<<<< HEAD
---- !u!114 &114682135493423094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Soundtrack
-  guid: ea62085378103646b2c6ae99d96de6b1
-  Banks:
-  - {fileID: 114999312032718162}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 114940683866831948}
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114724675145862134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
---- !u!114 &114776646105468536
-=======
---- !u!114 &114805625673881802
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/rollingv2
-  guid: db1fa2c3272caa43a49338c543072479
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-<<<<<<< HEAD
-  - {fileID: 114903948446667428}
-=======
-  - {fileID: 114743084841451932}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &114840953674893378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/dodge
-  guid: 4aa474c44a27b14cb9f31d61ca73a066
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-<<<<<<< HEAD
   Length: 1604
---- !u!114 &114873516279914320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\My courses\2st year\Project Indie Game\ProjectIndieGame\Assets\FMOD\FMOD
-    Project\Build\Desktop\Master Bank.bank
-  lastModified: 636795318375585324
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1567616
-  Exists: 1
---- !u!114 &114903948446667428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
---- !u!114 &114909501030347612
-=======
-  Length: 445
---- !u!114 &114900357760279894
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
-<<<<<<< HEAD
---- !u!114 &114940683866831948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Lifes
-  Min: 1
-  Max: 3
-  Default: 1
---- !u!114 &114970217601465274
-=======
---- !u!114 &114901825280984684
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+--- !u!114 &114858283795044990
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -580,61 +352,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Soundtrack
-  guid: ea62085378103646b2c6ae99d96de6b1
+  Path: event:/menu
+  guid: 7a2741a70c83ce4dab4f164ee120d5fd
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 0
+  - {fileID: 114908811835512310}
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: 114925985817944092}
+  Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
---- !u!114 &114925985817944092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
---- !u!114 &114983431420119378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
---- !u!114 &114995224023348628
-=======
-  Name: Lifes
-  Min: 1
-  Max: 3
-  Default: 1
---- !u!114 &114936610036390842
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+  Length: 51414
+--- !u!114 &114860731022647248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -645,50 +374,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/bull gets hit
-  guid: 596b599ca604af4ab1f7ecf3fe8714cf
+  Path: event:/doom
+  guid: b11259b8113a4d4c832c0a9caa958237
   Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
+  - {fileID: 114908811835512310}
   IsStream: 1
-=======
-  - {fileID: 114417875486554702}
-  IsStream: 0
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1624
---- !u!114 &114958366104071902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/end game
-  guid: 9400b8634fb2cc498c76457a755671cf
-  Banks:
-<<<<<<< HEAD
-  - {fileID: 114999312032718162}
-=======
-  - {fileID: 114417875486554702}
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-<<<<<<< HEAD
-  Length: 625
---- !u!114 &114999312032718162
+  Length: 12853
+--- !u!114 &114908811835512310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -707,6 +404,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1567616
   Exists: 1
-=======
-  Length: 3483
->>>>>>> 6cb781a8ebdef95e27fd17394b75094c9e5d3f65
+--- !u!114 &114964934929831142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/bull gets hit
+  guid: 596b599ca604af4ab1f7ecf3fe8714cf
+  Banks:
+  - {fileID: 114908811835512310}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1624
