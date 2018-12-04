@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114215745524222052}
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   EditorEvents:
   - {fileID: 114584720159874406}
   - {fileID: 114235588594809154}
@@ -27,9 +27,9 @@ MonoBehaviour:
   - {fileID: 114820261151173562}
   - {fileID: 114216102768887546}
   - {fileID: 114516907668069520}
-  MasterBankRef: {fileID: 114853166461902374}
+  MasterBankRef: {fileID: 114094312095274046}
   StringsBankRef: {fileID: 114215745524222052}
-  stringsBankWriteTime: 636795181671259544
+  stringsBankWriteTime: 636794497514891553
   cacheVersion: 2
 --- !u!114 &114020403882392772
 MonoBehaviour:
@@ -75,7 +75,7 @@ MonoBehaviour:
   Path: event:/end game
   guid: 9400b8634fb2cc498c76457a755671cf
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -113,6 +113,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114094312095274046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Project Indie\ProjectIndieGame\Assets\FMOD\FMOD Project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636794553198346045
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1343872
+  Exists: 1
 --- !u!114 &114215745524222052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD Project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636795181671259544
+  lastModified: 636794497514891553
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -145,12 +164,12 @@ MonoBehaviour:
   Path: event:/rollingv2
   guid: db1fa2c3272caa43a49338c543072479
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114702343459175236}
+  - {fileID: 114447989345970416}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -168,12 +187,12 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114240992041155866}
+  - {fileID: 114545553510197610}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -210,7 +229,7 @@ MonoBehaviour:
   Path: event:/dodge
   guid: 4aa474c44a27b14cb9f31d61ca73a066
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -247,7 +266,7 @@ MonoBehaviour:
   Path: event:/bounce
   guid: 51d31ce4af1e944aac00eb5c3a4cde74
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -285,6 +304,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114447989345970416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114516907668069520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,15 +333,30 @@ MonoBehaviour:
   Path: event:/Soundtrack
   guid: ea62085378103646b2c6ae99d96de6b1
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114627081788325070}
+  - {fileID: 114868176955681678}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114545553510197610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114559388682208042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +390,7 @@ MonoBehaviour:
   Path: event:/attack
   guid: 0bd46ae5e4e4f54685b945ba0ecb89e1
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -363,7 +412,7 @@ MonoBehaviour:
   Path: event:/loosing live
   guid: 7b3357b5f839d647a08d83c197c028de
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -385,7 +434,7 @@ MonoBehaviour:
   Path: event:/Pig gets hit
   guid: 52d103664363c9499006f8d490daa7f0
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -407,7 +456,7 @@ MonoBehaviour:
   Path: event:/menu
   guid: 7a2741a70c83ce4dab4f164ee120d5fd
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -478,7 +527,7 @@ MonoBehaviour:
   Path: event:/bull gets hit
   guid: 596b599ca604af4ab1f7ecf3fe8714cf
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -500,7 +549,7 @@ MonoBehaviour:
   Path: event:/ram gets hit
   guid: c06a307d0c65ca4f90c64f93ed4cf626
   Banks:
-  - {fileID: 114853166461902374}
+  - {fileID: 114094312095274046}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -526,7 +575,22 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1343872
-  Exists: 1
+  Exists: 0
+--- !u!114 &114868176955681678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Lifes
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114951771233385216
 MonoBehaviour:
   m_ObjectHideFlags: 0
