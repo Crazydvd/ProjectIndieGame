@@ -36,5 +36,6 @@ public class GameMenuManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         Pause.Paused = false;
+        gameObject.SetActive(false);
     }
 }
