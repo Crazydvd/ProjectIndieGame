@@ -51,7 +51,6 @@ public class CameraAnimation : MonoBehaviour
 
     private void playMoveAnimation()
     {
-        _canvas.GetComponent<CountdownScript>().StartTimer();
         _animator.Play("CameraMove");
     }
 
@@ -80,7 +79,8 @@ public class CameraAnimation : MonoBehaviour
 
     public void StartTimer()
     {
-        _canvas.GetComponent<CountdownScript>().StartTimer();
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove"))
+            _canvas.GetComponent<CountdownScript>().StartTimer();
     }
 
     public static bool Finished { get; set; }
