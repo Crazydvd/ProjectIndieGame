@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
-    [Range(1, 2)]
-    [SerializeField] int _playerID = 1;
     [SerializeField] float _attackCooldown = 0.5f;
     private float _timer = 0;
     public float Force = 10;

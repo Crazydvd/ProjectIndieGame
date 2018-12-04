@@ -23,10 +23,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _dodgeDuration = 0.3f;
     [SerializeField] private float _bendingPower = 1f;
     [SerializeField] private float _bendingPowerDecrease = 0.5f;
-    [SerializeField] private int _receivingDamage = 5;
 
-    [Range(1, 2)]
-    [SerializeField] private int _playerID = 1;
     public bool CANTMOVE = false;
 
     [Header("The amount of seconds that the immortality lasts")]
@@ -50,9 +47,11 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        Camera main = Camera.main;
+
         _attackScript = RotationPoint.GetComponent<Attack>();
         _rigidBody = GetComponent<Rigidbody>();
-        _screenShake = Camera.main.GetComponent<ScreenShake>();
+        _screenShake = main.GetComponent<ScreenShake>();
         _playerStatus = GetComponent<PlayerStatus>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
         _dirtParticle = transform.Find("DirtTrail").gameObject;
@@ -82,12 +81,6 @@ public class Movement : MonoBehaviour
 
         _walkVelocity = _walkVelocity.normalized;
         _walkVelocity = _walkVelocity * _parameters.SPEED;
-
-        if (_walkVelocity.magnitude > _parameters.SPEED)
-        {
-            _walkVelocity = _walkVelocity.normalized;
-            _walkVelocity = _walkVelocity * _parameters.SPEED;
-        }
 
         if (_timer > 0)
         {
@@ -136,7 +129,7 @@ public class Movement : MonoBehaviour
 
     private void reflect(Vector3 pNormal)
     {
-        if (_dodging)
+        if (_dodging || _immortal)
             return;
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
@@ -157,13 +150,12 @@ public class Movement : MonoBehaviour
             return;
         }
 
-
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
             _dashParticle.SetActive(true);
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
-            _rigidBody.velocity = _walkVelocity * 2.5f;
+            _rigidBody.velocity = _walkVelocity * _dodgeSpeed;
             GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
             Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
             gameObject.layer = 10;
@@ -188,20 +180,16 @@ public class Movement : MonoBehaviour
     {
         reflect(collision.contacts[0].normal);
 
-<<<<<<< HEAD
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f || _dodging)
-            Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
-=======
-        if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
         {
             Instantiate(SmokeParticle, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+            if (_dodging) return;
 
             if (collision.gameObject.GetComponent<BreakFences>() != null && !_dodging)
             {
                 collision.gameObject.GetComponent<BreakFences>().DecreaseDurability();
             }
         }
->>>>>>> 29fb63825bc6b5d1f38b8cc72f145e1b4c15e4f8
 
         if (collision.gameObject.tag.ToUpper() == "PLAYER")
         {
@@ -262,7 +250,6 @@ public class Movement : MonoBehaviour
     public void startImmortality()
     {
         _immortal = true;
-
 
         _rigidBody.velocity = Vector3.zero;
         _walkVelocity = Vector3.zero;

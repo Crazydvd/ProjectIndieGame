@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RotatePlayer : MonoBehaviour
 {
-    [Range(1,2)]
-    [SerializeField] int _playerID = 1;   
     [SerializeField] float _deadzone = 0.25f;
 
     private PlayerParameters _parameters;

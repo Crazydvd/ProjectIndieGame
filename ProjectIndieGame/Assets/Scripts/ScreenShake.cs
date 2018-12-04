@@ -23,6 +23,7 @@ public class ScreenShake : MonoBehaviour
             yield return null;
         }
 
-        transform.position = _oldPosition;
+        //transform.position = _oldPosition;
+        GetComponent<SetToPosition>().GoToPos();
     }
 }
