@@ -1180,6 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _givenTime: 180
+  _targetRotation: {x: -3, y: -30, z: 0}
 --- !u!1001 &101090675
 Prefab:
   m_ObjectHideFlags: 0
@@ -1583,6 +1584,16 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -6154,6 +6165,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -7281,6 +7302,16 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Latten (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -7492,6 +7523,16 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -8196,6 +8237,16 @@ Prefab:
     - target: {fileID: 1996265667138966, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_Name
       value: Fence_Latten (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -11913,6 +11964,16 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Latten (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -14254,6 +14315,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a9718448116674c9f8434fb95fa25e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &766701936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 766701938}
+  - component: {fileID: 766701937}
+  m_Layer: 0
+  m_Name: Deathzone (3)
+  m_TagString: Boundary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &766701937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766701936}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.843385, y: 3.468052, z: 7.565896}
+  m_Center: {x: 2.7916691, y: 1.234026, z: -0.11486292}
+--- !u!4 &766701938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 766701936}
+  m_LocalRotation: {x: 0.0013352109, y: 0, z: 0, w: 0.9999991}
+  m_LocalPosition: {x: -11.75, y: 0.71, z: -8.77}
+  m_LocalScale: {x: 1, y: 1, z: 1.1755767}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 110
+  m_LocalEulerAnglesHint: {x: 0.15300001, y: 0, z: 0}
 --- !u!4 &772988759
 Transform:
   m_ObjectHideFlags: 0
@@ -16396,6 +16498,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4228319482321664, guid: f93b9246499f51a4188d5c809f595ee6,
     type: 2}
   m_PrefabInternal: {fileID: 738843508}
+--- !u!1 &912591963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1436827467632258, guid: 914f793d4f570a74e99d9ccef2b25029,
+    type: 2}
+  m_PrefabInternal: {fileID: 550747962}
+--- !u!65 &912591964
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 912591963}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 103.92935, y: 64.33932, z: 13.983475}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &915356586
 GameObject:
   m_ObjectHideFlags: 0
@@ -23943,6 +24062,16 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Latten (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -24695,8 +24824,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1340541593}
   m_LocalRotation: {x: 0.0009455267, y: 0.7071062, z: -0.00094552716, w: 0.7071062}
-  m_LocalPosition: {x: 0.36, y: 0.72, z: 2.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.36, y: 0.72, z: 1.66}
+  m_LocalScale: {x: 1, y: 1, z: 1.6006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
@@ -26098,6 +26227,16 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -27837,6 +27976,16 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Latten (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -28202,6 +28351,16 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -31110,7 +31269,12 @@ Prefab:
     - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
         type: 2}
       propertyPath: _breakable
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -31509,6 +31673,16 @@ Prefab:
     - target: {fileID: 1996265667138966, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_Name
       value: Fence_Latten (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -33627,6 +33801,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -33714,6 +33898,47 @@ Transform:
   m_Father: {fileID: 1392339202}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 138.218, z: 0}
+--- !u!1 &1869960228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869960230}
+  - component: {fileID: 1869960229}
+  m_Layer: 0
+  m_Name: Deathzone (2)
+  m_TagString: Boundary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1869960229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869960228}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.843385, y: 3.468052, z: 7.565896}
+  m_Center: {x: 2.7916691, y: 1.234026, z: -0.11486292}
+--- !u!4 &1869960230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1869960228}
+  m_LocalRotation: {x: 0.0013352109, y: 0, z: 0, w: 0.9999991}
+  m_LocalPosition: {x: 6.25, y: 0.71, z: -8.77}
+  m_LocalScale: {x: 1, y: 1, z: 1.1755767}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 109
+  m_LocalEulerAnglesHint: {x: 0.15300001, y: 0, z: 0}
 --- !u!1001 &1873745350
 Prefab:
   m_ObjectHideFlags: 0
@@ -34646,6 +34871,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -35228,6 +35463,16 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -35429,6 +35674,16 @@ Prefab:
     - target: {fileID: 4311868886029002, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -35976,6 +36231,16 @@ Prefab:
     - target: {fileID: 1996265667138966, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_Name
       value: Fence_Latten (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -36697,6 +36962,16 @@ Prefab:
       propertyPath: m_Name
       value: Fence_Latten (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
   m_IsPrefabAsset: 0
@@ -36742,6 +37017,16 @@ Prefab:
     - target: {fileID: 1996265667138966, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_Name
       value: Fence_Latten (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
@@ -37270,6 +37555,23 @@ Transform:
   m_Father: {fileID: 1392339202}
   m_RootOrder: 122
   m_LocalEulerAnglesHint: {x: 0, y: 1.0120001, z: 0}
+--- !u!1 &2010763164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1436827467632258, guid: 914f793d4f570a74e99d9ccef2b25029,
+    type: 2}
+  m_PrefabInternal: {fileID: 1891774638}
+--- !u!65 &2010763165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2010763164}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 103.92935, y: 64.33932, z: 13.983475}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2011219232
 Prefab:
   m_ObjectHideFlags: 0
@@ -37912,6 +38214,47 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d6308ac40e09094d82daae7fc902501, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &2046653370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2046653372}
+  - component: {fileID: 2046653371}
+  m_Layer: 0
+  m_Name: Deathzone (1)
+  m_TagString: Boundary
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2046653371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046653370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.843385, y: 3.468052, z: 7.565896}
+  m_Center: {x: 2.7916691, y: 1.234026, z: -0.11486292}
+--- !u!4 &2046653372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2046653370}
+  m_LocalRotation: {x: 0.0009455267, y: 0.7071062, z: -0.00094552716, w: 0.7071062}
+  m_LocalPosition: {x: 0.36, y: 0.72, z: -13.58}
+  m_LocalScale: {x: 1, y: 1, z: 1.6006}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 108
+  m_LocalEulerAnglesHint: {x: 0.15300001, y: 90.00001, z: 0}
 --- !u!1001 &2051078472
 Prefab:
   m_ObjectHideFlags: 0
@@ -38681,6 +39024,16 @@ Prefab:
     - target: {fileID: 1996265667138966, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
       propertyPath: m_Name
       value: Fence_Latten (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _breakable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114877138214482816, guid: e73f6d50fed634540b9ef6bb908a855e,
+        type: 2}
+      propertyPath: _durability
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e73f6d50fed634540b9ef6bb908a855e, type: 2}
