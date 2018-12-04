@@ -16,16 +16,12 @@ public class PlaySecretAnimation : MonoBehaviour
     bool activated;
     bool turnWhite = false;
 
-<<<<<<< HEAD
     private void Start()
     {
         GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-=======
-    void Start()
-    {
+
         _screenShake = Camera.main.GetComponent<ScreenShake>();
         _doomMusic = FMODUnity.RuntimeManager.CreateInstance("event:/doom");
->>>>>>> e9b415bd658d399396c5a5916faa41462f4cb445
     }
 
     // Update is called once per frame
@@ -38,8 +34,6 @@ public class PlaySecretAnimation : MonoBehaviour
             animator.enabled = true;
             activated = true;
             Invoke("ActivateSword", 4.5f);
-<<<<<<< HEAD
-=======
             _doomMusic.start();
             _doomMusic.release();
         }
@@ -52,7 +46,6 @@ public class PlaySecretAnimation : MonoBehaviour
 
             FMODUnity.RuntimeManager.GetVCA("vca:/All sounds").setVolume(masterVolume);
             _doomMusic.setVolume(1 - masterVolume);
->>>>>>> e9b415bd658d399396c5a5916faa41462f4cb445
         }
 
         if (turnWhite)
