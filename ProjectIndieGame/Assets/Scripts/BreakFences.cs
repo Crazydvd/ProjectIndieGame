@@ -30,14 +30,18 @@ public class BreakFences : MonoBehaviour
         {
             case 9:
                 _mesh.mesh = _broken1;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 6:
                 _mesh.mesh = _broken2;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 3:
                 _mesh.mesh = _broken3;
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 0:
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 Destroy(gameObject, 0f);
                 break;
             default:

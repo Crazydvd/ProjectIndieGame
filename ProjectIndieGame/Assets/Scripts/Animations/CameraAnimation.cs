@@ -19,6 +19,11 @@ public class CameraAnimation : MonoBehaviour
         _players = GameObject.FindGameObjectsWithTag("Player");
         _canvas = GameObject.FindGameObjectWithTag("Canvas");
 
+        if (_canvas == null)
+        {
+            throw new System.Exception("YOU DIDN'T APPLY A TAG TO THE CANVAS");
+        }
+
         Finished = false;
 
         foreach (GameObject camera in cameras)
