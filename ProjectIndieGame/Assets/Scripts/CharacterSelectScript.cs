@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class CharacterSelectScript : MonoBehaviour
 {
     [SerializeField] GameObject _modelsParent;
+    [SerializeField] GameObject _statsParent;
 
     [SerializeField] GameObject[] _namesDeselected;
     [SerializeField] GameObject[] _namesSelected;
+    [SerializeField] GameObject[] _statsOfSelected;
 
-    [Range(1,2)]
+    [SerializeField] GameObject _selectSymbol;
+    [SerializeField] GameObject _deselectSymbol;
+    [SerializeField] GameObject _backSymbol;
+
+    [Range(1, 2)]
     [SerializeField] int _playerID = 1;
     [SerializeField] float _timeoutTime = 0.2f;
 
@@ -44,9 +50,10 @@ public class CharacterSelectScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         // character rotation
-        if (Input.GetAxis("RightHorizontal_P" + _playerID) > 0) {
+        if (Input.GetAxis("RightHorizontal_P" + _playerID) > 0)
+        {
             _modelsParent.transform.Rotate(0, -1, 0);
         }
         if (Input.GetAxis("RightHorizontal_P" + _playerID) < 0)
@@ -54,6 +61,7 @@ public class CharacterSelectScript : MonoBehaviour
             _modelsParent.transform.Rotate(0, 1, 0);
         }
 
+        // selecting character
         if (Input.GetButtonDown("Accept_P" + _playerID))
         {
             PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
@@ -73,9 +81,9 @@ public class CharacterSelectScript : MonoBehaviour
             _timeoutTimer -= Time.deltaTime;
             return;
         }
-        
+
         // change skins
-        if(Input.GetButtonDown("RightBumper_P" + _playerID))
+        if (Input.GetButtonDown("RightBumper_P" + _playerID))
         {
             _color++;
             if (_color > _maxColors - 1) _color = 0;
@@ -102,7 +110,7 @@ public class CharacterSelectScript : MonoBehaviour
         if (!_selected)
         {
             if (Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
-            {    
+            {
                 _char++;
                 if (_char > _namesSelected.Length - 1) _char = 0;
                 resetColor();
@@ -120,6 +128,12 @@ public class CharacterSelectScript : MonoBehaviour
                 SetNameDeselected();
             }
         }
+
+        // Return
+        else if (Input.GetButtonDown("Decline_P1") && PlayerPrefs.GetInt("Char_P1") == -1)
+        {
+            RemoveChildren(transform);
+        }
     }
 
     void resetColor()
@@ -134,15 +148,32 @@ public class CharacterSelectScript : MonoBehaviour
     void SetNameDeselected()
     {
         // remove Children
-        RemoveChildren();
+        RemoveChildren(transform);
         Instantiate(_namesDeselected[_char], transform); // initiate new name
+
+        // switch button symbols
+        _selectSymbol.SetActive(true);
+        _deselectSymbol.SetActive(false);
+
+        if (_backSymbol != null && _playerID == 1)
+        {
+            _backSymbol.SetActive(true);
+        }
     }
 
     void SetNameSelected()
     {
         // remove Children
-        RemoveChildren();
+        RemoveChildren(transform);
         Instantiate(_namesSelected[_char], transform); // initiate new name
+
+        // switch button symbols
+        _selectSymbol.SetActive(false);
+        _deselectSymbol.SetActive(true);
+        if (_backSymbol != null && _playerID == 1)
+        {
+            _backSymbol.SetActive(false);
+        }
     }
 
     void SetCharacter()
@@ -150,20 +181,30 @@ public class CharacterSelectScript : MonoBehaviour
         PlayerPrefs.SetInt("Preselect_color_P" + _playerID, _color);
         PlayerPrefs.SetInt("Preselect_char_P" + _playerID, _char);
 
+        if (_selected)
+        {
+            PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
+        }
+
+        //showing stats
+        RemoveChildren(_statsParent.transform);
+        Instantiate(_statsOfSelected[_char], _statsParent.transform);
+
         _populatePreviewScript.SetModel(_char, _color);
 
         _timeoutTimer = _timeoutTime;
     }
 
-    void RemoveChildren()
+    void RemoveChildren(Transform parent)
     {
-        for (int i = transform.childCount; i > 0; i--)
+        for (int i = parent.childCount; i > 0; i--)
         {
-            Destroy(transform.GetChild(i - 1).gameObject);
+            Destroy(parent.GetChild(i - 1).gameObject);
         }
     }
 
-    void DeselectCharacter() {
+    void DeselectCharacter()
+    {
         PlayerPrefs.SetInt("Char_P" + _playerID, -1);
         PlayerPrefs.SetInt("Char_color_P" + _playerID, -1);
         _selected = false;
