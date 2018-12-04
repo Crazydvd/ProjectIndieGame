@@ -49,12 +49,17 @@ public class LoadPlayerSettings : MonoBehaviour {
 
         }
 
-        GetComponent<Material>().mainTexture = _characters[ID, altID].mainTexture;
-
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
         MeshFilter meshFilter = GetComponent<MeshFilter>();
 
-        meshRenderer.material = _usedModel.GetComponent<MeshRenderer>().sharedMaterial;
+        if (altID == 0)
+        {
+            meshRenderer.material = _usedModel.GetComponent<MeshRenderer>().sharedMaterial;
+        }
+        else
+        {
+            meshRenderer.material = _characters[ID, altID - 1];
+        }
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
 	}
 
