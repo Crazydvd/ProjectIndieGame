@@ -6,16 +6,13 @@ public class CameraAnimation : MonoBehaviour
 {
     private Animator _animator;
     private bool _played = false;
-
-    public static GameObject Camera1;
-    public static GameObject Camera2;
+    private bool _done;
 
     private GameObject[] _players;
     private GameObject _canvas;
 
     private void Start()
     {
-        GameObject[] cameras = GameObject.FindGameObjectsWithTag("MainCamera");
         _players = GameObject.FindGameObjectsWithTag("Player");
         _canvas = GameObject.FindGameObjectWithTag("Canvas");
 
@@ -25,19 +22,8 @@ public class CameraAnimation : MonoBehaviour
         }
 
         Finished = false;
-
-        foreach (GameObject camera in cameras)
-        {
-            if (camera == gameObject)
-            {
-                continue;
-            }
-            Camera1 = camera;
-        }
-
-        Camera1.SetActive(false);
+        
         _animator = GetComponent<Animator>();
-        Camera2 = gameObject;
 
         toggleHUD();
         togglePlayerRotationAndMovement();
@@ -46,6 +32,8 @@ public class CameraAnimation : MonoBehaviour
 
     private void Update()
     {
+        if (_done) return;
+        
         AnimatorStateInfo currentState = _animator.GetCurrentAnimatorStateInfo(0);
 
         if (currentState.IsName("CameraMove"))
@@ -53,25 +41,6 @@ public class CameraAnimation : MonoBehaviour
             _played = true;
             return;
         }
-
-        if (!_played)
-        {
-            return;
-        }
-
-        if (currentState.IsName("idle"))
-        {
-            Finished = true;
-            ToggleCameras();
-            toggleHUD();
-            togglePlayerRotationAndMovement();
-        }
-    }
-
-    public static void ToggleCameras()
-    {
-        Camera1.SetActive(!Camera1.activeSelf);
-        Camera2.SetActive(!Camera2.activeSelf);
     }
 
     private void toggleHUD()
@@ -91,6 +60,15 @@ public class CameraAnimation : MonoBehaviour
     private void playMoveAnimation()
     {
         _animator.Play("CameraMove");
+    }
+
+    public void EndOfAnimation()
+    {
+        Finished = true;
+        _done = true;
+
+        toggleHUD();
+        togglePlayerRotationAndMovement();
     }
 
     public static bool Finished { get; set; }
