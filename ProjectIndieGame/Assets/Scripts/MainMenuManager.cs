@@ -12,7 +12,6 @@ public class MainMenuManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _menuLevel = PlayerPrefs.GetInt("MainMenu");
-        Debug.Log(_menuLevel);
 
         if (_menuLevel == 1)
         {
