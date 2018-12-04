@@ -17,7 +17,7 @@ public class PlaySecretAnimation : MonoBehaviour
         Animator animator = GetComponent<Animator>();
         if (Input.GetKeyDown(KeyCode.F12))
         {
-
+            GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
             animator.enabled = true;
             Invoke("ActivateSword", 4.5f);
 
