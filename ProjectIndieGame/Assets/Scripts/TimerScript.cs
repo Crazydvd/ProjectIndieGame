@@ -26,6 +26,10 @@ public class TimerScript : MonoBehaviour
         _playerHandler = Camera.main.GetComponent<PlayersHandler>();
         _timerUI.text = ((int)_givenTime).ToString();
         _light = GameObject.FindWithTag("Light");
+        if (_light == null)
+        {
+            throw new System.Exception("YOU DIDN'T APPLY A TAG TO THE LIGHT");
+        }
 
         _originalRotation = _light.transform.rotation.eulerAngles;
         _time = _givenTime;
