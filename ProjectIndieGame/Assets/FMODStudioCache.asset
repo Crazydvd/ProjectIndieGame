@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114589419577452886}
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   EditorEvents:
   - {fileID: 114651236368938244}
   - {fileID: 114006945533097684}
@@ -28,9 +28,9 @@ MonoBehaviour:
   - {fileID: 114561328451484682}
   - {fileID: 114545179410116318}
   - {fileID: 114682135493423094}
-  MasterBankRef: {fileID: 114450042333588552}
+  MasterBankRef: {fileID: 114527806181260256}
   StringsBankRef: {fileID: 114589419577452886}
-  stringsBankWriteTime: 636795304499458956
+  stringsBankWriteTime: 636795307874542175
   cacheVersion: 2
 --- !u!114 &114006945533097684
 MonoBehaviour:
@@ -46,7 +46,7 @@ MonoBehaviour:
   Path: event:/dodge
   guid: 4aa474c44a27b14cb9f31d61ca73a066
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -54,6 +54,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 445
+--- !u!114 &114088515853016020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114200309556452614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +83,7 @@ MonoBehaviour:
   Path: event:/end game
   guid: 9400b8634fb2cc498c76457a755671cf
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -90,7 +105,7 @@ MonoBehaviour:
   Path: event:/menu
   guid: 7a2741a70c83ce4dab4f164ee120d5fd
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -142,7 +157,7 @@ MonoBehaviour:
   Path: event:/bull gets hit
   guid: 596b599ca604af4ab1f7ecf3fe8714cf
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -168,6 +183,25 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1517664
+  Exists: 0
+--- !u!114 &114527806181260256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Project Indie\ProjectIndieGame\Assets\FMOD\FMOD Project\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636795307874512247
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1517664
   Exists: 1
 --- !u!114 &114545179410116318
 MonoBehaviour:
@@ -183,12 +217,12 @@ MonoBehaviour:
   Path: event:/rollingv2
   guid: db1fa2c3272caa43a49338c543072479
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114221437323816462}
+  - {fileID: 114088515853016020}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -206,7 +240,7 @@ MonoBehaviour:
   Path: event:/ram gets hit
   guid: c06a307d0c65ca4f90c64f93ed4cf626
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -228,7 +262,7 @@ MonoBehaviour:
   Path: event:/bounce
   guid: 51d31ce4af1e944aac00eb5c3a4cde74
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -248,12 +282,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\FMOD\FMOD Project\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636795304499458956
+  lastModified: 636795307874542175
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1600
   Exists: 1
+--- !u!114 &114617285252820556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114634779978318444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Lifes
+  Min: 1
+  Max: 3
+  Default: 1
 --- !u!114 &114651236368938244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +332,7 @@ MonoBehaviour:
   Path: event:/attack
   guid: 0bd46ae5e4e4f54685b945ba0ecb89e1
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -290,12 +354,12 @@ MonoBehaviour:
   Path: event:/Soundtrack
   guid: ea62085378103646b2c6ae99d96de6b1
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114225476919211570}
+  - {fileID: 114634779978318444}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -313,12 +377,12 @@ MonoBehaviour:
   Path: event:/rolling
   guid: 6a76d0b50dba0e40ab57f0f81db7de62
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114795623329956112}
+  - {fileID: 114617285252820556}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -351,7 +415,7 @@ MonoBehaviour:
   Path: event:/loosing live
   guid: 7b3357b5f839d647a08d83c197c028de
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -373,7 +437,7 @@ MonoBehaviour:
   Path: event:/doom
   guid: b11259b8113a4d4c832c0a9caa958237
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -395,7 +459,7 @@ MonoBehaviour:
   Path: event:/Pig gets hit
   guid: 52d103664363c9499006f8d490daa7f0
   Banks:
-  - {fileID: 114450042333588552}
+  - {fileID: 114527806181260256}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
