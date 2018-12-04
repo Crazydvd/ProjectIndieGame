@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{5F3214C4-8274-118A-4EA8-1E4E4DF13905}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -23,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_16;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_16;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -45,497 +44,494 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-    <UnityVersion>2018.2.16f1</UnityVersion>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AttachUI.cs" />
-    <Compile Include="Assets\FMOD\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
-    <Compile Include="Assets\FMOD\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\BankRefAttribute.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\EventRefAttribute.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\FMOD_Listener.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\FMOD_StudioEventEmitter.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\FMODAsset.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\OneshotList.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\ParamRef.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\RuntimeManager.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\RuntimeUtils.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Settings.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\StudioBankLoader.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\StudioEventEmitter.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\StudioListener.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\StudioParameterTrigger.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Timeline\FMODEventPlayable.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Timeline\FMODEventTrack.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_dsp.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_errors.cs" />
-    <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_studio.cs" />
-    <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
-    <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
-    <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
-    <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
-    <Compile Include="Assets\Scripts\Animations\AnimationScript.cs" />
-    <Compile Include="Assets\Scripts\Animations\CameraAnimation.cs" />
-    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
-    <Compile Include="Assets\Scripts\BreakFences.cs" />
-    <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
-    <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
-    <Compile Include="Assets\Scripts\GameMenuManager.cs" />
-    <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
-    <Compile Include="Assets\Scripts\LoadPlayerSprite.cs" />
-    <Compile Include="Assets\Scripts\MainMenuCameraScript.cs" />
-    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
-    <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
-    <Compile Include="Assets\Scripts\Pause.cs" />
-    <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
-    <Compile Include="Assets\Scripts\Player\Attack.cs" />
-    <Compile Include="Assets\Scripts\Player\DeathScript.cs" />
-    <Compile Include="Assets\Scripts\Player\Movement.cs" />
-    <Compile Include="Assets\Scripts\Player\Offset.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerParameters.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerRotationScript.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerSound.cs" />
-    <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
-    <Compile Include="Assets\Scripts\Player\RollingSound.cs" />
-    <Compile Include="Assets\Scripts\Player\RotatePlayer.cs" />
-    <Compile Include="Assets\Scripts\PlayersHandler.cs" />
-    <Compile Include="Assets\Scripts\PlaySecretAnimation.cs" />
-    <Compile Include="Assets\Scripts\PopulatePreviewScript.cs" />
-    <Compile Include="Assets\Scripts\Rotation.cs" />
-    <Compile Include="Assets\Scripts\ScreenShake.cs" />
-    <Compile Include="Assets\Scripts\SelfDestruct.cs" />
-    <Compile Include="Assets\Scripts\SetToPosition.cs" />
-    <Compile Include="Assets\Scripts\StageSelectorScript.cs" />
-    <Compile Include="Assets\Scripts\StageSelectWindowScript.cs" />
-    <Compile Include="Assets\Scripts\TimerScript.cs" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{8c70b091-610e-4ddc-a5e9-712d0a99e8a4}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{12f19629-b022-4a67-9b34-3c9887f5d733}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{9c596b59-04a6-4aaf-b1f7-ecf3fe8714cf}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{e41cd351-1eaf-4a94-ac00-eb5c3a4cde74}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{45a7568a-4b86-4fba-abb1-680a9d26beac}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPresetFolder\{62faa572-ede5-4cfc-a2c2-6ef166bb8b42}.xml" />
-    <None Include="Assets\Shaders\HandoutShaders\RedShader.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{c30a0a6e-f15f-4d19-830c-a6d2926fb832}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{63b80094-b24f-49cc-8c76-457a755671cf}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{f76164c2-1864-4fa5-a673-2de856b42340}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{b3bb3b62-de14-43b0-a345-b14f2f8bfcaa}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{e56ad40b-e4e4-46f5-85b9-45ba0ecb89e1}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Workspace.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{1975cf4f-41fc-4d5e-bfb7-50ffe05f4675}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ad4de311-2123-4f6b-b0ed-ec9da7263c4a}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\EncodingSetting\{8499bbd5-263a-4a08-8e63-610b5e2bd2b3}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{53f84195-7ece-4238-8aaa-144ab68aef41}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{718b047f-ba74-4178-a5dc-7a96ff78d5c4}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{073df1a2-de9c-4c68-8787-d624a79d7ea7}.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Return\{3b329aa5-cf8b-4643-86d9-c25ec0b7eb2e}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
-    <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Asset\{3349a0b7-2bd8-4ab0-8484-ac843ebb8f6c}.xml" />
-    <None Include="Assets\Shaders\HandoutShaders\BreatheShader.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
-    <None Include="Assets\Shaders\HandoutShaders\VectorOperations.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b5d0766a-ba0d-400e-ab57-f0f81db7de62}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52f67d28-5444-44e9-b99c-1a85bf0ba932}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Platform\{9bc46831-809b-4623-90fd-85579b1ef23f}.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
-    <None Include="Assets\Shaders\HandoutShaders\UVcycleShader.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9e55a0c9-e352-4e49-b6c0-fca57b7156da}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{51bdf7d1-aeba-4d9c-b97d-7dbae6a4c98f}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{a741277a-830c-4dce-ab4f-164ee120d5fd}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{2c81661b-665f-474e-9c84-4568a385ca2e}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{46182adc-3497-4559-961f-374b1c55cf57}.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{0b2f405f-e803-4671-a132-97491d1e8bb6}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\EffectPresetFolder\{62725d03-9564-4a00-b35d-837416262702}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\VCA\{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}.xml" />
-    <None Include="Assets\Shaders\HandoutShaders\DisplayNormals.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{49ac79ca-812c-4597-9a98-762f99b9da4e}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{682f8507-3e62-426e-b26c-f812a71efe56}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ace2153b-51fd-4599-84e1-f43ac7b977fc}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9fb2479d-7d03-485c-a8d7-1347d14ad39d}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{c4014da6-4ff8-4103-aba8-8a0d28b82df0}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Bank\{190993ff-971d-468d-a06c-102ff4caeec5}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52865590-69d0-4c40-9000-ee7bd43c1037}.xml" />
-    <None Include="Assets\Shaders\HandoutShaders\WoodShader.shader" />
-    <None Include="Assets\Shaders\HandoutShaders\WaterShader.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Mixer.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{36e761de-2153-4db6-b7c3-2ec29718680d}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
-    <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{44007477-9410-4050-bfc0-0d2f482eccf9}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\BankFolder\{141f14c8-e7ca-47b0-ae8e-17fa3c692de3}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{be28c00f-e3e0-44ea-a89d-7a8efe5a645d}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{04a8cb90-77c4-460e-abd1-49985ac8fa39}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{cc322aad-fc73-4169-a8b0-6806c9753ca6}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
-    <None Include="Assets\Shaders\HandoutShaders\WorldPositionShader.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{d0f60cb5-14d2-4c83-a9e3-cf9caf022b57}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{262c69e2-2118-4ba8-b7ac-c083ec24c2b6}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPreset\{ef3b1ddd-c045-4738-b8fe-5f4966c8e6b5}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{bf67961c-6b2b-4db2-b36f-2b1d55c9b474}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{3de96059-e28b-4d5f-bf8e-0268934eaf3b}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{4e1f4421-042c-402d-9e7a-869795e92b49}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Master.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{530862ea-1078-4636-b2c6-ae99d96de6b1}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Tags.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{7d306ac0-650c-4fca-90c6-4f93ed4cf626}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{5dfcc289-400d-4238-a7d9-979630e9fdba}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{92e51ae5-5bdd-4a1c-bf17-ae834df3a2d6}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{21c57d6e-baa3-404b-b20c-12e99db5fef5}.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\EventFolder\{4b9365e3-01de-484d-9e29-11c78587f193}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b85912b1-3a11-4c4d-832c-0a9caa958237}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{4937f0b0-8dce-4d68-9faf-89d77801f678}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{726f0d85-a60b-48f9-aee9-67cfedce45e0}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{f744b1e9-fcdb-43dd-ab32-87ede165f18b}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b557337b-39f8-47d6-a08d-83c197c028de}.xml" />
-    <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{658c7b25-dd41-4e19-b711-f42403510528}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{bd86cb8d-cd46-4896-adf1-a1cd56337b40}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\SnapshotGroup\{cb3d15b0-8048-4886-832d-b322d6483211}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{eeb1f91b-8e97-4735-bc0b-0d3557775b78}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPreset\{0746bf8b-453c-4e25-b207-d23fb6d6a5a7}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c474a44a-274a-4cb1-b9f3-1d61ca73a066}.xml" />
-    <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
-    <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{a31cc860-9e7c-4516-93e0-9c18816d5c1c}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{724d69be-0e64-489c-bc49-e9551e497a0f}.xml" />
-    <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{6603d152-6343-49c9-9006-f8d490daa7f0}.xml" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AIModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ARModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.BaselibModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClothModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CloudWebServicesModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.FacebookModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.FileSystemHttpModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GridModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.InputModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ParticlesLegacyModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StyleSheetsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TLSModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TimelineModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UNETModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VRModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.WindModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XRModule">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Locator">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Timeline">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/dvdui/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/dvdui/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityScript">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityScript.Lang">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
-    </Reference>
-    <Reference Include="Boo.Lang">
-      <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
-    </Reference>
+     <Compile Include="Assets\AttachUI.cs" />
+     <Compile Include="Assets\FMOD\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
+     <Compile Include="Assets\FMOD\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\BankRefAttribute.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\EventRefAttribute.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\FMOD_Listener.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\FMOD_StudioEventEmitter.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\FMODAsset.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\OneshotList.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\ParamRef.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\RuntimeManager.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\RuntimeUtils.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Settings.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\StudioBankLoader.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\StudioEventEmitter.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\StudioListener.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\StudioParameterTrigger.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Timeline\FMODEventPlayable.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Timeline\FMODEventTrack.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_dsp.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_errors.cs" />
+     <Compile Include="Assets\FMOD\Plugins\FMOD\Wrapper\fmod_studio.cs" />
+     <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
+     <Compile Include="Assets\FMOD\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\FogComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\GrainComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\BloomModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingContext.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Scripts\Animations\AnimationScript.cs" />
+     <Compile Include="Assets\Scripts\Animations\CameraAnimation.cs" />
+     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
+     <Compile Include="Assets\Scripts\BreakFences.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelectScript.cs" />
+     <Compile Include="Assets\Scripts\CharacterSelectWindowScript.cs" />
+     <Compile Include="Assets\Scripts\GameMenuManager.cs" />
+     <Compile Include="Assets\Scripts\LoadPlayerSettings.cs" />
+     <Compile Include="Assets\Scripts\LoadPlayerSprite.cs" />
+     <Compile Include="Assets\Scripts\MainMenuCameraScript.cs" />
+     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+     <Compile Include="Assets\Scripts\MainMenuMusic.cs" />
+     <Compile Include="Assets\Scripts\Pause.cs" />
+     <Compile Include="Assets\Scripts\Physics\Vec2.cs" />
+     <Compile Include="Assets\Scripts\Player\Attack.cs" />
+     <Compile Include="Assets\Scripts\Player\DeathScript.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement.cs" />
+     <Compile Include="Assets\Scripts\Player\Offset.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerCollision.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerParameters.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerRotationScript.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerSound.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerStatus.cs" />
+     <Compile Include="Assets\Scripts\Player\RollingSound.cs" />
+     <Compile Include="Assets\Scripts\Player\RotatePlayer.cs" />
+     <Compile Include="Assets\Scripts\PlayersHandler.cs" />
+     <Compile Include="Assets\Scripts\PlaySecretAnimation.cs" />
+     <Compile Include="Assets\Scripts\PopulatePreviewScript.cs" />
+     <Compile Include="Assets\Scripts\Rotation.cs" />
+     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
+     <Compile Include="Assets\Scripts\SetToPosition.cs" />
+     <Compile Include="Assets\Scripts\StageSelectorScript.cs" />
+     <Compile Include="Assets\Scripts\StageSelectWindowScript.cs" />
+     <Compile Include="Assets\Scripts\TimerScript.cs" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{8c70b091-610e-4ddc-a5e9-712d0a99e8a4}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{12f19629-b022-4a67-9b34-3c9887f5d733}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{9c596b59-04a6-4aaf-b1f7-ecf3fe8714cf}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{e41cd351-1eaf-4a94-ac00-eb5c3a4cde74}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{45a7568a-4b86-4fba-abb1-680a9d26beac}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPresetFolder\{62faa572-ede5-4cfc-a2c2-6ef166bb8b42}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{5cf22063-8004-4039-92df-49e8b3d4e8a9}.xml" />
+     <None Include="Assets\Shaders\HandoutShaders\RedShader.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{c30a0a6e-f15f-4d19-830c-a6d2926fb832}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{63b80094-b24f-49cc-8c76-457a755671cf}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{f76164c2-1864-4fa5-a673-2de856b42340}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{b3bb3b62-de14-43b0-a345-b14f2f8bfcaa}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{e56ad40b-e4e4-46f5-85b9-45ba0ecb89e1}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{c205e3e2-7a6e-4f6b-990e-5605df9aeb91}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Workspace.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{2c32d36d-b1e6-4797-819b-af139c944e1f}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{1975cf4f-41fc-4d5e-bfb7-50ffe05f4675}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ad4de311-2123-4f6b-b0ed-ec9da7263c4a}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\EncodingSetting\{8499bbd5-263a-4a08-8e63-610b5e2bd2b3}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{53f84195-7ece-4238-8aaa-144ab68aef41}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{718b047f-ba74-4178-a5dc-7a96ff78d5c4}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{073df1a2-de9c-4c68-8787-d624a79d7ea7}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{2652fc85-017e-4b85-acdc-739eaa163612}.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Return\{3b329aa5-cf8b-4643-86d9-c25ec0b7eb2e}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Asset\{3349a0b7-2bd8-4ab0-8484-ac843ebb8f6c}.xml" />
+     <None Include="Assets\Shaders\HandoutShaders\BreatheShader.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+     <None Include="Assets\Shaders\HandoutShaders\VectorOperations.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b5d0766a-ba0d-400e-ab57-f0f81db7de62}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52f67d28-5444-44e9-b99c-1a85bf0ba932}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Platform\{9bc46831-809b-4623-90fd-85579b1ef23f}.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+     <None Include="Assets\Shaders\HandoutShaders\UVcycleShader.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9e55a0c9-e352-4e49-b6c0-fca57b7156da}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{51bdf7d1-aeba-4d9c-b97d-7dbae6a4c98f}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{a741277a-830c-4dce-ab4f-164ee120d5fd}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{2c81661b-665f-474e-9c84-4568a385ca2e}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{46182adc-3497-4559-961f-374b1c55cf57}.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{0b2f405f-e803-4671-a132-97491d1e8bb6}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\EffectPresetFolder\{62725d03-9564-4a00-b35d-837416262702}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\VCA\{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}.xml" />
+     <None Include="Assets\Shaders\HandoutShaders\DisplayNormals.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{49ac79ca-812c-4597-9a98-762f99b9da4e}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{682f8507-3e62-426e-b26c-f812a71efe56}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{ace2153b-51fd-4599-84e1-f43ac7b977fc}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{9fb2479d-7d03-485c-a8d7-1347d14ad39d}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{c4014da6-4ff8-4103-aba8-8a0d28b82df0}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Bank\{190993ff-971d-468d-a06c-102ff4caeec5}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{52865590-69d0-4c40-9000-ee7bd43c1037}.xml" />
+     <None Include="Assets\Shaders\HandoutShaders\WoodShader.shader" />
+     <None Include="Assets\Shaders\HandoutShaders\WaterShader.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Mixer.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{36e761de-2153-4db6-b7c3-2ec29718680d}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+     <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{44007477-9410-4050-bfc0-0d2f482eccf9}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\BankFolder\{141f14c8-e7ca-47b0-ae8e-17fa3c692de3}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{be28c00f-e3e0-44ea-a89d-7a8efe5a645d}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{04a8cb90-77c4-460e-abd1-49985ac8fa39}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{cc322aad-fc73-4169-a8b0-6806c9753ca6}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
+     <None Include="Assets\Shaders\HandoutShaders\WorldPositionShader.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{d0f60cb5-14d2-4c83-a9e3-cf9caf022b57}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{262c69e2-2118-4ba8-b7ac-c083ec24c2b6}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{3d0c85c9-a553-49ff-9164-f8d8dd41c4cc}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPreset\{ef3b1ddd-c045-4738-b8fe-5f4966c8e6b5}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{bf67961c-6b2b-4db2-b36f-2b1d55c9b474}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{3de96059-e28b-4d5f-bf8e-0268934eaf3b}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{4e1f4421-042c-402d-9e7a-869795e92b49}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Master.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{530862ea-1078-4636-b2c6-ae99d96de6b1}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Tags.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{7d306ac0-650c-4fca-90c6-4f93ed4cf626}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{5dfcc289-400d-4238-a7d9-979630e9fdba}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{92e51ae5-5bdd-4a1c-bf17-ae834df3a2d6}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{21c57d6e-baa3-404b-b20c-12e99db5fef5}.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\EventFolder\{4b9365e3-01de-484d-9e29-11c78587f193}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b85912b1-3a11-4c4d-832c-0a9caa958237}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{4937f0b0-8dce-4d68-9faf-89d77801f678}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Group\{726f0d85-a60b-48f9-aee9-67cfedce45e0}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{f744b1e9-fcdb-43dd-ab32-87ede165f18b}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{b557337b-39f8-47d6-a08d-83c197c028de}.xml" />
+     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{658c7b25-dd41-4e19-b711-f42403510528}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{bd86cb8d-cd46-4896-adf1-a1cd56337b40}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\SnapshotGroup\{cb3d15b0-8048-4886-832d-b322d6483211}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{eeb1f91b-8e97-4735-bc0b-0d3557775b78}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\ParameterPreset\{0746bf8b-453c-4e25-b207-d23fb6d6a5a7}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{c474a44a-274a-4cb1-b9f3-1d61ca73a066}.xml" />
+     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+     <None Include="Assets\Shaders\HandoutShaders\TextureShader.shader" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{a31cc860-9e7c-4516-93e0-9c18816d5c1c}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{724d69be-0e64-489c-bc49-e9551e497a0f}.xml" />
+     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{6603d152-6343-49c9-9006-f8d490daa7f0}.xml" />
+ <Reference Include="UnityEditor.StandardEvents">
+ <HintPath>C:/My courses/2st year/Project Indie Game/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/My courses/2st year/Project Indie Game/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/My courses/2st year/Project Indie Game/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/My courses/2st year/Project Indie Game/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.BaselibModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CloudWebServicesModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CloudWebServicesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterInputModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClusterRendererModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CrashReportingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FacebookModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FacebookModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FileSystemHttpModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TimelineModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Locator">
+ <HintPath>C:/Program Files/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/dron2/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/dron2/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -543,4 +539,5 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  
 </Project>

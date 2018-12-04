@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{2652fc85-017e-4b85-acdc-739eaa163612}">
         <property name="name">
-            <value>New Event</value>
+            <value>Fence break</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
@@ -31,6 +31,9 @@
         <relationship name="timeline">
             <destination>{c70a877f-f10d-4bda-9f87-78889d3aa357}</destination>
         </relationship>
+        <relationship name="banks">
+            <destination>{190993ff-971d-468d-a06c-102ff4caeec5}</destination>
+        </relationship>
     </object>
     <object class="EventMixer" id="{3da5dd04-2472-4d54-8818-70d761cf4070}">
         <relationship name="masterBus">
@@ -50,7 +53,7 @@
             <destination>{c7ca61e0-eec8-4802-87e3-b0cec61a9a3f}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{3629d67f-8dec-49ed-822a-647e8d09378b}</destination>
+            <destination>{c205e3e2-7a6e-4f6b-990e-5605df9aeb91}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{d0b1f188-33a7-47c6-bf66-0fff75d552bf}"/>
