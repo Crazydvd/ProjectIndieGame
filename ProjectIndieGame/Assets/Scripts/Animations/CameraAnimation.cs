@@ -9,6 +9,7 @@ public class CameraAnimation : MonoBehaviour
 
     private GameObject[] _players;
     private GameObject _canvas;
+    private GameObject _resolutionScreen;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class CameraAnimation : MonoBehaviour
         }
 
         Finished = false;
-        
+
         _animator = GetComponent<Animator>();
 
         toggleHUD();
@@ -31,13 +32,18 @@ public class CameraAnimation : MonoBehaviour
 
     private void toggleHUD()
     {
-        _canvas.SetActive(!_canvas.activeInHierarchy);
+        _canvas.transform.Find("HUD").gameObject.SetActive(!_canvas.transform.Find("HUD").gameObject.activeInHierarchy);
     }
 
     private void togglePlayerRotationAndMovement()
     {
         foreach (GameObject player in _players)
         {
+            if (player.GetComponentInChildren<Movement>() == null)
+            {
+                continue;
+            }
+
             player.GetComponentInChildren<Movement>().enabled = !player.GetComponentInChildren<Movement>().isActiveAndEnabled;
             player.GetComponentInChildren<RotatePlayer>().enabled = !player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled;
         }
@@ -46,6 +52,22 @@ public class CameraAnimation : MonoBehaviour
     private void playMoveAnimation()
     {
         _animator.Play("CameraMove");
+    }
+
+    public void PlayInverseMoveAnimation(GameObject pResolutionScreen)
+    {
+        print("It will move now");
+        _resolutionScreen = pResolutionScreen;
+        _animator.Play("CameraMove Inverse");
+    }
+
+    public void ShowEndScreen()
+    {
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove Inverse"))
+        {
+            togglePlayerRotationAndMovement();
+            _resolutionScreen.SetActive(true);
+        }
     }
 
     public void EndOfAnimation()
