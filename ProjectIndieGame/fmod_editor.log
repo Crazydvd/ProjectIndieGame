@@ -8,7 +8,11 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
 <<<<<<< HEAD
+<<<<<<< HEAD
 [LOG] AsyncManager::init                       : manager 00000000F70355F8 isAsync 0 updatePeriod 0.02
+=======
+[LOG] AsyncManager::init                       : manager 0000000039B416A8 isAsync 0 updatePeriod 0.02
+>>>>>>> dc9eb907bdd958512bb3d51d538d2fadd711392b
 =======
 <<<<<<< HEAD
 [LOG] AsyncManager::init                       : manager 000000004A9DA508 isAsync 0 updatePeriod 0.02
