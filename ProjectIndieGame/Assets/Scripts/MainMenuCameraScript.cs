@@ -19,7 +19,8 @@ public class MainMenuCameraScript : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("MainMenu") == 1) {
             Debug.Log("hmmmm");
-            _animator.Play("CharacterSelect", -1, 100f);
+            _animator.enabled = true;
+            _animator.Play("CharacterSelect", 0, 1f);
         }
     }
 
