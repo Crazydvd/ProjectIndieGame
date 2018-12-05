@@ -35,7 +35,7 @@ public class MainMenuCameraScript : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetButton("RightBumper_P1"))
+        if (Input.GetButton("RightBumper_P1") || Input.GetKey(KeyCode.Space))
         {
             _animator.speed += 0.03f;
         }
@@ -44,7 +44,7 @@ public class MainMenuCameraScript : MonoBehaviour {
             _animator.speed = 1f;
         }
 
-        if (Input.GetButtonDown("Decline_P1") && _tutorialPlaying == true)
+        if ((Input.GetButtonDown("Decline_P1") || Input.GetKeyDown(KeyCode.Escape)) && _tutorialPlaying == true)
         {
             _mainMenuMusic.DisableTutorialMusic();
             _mainMenuMusic.FadeInMenuMusic();
