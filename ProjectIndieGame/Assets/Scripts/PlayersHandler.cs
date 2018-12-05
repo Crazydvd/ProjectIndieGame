@@ -28,6 +28,7 @@ public class PlayersHandler : MonoBehaviour
 
     public void EndGame(string pWinner, int winnerID)
     {
+        GetComponent<Animator>().enabled = true;
         WinnerID = winnerID;
         GetComponent<CameraAnimation>().PlayInverseMoveAnimation(_resolutionScreen);
         resolutionScreenText.text = pWinner + resolutionScreenText.text;

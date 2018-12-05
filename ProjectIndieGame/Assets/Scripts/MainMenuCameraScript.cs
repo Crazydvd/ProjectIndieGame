@@ -9,18 +9,21 @@ public class MainMenuCameraScript : MonoBehaviour {
     [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _characterSelect;
     [SerializeField] GameObject _mainMenuButton;
+    [SerializeField] GameObject _boomBox;
     [SerializeField] VideoPlayer _videoPlayer;
     [SerializeField] VideoClip _videoClip;
 
     private Animator _animator;
     private Animation _animation;
     private VideoClip _originalClip;
+    private MainMenuMusic _mainMenuMusic;
     private bool _tutorialPlaying = false;
 
     private void Start()
     {
         _animator = GetComponent<Animator>();
         _animation = _animator.GetComponent<Animation>();
+        _mainMenuMusic = _boomBox.GetComponent<MainMenuMusic>();
 
         if (PlayerPrefs.GetInt("MainMenu") == 1) {
             _animator.enabled = true;
@@ -43,7 +46,8 @@ public class MainMenuCameraScript : MonoBehaviour {
 
         if (Input.GetButtonDown("Decline_P1") && _tutorialPlaying == true)
         {
-
+            _mainMenuMusic.DisableTutorialMusic();
+            _mainMenuMusic.FadeInMenuMusic();
             _tutorialPlaying = false;
             _animator.Play("Controls Inverse");
             _videoPlayer.clip = _originalClip;
@@ -76,6 +80,7 @@ public class MainMenuCameraScript : MonoBehaviour {
         _mainMenu.SetActive(false);
         _animator.enabled = true;
         _animator.Play("Controls");
+        _mainMenuMusic.FadeOutMenuMusic();
     }
 
     public void EnableTutorial()
@@ -87,11 +92,12 @@ public class MainMenuCameraScript : MonoBehaviour {
             _videoPlayer.clip = _videoClip;
             _videoPlayer.Play();
             _tutorialPlaying = true;
+            _mainMenuMusic.EnableTutorialMusic();
         }
     }
 
     public void CloseTutorial()
-    {
+    {      
         _animator.Play("Controls Inverse");
     }
 
