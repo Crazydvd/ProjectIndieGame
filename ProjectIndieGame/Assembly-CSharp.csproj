@@ -54,17 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-<<<<<<< HEAD
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
-=======
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -304,11 +297,7 @@
     <None Include="Assets\FMOD\FMOD Project\Metadata\AudioFile\{724d69be-0e64-489c-bc49-e9551e497a0f}.xml" />
     <None Include="Assets\FMOD\FMOD Project\Metadata\Event\{6603d152-6343-49c9-9006-f8d490daa7f0}.xml" />
     <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-=======
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -548,11 +537,7 @@
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-<<<<<<< HEAD
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
-=======
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

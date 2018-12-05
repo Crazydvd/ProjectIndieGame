@@ -54,17 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-<<<<<<< HEAD
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
-=======
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>D:\SCHOOL\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -127,11 +120,7 @@
     <Compile Include="Assets\PostProcessing\Editor\Utils\FxStyles.cs" />
     <Compile Include="Assets\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-=======
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/SCHOOL/Projects/PROJECT INDIE GAME/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -395,21 +384,13 @@
       <HintPath>C:/Users/dvdui/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-<<<<<<< HEAD
-      <HintPath>C:/Users/l-oud/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-=======
       <HintPath>C:/Users/dvdui/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-<<<<<<< HEAD
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
-=======
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
     <Reference Include="System">
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.dll</HintPath>
@@ -433,11 +414,7 @@
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-<<<<<<< HEAD
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll</HintPath>
-=======
       <HintPath>D:/SCHOOL/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll</HintPath>
->>>>>>> b1a4bb4145e6e3572c0e1a8bd113319e35084913
     </Reference>
   </ItemGroup>
   <ItemGroup>

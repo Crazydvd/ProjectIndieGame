@@ -66,15 +66,19 @@ public class CameraAnimation : MonoBehaviour
         {
             togglePlayerRotationAndMovement();
             _resolutionScreen.SetActive(true);
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("");
         }
     }
 
     public void EndOfAnimation()
     {
-        Finished = true;
+        if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove"))
+        {
+            Finished = true;
 
-        toggleHUD();
-        togglePlayerRotationAndMovement();
+            toggleHUD();
+            togglePlayerRotationAndMovement();
+        }
     }
 
     public void StartTimer()
