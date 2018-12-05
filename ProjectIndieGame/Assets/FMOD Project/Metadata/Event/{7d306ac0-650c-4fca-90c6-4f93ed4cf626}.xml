@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{7d306ac0-650c-4fca-90c6-4f93ed4cf626}">
         <property name="name">
-            <value>Ram gets hit</value>
+            <value>0 gets hit</value>
         </property>
         <property name="outputFormat">
             <value>1</value>
