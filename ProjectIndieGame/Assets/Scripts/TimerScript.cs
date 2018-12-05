@@ -19,6 +19,7 @@ public class TimerScript : MonoBehaviour
 
     private float _scalar = 0;
     private float _time;
+    private float _secondsTime;
     private bool _endGame;
 
     void Start()
@@ -83,6 +84,18 @@ public class TimerScript : MonoBehaviour
 
             _playerHandler.EndGame(winner, winnerID);
             Destroy(this);
+        }
+
+        if (_givenTime <= 10)
+        {
+            _secondsTime -= Time.deltaTime;
+            if (_secondsTime <= 0)
+            {
+                _secondsTime = 1;
+                _timerUI.color = new Color(1, 0, 0);
+                _timerUI.fontSize = _timerUI.fontSize + 1;
+                FMODUnity.RuntimeManager.PlayOneShot("event:/bing");
+            }
         }
 
         _givenTime -= Time.deltaTime;

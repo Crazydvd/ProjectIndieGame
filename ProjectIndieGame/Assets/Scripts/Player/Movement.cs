@@ -136,7 +136,6 @@ public class Movement : MonoBehaviour
 
         if (_rigidBody.velocity.magnitude > _parameters.SPEED + 0.2f)
         {
-            StartCoroutine(Camera.main.GetComponent<ScreenShake>().Shake(0.2f, 0.1f));
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/bounce", gameObject);
         }
         _normal.Set(pNormal.x, pNormal.z);

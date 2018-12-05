@@ -13,10 +13,12 @@ public class BreakFences : MonoBehaviour
     [SerializeField] private Mesh _broken3;
 
     MeshFilter _mesh;
+    ScreenShake _screenShake;
 
     void Start()
     {
         _mesh = GetComponent<MeshFilter>();
+        _screenShake = Camera.main.GetComponent<ScreenShake>();
     }
 
     public void DecreaseDurability()
@@ -30,17 +32,21 @@ public class BreakFences : MonoBehaviour
         {
             case 9:
                 _mesh.mesh = _broken1;
+                StartCoroutine(_screenShake.Shake(0.2f, 0.1f));
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 6:
                 _mesh.mesh = _broken2;
+                StartCoroutine(_screenShake.Shake(0.2f, 0.1f));
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 3:
                 _mesh.mesh = _broken3;
+                StartCoroutine(_screenShake.Shake(0.2f, 0.1f));
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 break;
             case 0:
+                StartCoroutine(_screenShake.Shake(0.2f, 0.1f));
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Fence break", gameObject);
                 Destroy(gameObject, 0f);
                 break;
