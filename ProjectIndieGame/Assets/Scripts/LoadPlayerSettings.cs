@@ -61,6 +61,8 @@ public class LoadPlayerSettings : MonoBehaviour {
             meshRenderer.material = _characters[ID, altID - 1];
         }
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
+
+        loadStats(ID);
 	}
 
     void populateCharacterList()
@@ -68,5 +70,28 @@ public class LoadPlayerSettings : MonoBehaviour {
         _characters = new Material[,] { { _char1Alt1, _char1Alt2, _char1Alt3},
                                           { _char2Alt1, _char2Alt2, _char2Alt3 },
                                           { _char3Alt1, _char3Alt2, _char3Alt3 }};
+    }
+
+    void loadStats(int ID)
+    { 
+        PlayerParameters parameters = transform.root.GetComponent<PlayerParameters>();
+        if (ID == 0) // RAM
+        {
+            parameters.ATTACK = 4;
+            parameters.SPEED = 7;
+            parameters.DAMAGE_ABSORPTION = 10;
+        }
+        else if (ID == 1) // BULL
+        {
+            parameters.ATTACK = 6;
+            parameters.SPEED = 3.5f;
+            parameters.DAMAGE_ABSORPTION = 0;
+        }
+        else if (ID == 2) // PIG
+        {
+            parameters.ATTACK = 5;
+            parameters.SPEED = 5;
+            parameters.DAMAGE_ABSORPTION = 20;
+        }
     }
 }
