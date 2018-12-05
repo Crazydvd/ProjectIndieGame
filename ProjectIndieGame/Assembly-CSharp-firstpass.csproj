@@ -93,23 +93,7 @@
     <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
     <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-<<<<<<< HEAD
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-=======
-<<<<<<< HEAD
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-=======
-      <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
->>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -118,12 +102,7 @@
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-<<<<<<< HEAD
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-=======
-      <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
->>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
->>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity 3D/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -324,24 +303,10 @@
       <HintPath>D:/Unity 3D/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-<<<<<<< HEAD
       <HintPath>C:/Users/maris/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/maris/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-=======
-<<<<<<< HEAD
-      <HintPath>C:/Users/l-oud/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/l-oud/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-=======
-      <HintPath>C:/Users/lmwel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/lmwel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
->>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
->>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity 3D/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
