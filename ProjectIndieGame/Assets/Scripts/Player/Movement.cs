@@ -57,7 +57,9 @@ public class Movement : MonoBehaviour
         _dirtParticle = transform.Find("DirtTrail").gameObject;
         _trail = GetComponent<TrailRenderer>();
 
+        trailTransparency(0);
         _trail.time = 0;
+
         _dirtParticle.SetActive(true);
 
         _lateVelocity = Vector2.zero;
@@ -152,6 +154,7 @@ public class Movement : MonoBehaviour
 
         if (_timer <= 0 && _rigidBody.velocity.magnitude > 0f)
         {
+            trailTransparency(1);
             _trail.time = 5;
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
@@ -168,6 +171,7 @@ public class Movement : MonoBehaviour
     private void StopDodge()
     {
         _trail.time = 0;
+        trailTransparency(0);
         _dirtParticle.SetActive(true);
 
         _dodging = false;
@@ -298,6 +302,12 @@ public class Movement : MonoBehaviour
         {
             return;
         }
+    }
+
+    private void trailTransparency(float pTransparent)
+    {
+        _trail.startColor = new Color(1, 1, 1, pTransparent);
+        _trail.endColor = new Color(1, 1, 1, pTransparent);
     }
 
     public Vector3 WalkVelocity
