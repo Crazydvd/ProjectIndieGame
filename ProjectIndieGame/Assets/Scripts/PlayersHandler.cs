@@ -27,6 +27,7 @@ public class PlayersHandler : MonoBehaviour
 
     public void EndGame(string pWinner)
     {
+        GetComponent<Animator>().enabled = true;
         GetComponent<CameraAnimation>().PlayInverseMoveAnimation(_resolutionScreen);
         resolutionScreenText.text = pWinner + resolutionScreenText.text;
         EventSystem.current.SetSelectedGameObject(_firstButton);

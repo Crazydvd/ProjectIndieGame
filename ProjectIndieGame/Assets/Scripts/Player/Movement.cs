@@ -159,8 +159,7 @@ public class Movement : MonoBehaviour
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * _dodgeSpeed;
-            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
-            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            transparentColours();
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
@@ -222,7 +221,7 @@ public class Movement : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Invoke("normalColours", 0.1f);
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + transform.root.name + " gets hit", gameObject);
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + PlayerPrefs.GetInt("Char_P" + _parameters.PLAYER) + " gets hit3D", gameObject);
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
@@ -238,8 +237,22 @@ public class Movement : MonoBehaviour
 
     private void normalColours()
     {
-        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
-        Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 1);
+        Material _bodyMaterial = GetComponent<MeshRenderer>().material;
+        Material _headMaterial = Head.GetComponent<MeshRenderer>().material;
+        ChangeRenderMode.ChangeMode(_bodyMaterial, 0);
+        ChangeRenderMode.ChangeMode(_headMaterial, 0);
+        _bodyMaterial.color = new Color(1, 1, 1, 1);
+        _headMaterial.color = new Color(1, 1, 1, 1);
+    }
+
+    private void transparentColours()
+    {
+        Material _bodyMaterial = GetComponent<MeshRenderer>().material;
+        Material _headMaterial = Head.GetComponent<MeshRenderer>().material;
+        ChangeRenderMode.ChangeMode(_bodyMaterial, 1);
+        ChangeRenderMode.ChangeMode(_headMaterial, 1);
+        _bodyMaterial.color = new Color(1, 1, 1, 0.2f);
+        _headMaterial.color = new Color(1, 1, 1, 0.2f);
     }
 
 
@@ -264,9 +277,8 @@ public class Movement : MonoBehaviour
         _walkVelocity = Vector3.zero;
         _flyVelocity = Vector3.zero;
 
-        GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
-        Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
-        toggleTransparant();
+        transparentColours();
+        toggleTransparent();
         Invoke("endImmortality", IMMORTALITY_TIME);
     }
 
@@ -290,12 +302,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void toggleTransparant()
+    private void toggleTransparent()
     {
         if (_immortal)
         {
-            GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
-            Head.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 1, 0.2f);
+            transparentColours();
             Invoke("toggleNormal", 0.1f);
         }
         else

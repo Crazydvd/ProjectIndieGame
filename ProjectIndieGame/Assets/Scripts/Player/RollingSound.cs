@@ -13,9 +13,9 @@ public class RollingSound : MonoBehaviour
 
     void Start()
     {
-        _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rollingv2");
-        _rollSound.getParameter("speed", out _speed);
         _rigidbody = GetComponent<Rigidbody>();
+        _rollSound = FMODUnity.RuntimeManager.CreateInstance("event:/rolling3D");
+        _rollSound.getParameter("speed", out _speed);
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(_rollSound, transform, _rigidbody);
         _rollSound.start();
         _rollSound.release();

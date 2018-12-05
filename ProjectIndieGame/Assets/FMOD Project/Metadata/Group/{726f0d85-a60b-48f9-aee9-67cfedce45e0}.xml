@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="MixerGroup" id="{726f0d85-a60b-48f9-aee9-67cfedce45e0}">
         <property name="volume">
-            <value>-19.8000011</value>
+            <value>-28</value>
         </property>
         <property name="name">
             <value>dodge</value>

@@ -11,7 +11,7 @@ public class SetToPosition : MonoBehaviour
 
     private void Start()
     {
-        _oldPosition = transform.position;
+        SetOriginalPosition();
     }
 
     public void GoToPos()
@@ -23,5 +23,10 @@ public class SetToPosition : MonoBehaviour
         }
 
         transform.position = Transform.position;
+    }
+
+    public void SetOriginalPosition()
+    {
+        _oldPosition = transform.position;
     }
 }

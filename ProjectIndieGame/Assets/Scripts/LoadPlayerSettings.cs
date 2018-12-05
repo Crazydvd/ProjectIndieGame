@@ -70,7 +70,13 @@ public class LoadPlayerSettings : MonoBehaviour
         }
 
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
+<<<<<<< HEAD
     }
+=======
+
+        loadStats(ID);
+	}
+>>>>>>> 79a39645aa43cd0598b6c8c7aa79bf14dc64df17
 
     void populateCharacterList()
     {
@@ -79,5 +85,30 @@ public class LoadPlayerSettings : MonoBehaviour
                                           { _char3Alt1, _char3Alt2, _char3Alt3 }};
     }
 
+<<<<<<< HEAD
     public string Material { get; set; }
+=======
+    void loadStats(int ID)
+    { 
+        PlayerParameters parameters = transform.root.GetComponent<PlayerParameters>();
+        if (ID == 0) // RAM
+        {
+            parameters.ATTACK = 4;
+            parameters.SPEED = 7;
+            parameters.DAMAGE_ABSORPTION = 10;
+        }
+        else if (ID == 1) // BULL
+        {
+            parameters.ATTACK = 6;
+            parameters.SPEED = 3.5f;
+            parameters.DAMAGE_ABSORPTION = 0;
+        }
+        else if (ID == 2) // PIG
+        {
+            parameters.ATTACK = 5;
+            parameters.SPEED = 5;
+            parameters.DAMAGE_ABSORPTION = 20;
+        }
+    }
+>>>>>>> 79a39645aa43cd0598b6c8c7aa79bf14dc64df17
 }
