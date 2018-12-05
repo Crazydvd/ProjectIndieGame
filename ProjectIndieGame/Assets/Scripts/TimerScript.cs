@@ -41,7 +41,7 @@ public class TimerScript : MonoBehaviour
     void Update()
     {
         rotateLight();
-
+        int winnerID = -1;
         if (_givenTime <= 0)
         {
             string winner = "No one";
@@ -50,11 +50,13 @@ public class TimerScript : MonoBehaviour
             foreach (GameObject player in _playerHandler.GetPlayers())
             {
                 PlayerStatus playerStats = player.GetComponentInChildren<PlayerStatus>();
+                PlayerParameters playerParameters = player.GetComponent<PlayerParameters>();
 
                 if (bestPlayerStats == null)
                 {
                     bestPlayerStats = playerStats;
                     winner = player.name;
+                    winnerID = playerParameters.PLAYER;
                     continue;
                 }
 
@@ -62,6 +64,7 @@ public class TimerScript : MonoBehaviour
                 {
                     bestPlayerStats = playerStats;
                     winner = player.name;
+                    winnerID = playerParameters.PLAYER;
                 }
                 else if (playerStats.GetLives() == bestPlayerStats.GetLives())
                 {
@@ -69,15 +72,17 @@ public class TimerScript : MonoBehaviour
                     {
                         bestPlayerStats = playerStats;
                         winner = player.name;
+                        winnerID = playerParameters.PLAYER;
                     }
                     else if (playerStats.GetDamage() == bestPlayerStats.GetDamage())
                     {
                         winner = "No one";
+                        winnerID = playerParameters.PLAYER;
                     }
                 }
             }
 
-            _playerHandler.EndGame(winner);
+            _playerHandler.EndGame(winner, winnerID);
             Destroy(this);
         }
 

@@ -63,16 +63,13 @@ public class CameraAnimation : MonoBehaviour
 
         foreach (GameObject player in _players)
         {
-            Transform Body = player.transform.Find("Body");
-
-            if (Body == null)
+            if (GetComponent<PlayersHandler>().WinnerID != player.GetComponent<PlayerParameters>().PLAYER)
             {
                 continue;
             }
 
-            string material = Body.GetComponent<LoadPlayerSettings>().Material;
-
             PlayerParameters parameters = player.GetComponent<PlayerParameters>();
+
             int ID = PlayerPrefs.GetInt("Char_P" + parameters.PLAYER);
             int altID = PlayerPrefs.GetInt("Char_color_P" + parameters.PLAYER);
 
@@ -82,12 +79,16 @@ public class CameraAnimation : MonoBehaviour
                 switch (altID)
                 {
                     case 0: //Normal
+                        prefab = _prefabs[0];
                         break;
                     case 1: //Blue
+                        prefab = _prefabs[1];
                         break;
                     case 2: //Green
+                        prefab = _prefabs[2];
                         break;
                     case 3: //Orange
+                        prefab = _prefabs[3];
                         break;
                 }
             }
@@ -96,12 +97,16 @@ public class CameraAnimation : MonoBehaviour
                 switch (altID)
                 {
                     case 0: //Normal
+                        prefab = _prefabs[4];
                         break;
                     case 1: //Blue
+                        prefab = _prefabs[5];
                         break;
                     case 2: //Green
+                        prefab = _prefabs[6];
                         break;
                     case 3: //Orange
+                        prefab = _prefabs[7];
                         break;
                 }
             }
@@ -110,12 +115,16 @@ public class CameraAnimation : MonoBehaviour
                 switch (altID)
                 {
                     case 0: //Normal
+                        prefab = _prefabs[8];
                         break;
                     case 1: //Blue
+                        prefab = _prefabs[9];
                         break;
                     case 2: //Green
+                        prefab = _prefabs[10];
                         break;
                     case 3: //Orange
+                        prefab = _prefabs[11];
                         break;
                 }
             }
@@ -123,6 +132,9 @@ public class CameraAnimation : MonoBehaviour
             {
                 return;
             }
+            GameObject winPosition = GameObject.Find("WinPosition");
+
+            GameObject winner = Instantiate(prefab, winPosition.transform);
 
             player.transform.position = GameObject.Find("Barn").transform.position;
         }

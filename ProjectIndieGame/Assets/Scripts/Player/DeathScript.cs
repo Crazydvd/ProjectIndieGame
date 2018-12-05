@@ -34,7 +34,7 @@ public class DeathScript : MonoBehaviour
                 //Victory Royal
                 if (_playersHandler.GetPlayers().Count == 1)
                 {
-                    _playersHandler.EndGame(_playersHandler.GetPlayers()[0].name);
+                    _playersHandler.EndGame(_playersHandler.GetPlayers()[0].name, _playersHandler.GetPlayers()[0].GetComponent<PlayerParameters>().PLAYER);
                 }
                 return;
             }
