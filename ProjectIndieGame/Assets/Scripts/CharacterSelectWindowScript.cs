@@ -8,14 +8,15 @@ public class CharacterSelectWindowScript : MonoBehaviour {
     [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _stageSelect;
 
+    [SerializeField] GameObject _character1;
+    [SerializeField] GameObject _character2;
+
     private MainMenuCameraScript _cameraScript;
+    private Vector3 _defaultCharacterRotation = new Vector3(0, 90, 0);
 
 	// Use this for initialization
 	void Start () {
-        PlayerPrefs.SetInt("Char_P1", -1);
-        PlayerPrefs.SetInt("Char_P2", -1);
-        PlayerPrefs.SetInt("Color_P1", -1);
-        PlayerPrefs.SetInt("Color_P2", -1);
+        ResetCharacterSelect();
 
         _cameraScript = Camera.main.GetComponent<MainMenuCameraScript>();
     }
@@ -32,4 +33,31 @@ public class CharacterSelectWindowScript : MonoBehaviour {
             gameObject.SetActive(false);
         }
 	}
+
+    void ResetCharacterSelect()
+    {
+        PlayerPrefs.SetInt("Char_P1", -1);
+        PlayerPrefs.SetInt("Char_P2", -1);
+        PlayerPrefs.SetInt("Color_P1", -1);
+        PlayerPrefs.SetInt("Color_P2", -1);
+        PlayerPrefs.SetInt("Preselect_color_P1", -1);
+        PlayerPrefs.SetInt("Preselect_color_P2", -1);
+        PlayerPrefs.SetInt("Preselect_char_P1", -1);
+        PlayerPrefs.SetInt("Preselect_char_P2", -1);
+    }
+
+    private void OnEnable()
+    {
+        _character1.SetActive(true);
+        _character2.SetActive(true);
+        ResetCharacterSelect();
+    }
+
+    private void OnDisable()
+    {
+        _character1.transform.localEulerAngles = _defaultCharacterRotation;
+        _character2.transform.localEulerAngles = _defaultCharacterRotation;
+        _character1.SetActive(false);
+        _character2.SetActive(false);
+    }
 }
