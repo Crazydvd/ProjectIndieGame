@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectIndieGame/Assets/Raw Images/Materials.meta
 guid: 975e8623c02b08247b41be597f7fc4f4
+=======
+guid: bc104ba58ea66bf44b4a0cc3d864f414
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041:ProjectIndieGame/Assets/FMOD Project/Metadata/EffectPreset.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

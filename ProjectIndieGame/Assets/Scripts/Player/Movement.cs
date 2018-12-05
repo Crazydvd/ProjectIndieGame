@@ -222,7 +222,7 @@ public class Movement : MonoBehaviour
             GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
             Invoke("normalColours", 0.1f);
-            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + transform.root.name + " gets hit", gameObject);
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + transform.root.name + " gets hit3D", gameObject);
 
             _attackScript.SetCooldown();
             pOther.gameObject.SetActive(false);
