@@ -80,7 +80,7 @@ public class TimerScript : MonoBehaviour
         }
 
         _givenTime -= Time.deltaTime;
-        _timerUI.text = ((int)_givenTime).ToString();
+        _timerUI.text = ((int)_givenTime).ToString() + "s";
     }
 
     private void rotateLight()

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectIndieGame/Assets/rolling/Metadata.meta
 guid: be1464c58e718b84b85fbbf7f9853dcb
+=======
+<<<<<<< HEAD
+guid: 24a36e89e24373648aedee3258cd6f05
+=======
+guid: 4422507e6cd5adc4297ea5328b616d54
+>>>>>>> 8761067f3fc17472732cd308d1defb5d34c3ab4e
+>>>>>>> cfa981efd448a087f788cf26ba4e9187a3d81ac3:ProjectIndieGame/Assets/FMOD Project/Plugins.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

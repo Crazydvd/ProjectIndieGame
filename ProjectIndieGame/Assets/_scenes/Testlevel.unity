@@ -36997,6 +36997,19 @@ Prefab:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114586449570711818, guid: 232d3738cf59ba2499e59762506c72b6,
+        type: 2}
+      propertyPath: PLAYER
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715327320628266, guid: 232d3738cf59ba2499e59762506c72b6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133139438538994, guid: 232d3738cf59ba2499e59762506c72b6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 232d3738cf59ba2499e59762506c72b6, type: 2}
   m_IsPrefabAsset: 0
@@ -39477,6 +39490,11 @@ Prefab:
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 2087455390}
+    - target: {fileID: 224453519618097148, guid: bab93be8a91eca54bbf1fe43384076c6,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -26.00003
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114158033866652220, guid: bab93be8a91eca54bbf1fe43384076c6, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: bab93be8a91eca54bbf1fe43384076c6, type: 2}

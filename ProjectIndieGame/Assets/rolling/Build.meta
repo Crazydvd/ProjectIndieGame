@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:ProjectIndieGame/Assets/rolling/Build.meta
 guid: 9eaa1ffcd150cf44d8d202c65b772553
+=======
+<<<<<<< HEAD
+guid: 189cd648fc41ed549813abcb2ba17fdc
+=======
+guid: b1bb3848c01a16542b67e00f64ef01d4
+>>>>>>> 8761067f3fc17472732cd308d1defb5d34c3ab4e
+>>>>>>> cfa981efd448a087f788cf26ba4e9187a3d81ac3:ProjectIndieGame/Assets/FMOD Project/Metadata/Snapshot.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
