@@ -16,6 +16,11 @@ public class MainMenuCameraScript : MonoBehaviour {
     {
         _animator = GetComponent<Animator>();
         _animation = _animator.GetComponent<Animation>();
+
+        if (PlayerPrefs.GetInt("MainMenu") == 1) {
+            Debug.Log("hmmmm");
+            _animator.Play("CharacterSelect", -1, 100f);
+        }
     }
 
     private void Update()
