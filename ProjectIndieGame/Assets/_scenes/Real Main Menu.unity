@@ -11426,7 +11426,7 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 0.6319561
+  OverrideMinDistance: 0.9778228
   OverrideMaxDistance: 9.817291
 --- !u!95 &2038071785
 Animator:
