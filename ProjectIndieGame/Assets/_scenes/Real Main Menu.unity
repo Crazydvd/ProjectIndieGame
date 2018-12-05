@@ -6314,6 +6314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 590498786}
   _stageSelect: {fileID: 2037500583}
+  _character1: {fileID: 509870447}
+  _character2: {fileID: 1208379822}
 --- !u!1 &1214552747
 GameObject:
   m_ObjectHideFlags: 0
