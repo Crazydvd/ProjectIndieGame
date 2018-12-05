@@ -27,10 +27,10 @@ public class PlayersHandler : MonoBehaviour
 
     public void EndGame(string pWinner)
     {
+        GetComponent<CameraAnimation>().PlayInverseMoveAnimation(_resolutionScreen);
         resolutionScreenText.text = pWinner + resolutionScreenText.text;
-        _resolutionScreen.gameObject.SetActive(true);
         EventSystem.current.SetSelectedGameObject(_firstButton);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         _bgMusic.StopMusic();
         FMODUnity.RuntimeManager.PlayOneShot("event:/end game");
     }

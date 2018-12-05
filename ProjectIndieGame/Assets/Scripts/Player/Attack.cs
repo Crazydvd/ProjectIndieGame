@@ -11,6 +11,7 @@ public class Attack : MonoBehaviour
     private Movement _movement;
 
     private PlayerParameters _parameters;
+    private AnimationScript _animation;
 
     //private Movement _playerMovement;
 
@@ -19,6 +20,7 @@ public class Attack : MonoBehaviour
         //_playerMovement = transform.root.GetChild(0).GetComponent<Movement>();
         _parameters = transform.root.GetComponent<PlayerParameters>();
         _movement = transform.root.GetComponentInChildren<Movement>();
+        _animation = transform.root.GetComponentInChildren<AnimationScript>();
     }
 
     void Update()
@@ -44,10 +46,8 @@ public class Attack : MonoBehaviour
 
             SetCooldown();
             transform.GetChild(0).gameObject.SetActive(true);
-
-            //TODO: MAKE IT DO IT FOR EVERYONE
-            AnimationScript animation = transform.root.GetComponentInChildren<AnimationScript>();
-            animation.PlayAttackAnimation();
+            
+            _animation.PlayAttackAnimation();
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/attack", gameObject);
 
             Invoke("DisableHitBox", 0.25f);

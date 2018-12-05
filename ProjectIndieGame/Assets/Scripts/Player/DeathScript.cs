@@ -40,7 +40,7 @@ public class DeathScript : MonoBehaviour
             }
 
             transform.position = startPosition;
-            _movement.startImmortality();
+            _movement.StartImmortality();
         }
     }
 }
