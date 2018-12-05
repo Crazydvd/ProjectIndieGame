@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadPlayerSettings : MonoBehaviour {
+public class LoadPlayerSettings : MonoBehaviour
+{
 
     [SerializeField] GameObject _character1;
     [SerializeField] Material _char1Alt1;
@@ -23,11 +24,12 @@ public class LoadPlayerSettings : MonoBehaviour {
     GameObject _usedModel;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
 
         populateCharacterList();
-    
+
 
         _parameters = transform.root.GetComponent<PlayerParameters>();
         int ID = PlayerPrefs.GetInt("Char_P" + _parameters.PLAYER);
@@ -60,10 +62,17 @@ public class LoadPlayerSettings : MonoBehaviour {
         {
             meshRenderer.material = _characters[ID, altID - 1];
         }
+        Material = meshRenderer.material.name;
+
+        if (gameObject.name == "Body")
+        {
+            print(Material);
+        }
+
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
 
         loadStats(ID);
-	}
+    }
 
     void populateCharacterList()
     {
@@ -71,6 +80,8 @@ public class LoadPlayerSettings : MonoBehaviour {
                                           { _char2Alt1, _char2Alt2, _char2Alt3 },
                                           { _char3Alt1, _char3Alt2, _char3Alt3 }};
     }
+
+    public string Material { get; set; }
 
     void loadStats(int ID)
     { 

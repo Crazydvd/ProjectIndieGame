@@ -11,6 +11,8 @@ public class CameraAnimation : MonoBehaviour
     private GameObject _canvas;
     private GameObject _resolutionScreen;
 
+    public GameObject[] _prefabs;
+
     private void Start()
     {
         _players = GameObject.FindGameObjectsWithTag("Player");
@@ -57,6 +59,76 @@ public class CameraAnimation : MonoBehaviour
     public void PlayInverseMoveAnimation(GameObject pResolutionScreen)
     {
         _resolutionScreen = pResolutionScreen;
+        _canvas.GetComponentInChildren<TimerScript>().StopTimer();
+
+        foreach (GameObject player in _players)
+        {
+            Transform Body = player.transform.Find("Body");
+
+            if (Body == null)
+            {
+                continue;
+            }
+
+            string material = Body.GetComponent<LoadPlayerSettings>().Material;
+
+            PlayerParameters parameters = player.GetComponent<PlayerParameters>();
+            int ID = PlayerPrefs.GetInt("Char_P" + parameters.PLAYER);
+            int altID = PlayerPrefs.GetInt("Char_color_P" + parameters.PLAYER);
+
+            GameObject prefab = null;
+
+            if (ID == 0) //Ram
+            {
+                switch (altID)
+                {
+                    case 0: //Normal
+                        break;
+                    case 1: //Blue
+                        break;
+                    case 2: //Green
+                        break;
+                    case 3: //Orange
+                        break;
+                }
+            }
+            else if (ID == 1) //Bull
+            {
+                switch (altID)
+                {
+                    case 0: //Normal
+                        break;
+                    case 1: //Blue
+                        break;
+                    case 2: //Green
+                        break;
+                    case 3: //Orange
+                        break;
+                }
+            }
+            else if (ID == 2) //Pig
+            {
+                switch (altID)
+                {
+                    case 0: //Normal
+                        break;
+                    case 1: //Blue
+                        break;
+                    case 2: //Green
+                        break;
+                    case 3: //Orange
+                        break;
+                }
+            }
+            else
+            {
+                return;
+            }
+
+            Instantiate(prefab, transform.position, transform.rotation);
+            player.transform.position = GameObject.Find("Barn").transform.position;
+        }
+
         _animator.Play("CameraMove Inverse");
     }
 
@@ -66,6 +138,7 @@ public class CameraAnimation : MonoBehaviour
         {
             togglePlayerRotationAndMovement();
             _resolutionScreen.SetActive(true);
+
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("");
         }
     }
@@ -74,11 +147,10 @@ public class CameraAnimation : MonoBehaviour
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove"))
         {
-            Finished = true;            
+            Finished = true;
+
             toggleHUD();
-            GetComponent<SetToPosition>().SetOriginalPosition();
             togglePlayerRotationAndMovement();
-            _animator.enabled = false;
         }
     }
 

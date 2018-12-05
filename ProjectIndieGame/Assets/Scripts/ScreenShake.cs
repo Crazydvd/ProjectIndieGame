@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ScreenShake : MonoBehaviour
 {
+
     public IEnumerator Shake(float pDuration, float pMagnitude)
     {
         Vector3 _oldPosition = transform.position;
+
         float _time = 0f;
 
         while (_time < pDuration)
