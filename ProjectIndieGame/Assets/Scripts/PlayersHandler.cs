@@ -8,6 +8,7 @@ public class PlayersHandler : MonoBehaviour
 {
 
     public List<GameObject> players = new List<GameObject>();
+    public int WinnerID;
 
     [SerializeField] private GameObject _resolutionScreen;
     [SerializeField] private Text resolutionScreenText;
@@ -25,8 +26,9 @@ public class PlayersHandler : MonoBehaviour
         return players;
     }
 
-    public void EndGame(string pWinner)
+    public void EndGame(string pWinner, int winnerID)
     {
+        WinnerID = winnerID;
         GetComponent<CameraAnimation>().PlayInverseMoveAnimation(_resolutionScreen);
         resolutionScreenText.text = pWinner + resolutionScreenText.text;
         EventSystem.current.SetSelectedGameObject(_firstButton);

@@ -14719,6 +14719,7 @@ Transform:
   m_Children:
   - {fileID: 2089755382}
   - {fileID: 1893623874}
+  - {fileID: 1262981314}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25942,6 +25943,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8648c0e1287cc2e4da2344c51245d99a, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1262981313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1262981314}
+  m_Layer: 0
+  m_Name: WinPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1262981314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262981313}
+  m_LocalRotation: {x: 0, y: 0.9348567, z: -0, w: -0.3550253}
+  m_LocalPosition: {x: 2.32, y: 0.14, z: -14.14}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722056869}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 221.59, z: 0}
 --- !u!4 &1267226167
 Transform:
   m_ObjectHideFlags: 0
@@ -38601,6 +38630,7 @@ MonoBehaviour:
   players:
   - {fileID: 862016797}
   - {fileID: 117367150}
+  WinnerID: 0
   _resolutionScreen: {fileID: 626379898}
   resolutionScreenText: {fileID: 626379895}
   _firstButton: {fileID: 626379897}
@@ -38684,6 +38714,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da1b522cd75f2b142826c862724921a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _prefabs:
+  - {fileID: 1320555831468884, guid: 932654fcb4b0c1344ab8e3197b9c13e6, type: 2}
+  - {fileID: 1681821822565852, guid: a41cd58ac448d054aadc38736076e095, type: 2}
+  - {fileID: 1525400705238270, guid: b6bd4d001b038e541b77937e33bf4fec, type: 2}
+  - {fileID: 1201037340068260, guid: d40320a31c92f094d8464ae6e0eba87f, type: 2}
+  - {fileID: 1986556143603574, guid: ee95a53758e69ce488f488a6faa976c6, type: 2}
+  - {fileID: 1390513107938322, guid: cdfe818dd47beb847bdba73c4ed36f22, type: 2}
+  - {fileID: 1528570508335486, guid: 8420a952e9578a74d82ba033c8db7b44, type: 2}
+  - {fileID: 1635672664507770, guid: df4c056defd73c141b6e71a391687caa, type: 2}
+  - {fileID: 1377721478369366, guid: edd48ce0a347d164ab638d7de8e2ded2, type: 2}
+  - {fileID: 1973089363281860, guid: 368d854857a0cb54096fa5ba72c88ee8, type: 2}
+  - {fileID: 1887520066203898, guid: 1d71392c7b2ef3845a59fa2604050d10, type: 2}
+  - {fileID: 1642158055125332, guid: 3d5b87c263e56684d9fd599c9f5e519a, type: 2}
 --- !u!1001 &1896339844
 Prefab:
   m_ObjectHideFlags: 0
