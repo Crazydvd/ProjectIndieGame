@@ -214,7 +214,6 @@ public class CharacterSelectScript : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log(PlayerPrefs.GetInt("Char_P" + _playerID));
         _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
         _enemyPlayerID = _playerID == 1 ? 2 : 1;
 
@@ -222,7 +221,6 @@ public class CharacterSelectScript : MonoBehaviour
         _color = _playerID - 1;
 
         SetCharacter();
-        Debug.Log(PlayerPrefs.GetInt("Preselect_char_P" + _playerID));
         SetNameDeselected();
     }
 }
