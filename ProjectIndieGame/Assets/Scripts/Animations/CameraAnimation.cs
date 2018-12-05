@@ -74,11 +74,10 @@ public class CameraAnimation : MonoBehaviour
     {
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove"))
         {
-            Finished = true;            
+            Finished = true;
+
             toggleHUD();
-            GetComponent<SetToPosition>().SetOriginalPosition();
             togglePlayerRotationAndMovement();
-            _animator.enabled = false;
         }
     }
 
