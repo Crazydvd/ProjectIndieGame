@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class SetToPosition : MonoBehaviour
 {
-    public Transform Transform;
     public bool ownPosition = true;
 
     private Vector3 _oldPosition;
 
     private void Start()
     {
-        _oldPosition = transform.position;
+        SetOriginalPosition();
     }
 
     public void GoToPos()
     {
-        if (ownPosition)
-        {
-            transform.position = _oldPosition;
-            return;
-        }
+        transform.position = _oldPosition;
+    }
 
-        transform.position = Transform.position;
+    public void SetOriginalPosition()
+    {
+        _oldPosition = transform.position;
     }
 }

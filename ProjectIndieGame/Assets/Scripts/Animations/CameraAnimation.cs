@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CameraAnimation : MonoBehaviour
 {
+    public GameObject[] _prefabs;
+
     private Animator _animator;
     private bool _played = false;
 
     private GameObject[] _players;
     private GameObject _canvas;
     private GameObject _resolutionScreen;
-
-    public GameObject[] _prefabs;
 
     private void Start()
     {
@@ -76,7 +76,6 @@ public class CameraAnimation : MonoBehaviour
             int ID = PlayerPrefs.GetInt("Char_P" + parameters.PLAYER);
             int altID = PlayerPrefs.GetInt("Char_color_P" + parameters.PLAYER);
 
-            GameObject prefab = null;
 
             if (ID == 0) //Ram
             {
@@ -125,7 +124,6 @@ public class CameraAnimation : MonoBehaviour
                 return;
             }
 
-            Instantiate(prefab, transform.position, transform.rotation);
             player.transform.position = GameObject.Find("Barn").transform.position;
         }
 
@@ -138,7 +136,6 @@ public class CameraAnimation : MonoBehaviour
         {
             togglePlayerRotationAndMovement();
             _resolutionScreen.SetActive(true);
-
             GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("");
         }
     }
@@ -148,7 +145,8 @@ public class CameraAnimation : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove"))
         {
             Finished = true;
-
+            _animator.enabled = false;
+            Camera.main.GetComponent<SetToPosition>().SetOriginalPosition();
             toggleHUD();
             togglePlayerRotationAndMovement();
         }
