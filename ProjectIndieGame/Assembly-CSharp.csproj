@@ -155,7 +155,10 @@
     <None Include="Assets\FMOD Project\Metadata\Group\{45a7568a-4b86-4fba-abb1-680a9d26beac}.xml" />
     <None Include="Assets\FMOD Project\Metadata\ParameterPresetFolder\{62faa572-ede5-4cfc-a2c2-6ef166bb8b42}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{5cf22063-8004-4039-92df-49e8b3d4e8a9}.xml" />
+<<<<<<< HEAD
+=======
     <None Include="Assets\FMOD Project\Metadata\Event\{9b40d7b3-3a0a-4dc8-a070-664b60cf6acc}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\Shaders\HandoutShaders\RedShader.shader" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{c30a0a6e-f15f-4d19-830c-a6d2926fb832}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{63b80094-b24f-49cc-8c76-457a755671cf}.xml" />
@@ -188,6 +191,10 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
     <None Include="Assets\Shaders\HandoutShaders\VectorOperations.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+<<<<<<< HEAD
+    <None Include="Assets\FMOD Project\Metadata\Event\{b5d0766a-ba0d-400e-ab57-f0f81db7de62}.xml" />
+=======
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{52f67d28-5444-44e9-b99c-1a85bf0ba932}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Platform\{9bc46831-809b-4623-90fd-85579b1ef23f}.xml" />
@@ -205,12 +212,18 @@
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{0b2f405f-e803-4671-a132-97491d1e8bb6}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+<<<<<<< HEAD
+=======
     <None Include="Assets\FMOD Project\Metadata\Group\{4140a5af-da78-45f2-aaef-2314a870f6db}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\FMOD Project\Metadata\EffectPresetFolder\{62725d03-9564-4a00-b35d-837416262702}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
     <None Include="Assets\FMOD Project\Metadata\VCA\{b9b2f210-5dd2-461c-90ae-e799cb52f4a2}.xml" />
     <None Include="Assets\Shaders\HandoutShaders\DisplayNormals.shader" />
+<<<<<<< HEAD
+=======
     <None Include="Assets\FMOD Project\Metadata\Event\{786d1871-15d9-4222-ab2b-5b3dfc7bc38c}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{49ac79ca-812c-4597-9a98-762f99b9da4e}.xml" />
     <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{682f8507-3e62-426e-b26c-f812a71efe56}.xml" />
@@ -247,19 +260,29 @@
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{bf67961c-6b2b-4db2-b36f-2b1d55c9b474}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{3de96059-e28b-4d5f-bf8e-0268934eaf3b}.xml" />
+<<<<<<< HEAD
+    <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\FMOD Project\Metadata\AudioFile\{4e1f4421-042c-402d-9e7a-869795e92b49}.xml" />
+=======
     <None Include="Assets\FMOD Project\Metadata\Event\{da49d7f7-67f1-46a6-8f05-af2f900390cf}.xml" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{4e1f4421-042c-402d-9e7a-869795e92b49}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{ba536fde-2a22-4ffe-883c-93fc6d875570}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
     <None Include="Assets\FMOD Project\Metadata\Master.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{530862ea-1078-4636-b2c6-ae99d96de6b1}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Tags.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{7d306ac0-650c-4fca-90c6-4f93ed4cf626}.xml" />
+<<<<<<< HEAD
+    <None Include="Assets\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
+    <None Include="Assets\FMOD Project\Metadata\AudioFile\{5dfcc289-400d-4238-a7d9-979630e9fdba}.xml" />
+=======
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{bef20cf3-f436-4539-8f07-54ea8e3cd1ce}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{c3a21fdb-2c27-43aa-a493-38c543072479}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{5dfcc289-400d-4238-a7d9-979630e9fdba}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{f4580bc1-15d3-4c03-b2dd-028a9d39c882}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{92e51ae5-5bdd-4a1c-bf17-ae834df3a2d6}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{21c57d6e-baa3-404b-b20c-12e99db5fef5}.xml" />
@@ -272,13 +295,19 @@
     <None Include="Assets\FMOD Project\Metadata\Group\{726f0d85-a60b-48f9-aee9-67cfedce45e0}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{f744b1e9-fcdb-43dd-ab32-87ede165f18b}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{b557337b-39f8-47d6-a08d-83c197c028de}.xml" />
+<<<<<<< HEAD
+=======
     <None Include="Assets\FMOD Project\Metadata\Event\{d8220e1e-2dd7-4d8f-b31f-98a5913a6596}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{658c7b25-dd41-4e19-b711-f42403510528}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{bd86cb8d-cd46-4896-adf1-a1cd56337b40}.xml" />
     <None Include="Assets\FMOD Project\Metadata\SnapshotGroup\{cb3d15b0-8048-4886-832d-b322d6483211}.xml" />
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{eeb1f91b-8e97-4735-bc0b-0d3557775b78}.xml" />
+<<<<<<< HEAD
+=======
     <None Include="Assets\FMOD Project\Metadata\Event\{a74daeaf-6093-46fa-80e4-720b3972a852}.xml" />
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
     <None Include="Assets\FMOD Project\Metadata\ParameterPreset\{0746bf8b-453c-4e25-b207-d23fb6d6a5a7}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{c474a44a-274a-4cb1-b9f3-1d61ca73a066}.xml" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
@@ -288,7 +317,23 @@
     <None Include="Assets\FMOD Project\Metadata\AudioFile\{724d69be-0e64-489c-bc49-e9551e497a0f}.xml" />
     <None Include="Assets\FMOD Project\Metadata\Event\{6603d152-6343-49c9-9006-f8d490daa7f0}.xml" />
     <Reference Include="UnityEditor.StandardEvents">
+<<<<<<< HEAD
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+=======
+<<<<<<< HEAD
+      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>D:/Stack/Saxion/Q2.2/Project Indie/Git/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
+      <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+>>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -297,7 +342,12 @@
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
+<<<<<<< HEAD
       <HintPath>D:/Project Indie/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+=======
+      <HintPath>C:/Users/lmwel/Documents/ProjectIndieGame/ProjectIndieGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
+>>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity 3D/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -498,10 +548,24 @@
       <HintPath>D:/Unity 3D/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
+<<<<<<< HEAD
       <HintPath>C:/Users/maris/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/maris/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+=======
+<<<<<<< HEAD
+      <HintPath>C:/Users/l-oud/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/l-oud/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+=======
+      <HintPath>C:/Users/lmwel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/lmwel/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+>>>>>>> f8f291c936b2a4ccd3f14ebdace4ba553d74d041
+>>>>>>> 45203f68349e66266790db663bd04079f50f6d39
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity 3D/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
