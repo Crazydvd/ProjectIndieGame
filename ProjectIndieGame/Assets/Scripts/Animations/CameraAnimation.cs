@@ -151,13 +151,8 @@ public class CameraAnimation : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove Inverse"))
         {
             togglePlayerRotationAndMovement();
-<<<<<<< HEAD
 
             _resolutionScreen.SetActive(true);
-=======
-            _resolutionScreen.SetActive(true);
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("");
->>>>>>> ee7a9822a7f05dbe7ea8ff1ab470b302d620e030
         }
     }
 
