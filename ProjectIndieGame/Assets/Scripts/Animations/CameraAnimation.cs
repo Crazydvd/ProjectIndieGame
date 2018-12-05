@@ -48,6 +48,8 @@ public class CameraAnimation : MonoBehaviour
 
             player.GetComponentInChildren<Movement>().enabled = !player.GetComponentInChildren<Movement>().isActiveAndEnabled;
             player.GetComponentInChildren<RotatePlayer>().enabled = !player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled;
+
+            print(player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled);
         }
     }
 
@@ -139,6 +141,7 @@ public class CameraAnimation : MonoBehaviour
             player.transform.position = GameObject.Find("Barn").transform.position;
         }
 
+        toggleHUD();
         _animator.Play("CameraMove Inverse");
     }
 
@@ -147,9 +150,8 @@ public class CameraAnimation : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CameraMove Inverse"))
         {
             togglePlayerRotationAndMovement();
-            _resolutionScreen.SetActive(true);
 
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("");
+            _resolutionScreen.SetActive(true);
         }
     }
 
