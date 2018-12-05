@@ -750,7 +750,7 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 1
+  OverrideMinDistance: 0.7443855
   OverrideMaxDistance: 12
 --- !u!54 &106759371
 Rigidbody:
@@ -1094,15 +1094,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.364
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.597
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -14.526
+      value: -14.74
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalRotation.x
@@ -1110,7 +1110,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.9956452
+      value: -0.9288673
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1118,7 +1118,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.09322322
+      value: -0.37041277
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_RootOrder
@@ -1126,7 +1126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4168948383505038, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -190.698
+      value: -223.482
       objectReference: {fileID: 0}
     - target: {fileID: 1589778970531500, guid: a4cbf3182ca5eaf4a8709929fcaa2ded, type: 2}
       propertyPath: m_IsActive
