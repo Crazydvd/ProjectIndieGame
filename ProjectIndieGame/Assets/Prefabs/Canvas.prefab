@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 114635765237799430}
   - component: {fileID: 114222163291096884}
   - component: {fileID: 114679454699195522}
+  - component: {fileID: 114556254238186298}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Canvas
@@ -267,6 +268,7 @@ GameObject:
   - component: {fileID: 224341508161219450}
   - component: {fileID: 222562080301253108}
   - component: {fileID: 114966105270923546}
+  - component: {fileID: 114073836511115538}
   m_Layer: 5
   m_Name: Rumble
   m_TagString: Untagged
@@ -301,6 +303,7 @@ GameObject:
   - component: {fileID: 224972078974530968}
   - component: {fileID: 222307948719266126}
   - component: {fileID: 114696281813448532}
+  - component: {fileID: 114610973282707272}
   m_Layer: 5
   m_Name: 1
   m_TagString: Untagged
@@ -405,6 +408,7 @@ GameObject:
   - component: {fileID: 224444647300488456}
   - component: {fileID: 222431542839768884}
   - component: {fileID: 114286573420299922}
+  - component: {fileID: 114169518387131528}
   m_Layer: 5
   m_Name: 3
   m_TagString: Untagged
@@ -562,6 +566,7 @@ GameObject:
   - component: {fileID: 224089144298597408}
   - component: {fileID: 222779184080487696}
   - component: {fileID: 114524134867557678}
+  - component: {fileID: 114909680860855894}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -595,7 +600,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224590426077252528}
-  - component: {fileID: 114158033866652220}
   m_Layer: 5
   m_Name: Countdown
   m_TagString: Untagged
@@ -741,6 +745,28 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114073836511115538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1548320600695508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/cock
+  PlayEvent: 11
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114097909637874722
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -774,17 +800,28 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 180s
---- !u!114 &114158033866652220
+--- !u!114 &114169518387131528
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1895083314545876}
+  m_GameObject: {fileID: 1721016045472184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3493b1bf9c7458543a48a303b3576685, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Event: event:/bing
+  PlayEvent: 11
+  StopEvent: 12
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114174578796296330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,6 +1455,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114556254238186298
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1269953066000428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3493b1bf9c7458543a48a303b3576685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114568238299076792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1498,6 +1546,28 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114610973282707272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1580482621123726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/bing
+  PlayEvent: 11
+  StopEvent: 12
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114631065204746348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2008,6 +2078,28 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ' wins!'
+--- !u!114 &114909680860855894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1852883999778026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/bing
+  PlayEvent: 11
+  StopEvent: 12
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114912545106214224
 MonoBehaviour:
   m_ObjectHideFlags: 1
