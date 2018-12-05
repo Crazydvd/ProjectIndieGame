@@ -9,6 +9,8 @@ public class MainMenuMusic : MonoBehaviour
     void Start()
     {
         _mainMenuSound = FMODUnity.RuntimeManager.CreateInstance("event:/menu");
+        //_mainMenuSound = FMODUnity.RuntimeManager.CreateInstance("event:/menu3D");
+        //FMODUnity.RuntimeManager.AttachInstanceToGameObject(_mainMenuSound, transform, GetComponent<Rigidbody>());
         _mainMenuSound.start();
         _mainMenuSound.release();
     }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\FMOD\FMOD Project\rolling.fspro
-  SourceProjectPathUnformatted: Assets\FMOD\FMOD Project\rolling.fspro
-  SourceBankPathUnformatted: Assets\FMOD\FMOD Project\Build
+  sourceProjectPath: Assets\FMOD Project\rolling.fspro
+  SourceProjectPathUnformatted: Assets\FMOD Project\rolling.fspro
+  SourceBankPathUnformatted: Assets\FMOD Project\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
