@@ -73,6 +73,7 @@ public class CameraAnimation : MonoBehaviour
             int ID = PlayerPrefs.GetInt("Char_P" + parameters.PLAYER);
             int altID = PlayerPrefs.GetInt("Char_color_P" + parameters.PLAYER);
 
+            GameObject prefab = null;
 
             if (ID == 0) //Ram
             {
