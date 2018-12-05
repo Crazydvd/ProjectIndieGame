@@ -19,6 +19,7 @@ public class TimerScript : MonoBehaviour
 
     private float _scalar = 0;
     private float _time;
+    private bool _endGame;
 
     void Start()
     {
@@ -76,7 +77,7 @@ public class TimerScript : MonoBehaviour
             }
 
             _playerHandler.EndGame(winner);
-            Destroy(this, 0);
+            Destroy(this);
         }
 
         _givenTime -= Time.deltaTime;
@@ -87,5 +88,10 @@ public class TimerScript : MonoBehaviour
     {
         _scalar += (1 / _time) * Time.deltaTime;
         _light.transform.rotation = Quaternion.Euler(_originalRotation + _delta * _scalar);
+    }
+
+    public void StopTimer()
+    {
+        Destroy(this);
     }
 }
