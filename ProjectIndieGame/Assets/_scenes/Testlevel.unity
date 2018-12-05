@@ -38517,8 +38517,8 @@ GameObject:
   - component: {fileID: 1893623877}
   - component: {fileID: 1893623876}
   - component: {fileID: 1893623875}
-  - component: {fileID: 1893623882}
   - component: {fileID: 1893623883}
+  - component: {fileID: 1893623882}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -39322,7 +39322,7 @@ Prefab:
     - target: {fileID: 224453519618097148, guid: bab93be8a91eca54bbf1fe43384076c6,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -26.00003
+      value: -26
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114158033866652220, guid: bab93be8a91eca54bbf1fe43384076c6, type: 2}
