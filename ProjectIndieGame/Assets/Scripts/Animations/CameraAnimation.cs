@@ -48,8 +48,6 @@ public class CameraAnimation : MonoBehaviour
 
             player.GetComponentInChildren<Movement>().enabled = !player.GetComponentInChildren<Movement>().isActiveAndEnabled;
             player.GetComponentInChildren<RotatePlayer>().enabled = !player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled;
-
-            print(player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled);
         }
     }
 
