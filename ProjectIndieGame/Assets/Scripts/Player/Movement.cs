@@ -162,7 +162,7 @@ public class Movement : MonoBehaviour
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * _dodgeSpeed;
-            transparentColours();
+            transparantColours();
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
@@ -248,7 +248,7 @@ public class Movement : MonoBehaviour
         _headMaterial.color = new Color(1, 1, 1, 1);
     }
 
-    private void transparentColours()
+    private void transparantColours()
     {
         Material _bodyMaterial = GetComponent<MeshRenderer>().material;
         Material _headMaterial = Head.GetComponent<MeshRenderer>().material;
@@ -280,8 +280,8 @@ public class Movement : MonoBehaviour
         _walkVelocity = Vector3.zero;
         _flyVelocity = Vector3.zero;
 
-        transparentColours();
-        toggleTransparent();
+        transparantColours();
+        toggleTransparant();
         Invoke("endImmortality", IMMORTALITY_TIME);
     }
 
@@ -305,11 +305,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void toggleTransparent()
+    private void toggleTransparant()
     {
         if (_immortal)
         {
-            transparentColours();
+            transparantColours();
             Invoke("toggleNormal", 0.1f);
         }
         else
