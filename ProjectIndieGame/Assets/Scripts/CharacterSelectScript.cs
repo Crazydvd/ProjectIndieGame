@@ -32,6 +32,8 @@ public class CharacterSelectScript : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PlayerParameters.resetKeyboardPlayer();
+
         _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
         _enemyPlayerID = _playerID == 1 ? 2 : 1;
 
@@ -52,17 +54,32 @@ public class CharacterSelectScript : MonoBehaviour
     void Update()
     {
         // character rotation
-        if (Input.GetAxis("RightHorizontal_P" + _playerID) > 0)
+        if (_playerID == PlayerParameters.KeyBoardPlayer)
         {
-            _modelsParent.transform.Rotate(0, -1, 0);
+            if (Input.GetAxisRaw("KeyboardRightHorizontal") > 0)
+            {
+                _modelsParent.transform.Rotate(0, -1, 0);
+            }
+            if (Input.GetAxisRaw("KeyboardRightHorizontal") < 0)
+            {
+                _modelsParent.transform.Rotate(0, 1, 0);
+            }
         }
-        if (Input.GetAxis("RightHorizontal_P" + _playerID) < 0)
+        else
         {
-            _modelsParent.transform.Rotate(0, 1, 0);
+            if (Input.GetAxis("RightHorizontal_P" + _playerID) > 0)
+            {
+                _modelsParent.transform.Rotate(0, -1, 0);
+            }
+            if (Input.GetAxis("RightHorizontal_P" + _playerID) < 0)
+            {
+                _modelsParent.transform.Rotate(0, 1, 0);
+            }
         }
 
         // selecting character
-        if (Input.GetButtonDown("Accept_P" + _playerID))
+        if (Input.GetButtonDown("Accept_P" + _playerID) ||
+            (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardAccept")))
         {
             PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
             PlayerPrefs.SetInt("Char_P" + _playerID, _char);
@@ -70,7 +87,8 @@ public class CharacterSelectScript : MonoBehaviour
 
             SetNameSelected();
         }
-        else if (Input.GetButtonDown("Decline_P" + _playerID))
+        else if (Input.GetButtonDown("Decline_P" + _playerID) ||
+            (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardDecline")))
         {
             Invoke("DeselectCharacter", 0.001f);
         }
@@ -83,7 +101,8 @@ public class CharacterSelectScript : MonoBehaviour
         }
 
         // change skins
-        if (Input.GetButtonDown("RightBumper_P" + _playerID))
+        if (Input.GetButtonDown("RightBumper_P" + _playerID) ||
+            (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardRB")))
         {
             _color++;
             if (_color > _maxColors - 1) _color = 0;
@@ -94,7 +113,8 @@ public class CharacterSelectScript : MonoBehaviour
             if (_color > _maxColors - 1) _color = 0;
             SetCharacter();
         }
-        if (Input.GetButtonDown("LeftBumper_P" + _playerID))
+        if (Input.GetButtonDown("LeftBumper_P" + _playerID) ||
+            (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardLB")))
         {
             _color--;
             if (_color < 0) _color = _maxColors - 1;
@@ -109,7 +129,8 @@ public class CharacterSelectScript : MonoBehaviour
         // character selection
         if (!_selected)
         {
-            if (Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
+            if (Input.GetAxis("LeftHorizontal_P" + _playerID) > 0 ||
+                (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetAxis("KeyboardHorizontal") > 0))
             {
                 _char++;
                 if (_char > _namesSelected.Length - 1) _char = 0;
@@ -118,7 +139,8 @@ public class CharacterSelectScript : MonoBehaviour
 
                 SetNameDeselected();
             }
-            if (Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
+            if (Input.GetAxis("LeftHorizontal_P" + _playerID) < 0 ||
+                (_playerID == PlayerParameters.KeyBoardPlayer && Input.GetAxis("KeyboardHorizontal") < 0))
             {
                 _char--;
                 if (_char < 0) _char = _namesSelected.Length - 1;

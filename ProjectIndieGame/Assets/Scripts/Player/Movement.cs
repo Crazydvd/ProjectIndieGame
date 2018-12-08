@@ -78,7 +78,16 @@ public class Movement : MonoBehaviour
         }
         _walkVelocity = Vector3.zero;
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
+        Vector2 stickInput;
+        if (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer)
+        {
+            stickInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
+        else
+        {
+            stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
+        }
+
         if (stickInput.magnitude < 0.25f)
             stickInput = Vector2.zero;
 
@@ -117,7 +126,8 @@ public class Movement : MonoBehaviour
         {
             _rigidBody.velocity = _walkVelocity;
 
-            if ((Input.GetButton("Fire2") || Input.GetButton("LeftBumper_P" + _parameters.PLAYER)))
+            if (Input.GetButton("LeftBumper_P" + _parameters.PLAYER) ||
+                    (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardLB")))
             {
                 dodge();
             }

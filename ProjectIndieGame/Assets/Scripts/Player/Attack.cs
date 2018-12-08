@@ -37,7 +37,8 @@ public class Attack : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("RightBumper_P" + _parameters.PLAYER))
+        if (Input.GetButtonDown("RightBumper_P" + _parameters.PLAYER) ||
+            (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardRB")))
         {
             if (_movement.Immortal)
             {
