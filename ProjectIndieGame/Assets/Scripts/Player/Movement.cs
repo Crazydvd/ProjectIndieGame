@@ -126,7 +126,7 @@ public class Movement : MonoBehaviour
         {
             _rigidBody.velocity = _walkVelocity;
 
-            if (Input.GetButton("LeftBumper_P" + _parameters.PLAYER) ||
+            if (Input.GetButton("LeftBumper_P" + _parameters.PLAYER) || Input.GetAxis("LeftTrigger_P" + _parameters.PLAYER) > 0 ||
                     (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardLB")))
             {
                 dodge();
