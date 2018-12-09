@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Video;
 
-public class MainMenuCameraScript : MonoBehaviour {
+public class MainMenuCameraScript : MonoBehaviour
+{
 
     [SerializeField] GameObject _mainMenu;
     [SerializeField] GameObject _characterSelect;
@@ -17,6 +18,7 @@ public class MainMenuCameraScript : MonoBehaviour {
     private Animation _animation;
     private VideoClip _originalClip;
     private MainMenuMusic _mainMenuMusic;
+    private GameObject _tutorialBackButton;
     private bool _tutorialPlaying = false;
 
     private void Start()
@@ -24,8 +26,10 @@ public class MainMenuCameraScript : MonoBehaviour {
         _animator = GetComponent<Animator>();
         _animation = _animator.GetComponent<Animation>();
         _mainMenuMusic = _boomBox.GetComponent<MainMenuMusic>();
+        _tutorialBackButton = GameObject.Find("Canvas").transform.Find("TV").gameObject;
 
-        if (PlayerPrefs.GetInt("MainMenu") == 1) {
+        if (PlayerPrefs.GetInt("MainMenu") == 1)
+        {
             _animator.enabled = true;
             _animator.Play("CharacterSelect", 0, 1f);
         }
@@ -51,6 +55,8 @@ public class MainMenuCameraScript : MonoBehaviour {
             _tutorialPlaying = false;
             _animator.Play("Controls Inverse");
             _videoPlayer.clip = _originalClip;
+
+            toggleTutorialBackButton();
         }
     }
 
@@ -93,11 +99,13 @@ public class MainMenuCameraScript : MonoBehaviour {
             _videoPlayer.Play();
             _tutorialPlaying = true;
             _mainMenuMusic.EnableTutorialMusic();
+
+            toggleTutorialBackButton();
         }
     }
 
     public void CloseTutorial()
-    {      
+    {
         _animator.Play("Controls Inverse");
     }
 
@@ -109,5 +117,10 @@ public class MainMenuCameraScript : MonoBehaviour {
             _mainMenu.SetActive(true);
             EventSystem.current.SetSelectedGameObject(_mainMenuButton);
         }
+    }
+
+    private void toggleTutorialBackButton()
+    {
+        _tutorialBackButton.SetActive(!_tutorialBackButton.activeInHierarchy);
     }
 }

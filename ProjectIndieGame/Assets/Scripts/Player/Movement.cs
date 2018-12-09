@@ -32,6 +32,10 @@ public class Movement : MonoBehaviour
     [Header("How much seconds are between turning transparent and normal when immortal")]
     public float transparency_interval = 0.1f;
 
+    [Header("What colour to turn to when damaged and for how long (seconds)")]
+    public Color DamageColour = new Color(0.8f, 0, 0, 1);
+    public float DamageTime = 0.3f;
+
     private bool _dodging;
     private float _timer;
 
@@ -74,7 +78,16 @@ public class Movement : MonoBehaviour
         }
         _walkVelocity = Vector3.zero;
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
+        Vector2 stickInput;
+        if (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer)
+        {
+            stickInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
+        else
+        {
+            stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
+        }
+
         if (stickInput.magnitude < 0.25f)
             stickInput = Vector2.zero;
 
@@ -113,7 +126,8 @@ public class Movement : MonoBehaviour
         {
             _rigidBody.velocity = _walkVelocity;
 
-            if ((Input.GetButton("Fire2") || Input.GetButton("LeftBumper_P" + _parameters.PLAYER)))
+            if (Input.GetButton("LeftBumper_P" + _parameters.PLAYER) || Input.GetAxis("LeftTrigger_P" + _parameters.PLAYER) > 0 ||
+                    (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardLB")))
             {
                 dodge();
             }
@@ -158,7 +172,7 @@ public class Movement : MonoBehaviour
             _dirtParticle.SetActive(false);
             _timer = _dodgeCooldown;
             _rigidBody.velocity = _walkVelocity * _dodgeSpeed;
-            transparentColours();
+            transparantColours();
             gameObject.layer = 10;
             _dodging = true;
             Invoke("StopDodge", _dodgeDuration);
@@ -217,9 +231,9 @@ public class Movement : MonoBehaviour
 
             StartCoroutine(_screenShake.Shake(0.2f, 0.1f + _playerStatus.GetDamage() / 300f)); //shake the screen depending on damage
             _playerStatus.IncreaseDamage(pOther.transform.root.GetComponent<PlayerParameters>().ATTACK);
-            GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
-            Head.GetComponent<MeshRenderer>().material.color = new Color(0.8f, 0, 0, 1);
-            Invoke("normalColours", 0.1f);
+            GetComponent<MeshRenderer>().material.color = DamageColour;
+            Head.GetComponent<MeshRenderer>().material.color = DamageColour;
+            Invoke("normalColours", DamageTime);
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/" + PlayerPrefs.GetInt("Char_P" + _parameters.PLAYER) + " gets hit3D", gameObject);
 
             _attackScript.SetCooldown();
@@ -244,7 +258,7 @@ public class Movement : MonoBehaviour
         _headMaterial.color = new Color(1, 1, 1, 1);
     }
 
-    private void transparentColours()
+    private void transparantColours()
     {
         Material _bodyMaterial = GetComponent<MeshRenderer>().material;
         Material _headMaterial = Head.GetComponent<MeshRenderer>().material;
@@ -276,8 +290,8 @@ public class Movement : MonoBehaviour
         _walkVelocity = Vector3.zero;
         _flyVelocity = Vector3.zero;
 
-        transparentColours();
-        toggleTransparent();
+        transparantColours();
+        toggleTransparant();
         Invoke("endImmortality", IMMORTALITY_TIME);
     }
 
@@ -301,11 +315,11 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void toggleTransparent()
+    private void toggleTransparant()
     {
         if (_immortal)
         {
-            transparentColours();
+            transparantColours();
             Invoke("toggleNormal", 0.1f);
         }
         else

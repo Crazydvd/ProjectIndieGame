@@ -20,4 +20,18 @@ public class PlayerParameters : MonoBehaviour
     [Header("The % slower you get tossed around")]
     [Range(0, 100)]
     public int DAMAGE_ABSORPTION;
+
+    public static int KeyBoardPlayer = 2;
+
+    private void Start()
+    {
+        int length = Input.GetJoystickNames().Length;
+        KeyBoardPlayer = length + 1;
+    }
+
+    public static void resetKeyboardPlayer()
+    {
+        int length = Input.GetJoystickNames().Length;
+        KeyBoardPlayer = length + 1;
+    }
 }

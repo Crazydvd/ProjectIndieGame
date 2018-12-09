@@ -64,11 +64,6 @@ public class LoadPlayerSettings : MonoBehaviour
         }
         Material = meshRenderer.material.name;
 
-        if (gameObject.name == "Body")
-        {
-            print(Material);
-        }
-
         meshFilter.mesh = _usedModel.GetComponent<MeshFilter>().sharedMesh;
 
         loadStats(ID);

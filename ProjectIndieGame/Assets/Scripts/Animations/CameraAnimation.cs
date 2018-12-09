@@ -48,8 +48,6 @@ public class CameraAnimation : MonoBehaviour
 
             player.GetComponentInChildren<Movement>().enabled = !player.GetComponentInChildren<Movement>().isActiveAndEnabled;
             player.GetComponentInChildren<RotatePlayer>().enabled = !player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled;
-
-            print(player.GetComponentInChildren<RotatePlayer>().isActiveAndEnabled);
         }
     }
 
@@ -139,7 +137,7 @@ public class CameraAnimation : MonoBehaviour
 
             GameObject winner = Instantiate(prefab, winPosition.transform);
 
-            player.transform.position = GameObject.Find("Barn").transform.position;
+            player.transform.position = new Vector3(0, -10, 0);
         }
 
         toggleHUD();

@@ -21,12 +21,13 @@ public class RotatePlayer : MonoBehaviour
             return;
         }
 
-        Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _parameters.PLAYER), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
-        if (stickInput.magnitude < _deadzone)
-            stickInput = Vector2.zero;
-
-        if (Input.GetJoystickNames().Length > 0) 
+        if (_parameters.PLAYER != PlayerParameters.KeyBoardPlayer) 
         {
+
+            Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _parameters.PLAYER), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
+            if (stickInput.magnitude < _deadzone)
+                stickInput = Vector2.zero;
+
             Vec2 direction = new Vec2(stickInput.x, stickInput.y);
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
