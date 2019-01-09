@@ -27,12 +27,13 @@ public class CharacterSelectWindowScript : MonoBehaviour {
         {
             SceneManager.LoadScene(1);
         }
-        else if (Input.GetButtonDown("Decline_P1") && PlayerPrefs.GetInt("Char_P1") == -1)
-        {
-            _cameraScript.BackToMain();
-            gameObject.SetActive(false);
-        }
 	}
+
+    public void BackToMenu()
+    {
+        _cameraScript.BackToMain();
+        gameObject.SetActive(false);
+    }
 
     void ResetCharacterSelect()
     {

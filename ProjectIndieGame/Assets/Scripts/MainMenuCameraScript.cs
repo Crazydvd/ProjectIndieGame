@@ -55,16 +55,38 @@ public class MainMenuCameraScript : MonoBehaviour
             _tutorialPlaying = false;
             _animator.Play("Controls Inverse");
             _videoPlayer.clip = _originalClip;
-
             toggleTutorialBackButton();
         }
     }
+
 
     public void StartCamera()
     {
         _mainMenu.SetActive(false);
         _animator.enabled = true;
         _animator.Play("CharacterSelect");
+
+        SetControllerIdPlayerOne();
+    }
+
+    void SetControllerIdPlayerOne()
+    {
+        ControllerSettings.ResetPlayers();
+        bool joystick = false;
+        for (int i = 1; i < 5; i++)
+        {
+            if(Input.GetButton("Accept_P" + i))
+            {
+                ControllerSettings.player1Joystick = i;
+                joystick = true;
+                break;
+            }
+        }
+
+        if (!joystick)
+        {
+            ControllerSettings.player1Joystick = 0;
+        }
     }
 
     public void BackToMain()
