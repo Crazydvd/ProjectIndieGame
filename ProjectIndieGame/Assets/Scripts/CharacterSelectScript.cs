@@ -40,39 +40,70 @@ public class CharacterSelectScript : MonoBehaviour
     // Use this for initialization
     void OnEnable()
     {
+        _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
+        _characterSelectWindowScript = GetComponentInParent<CharacterSelectWindowScript>();
+
+        if (ControllerSettings.player2Joystick != -1 && _controllerID != -1) // check if coming back from stage select (or from the game I suppose)
+        {
+            DeselectCharacter();
+            SelectCharacterToShow();
+            PlayerSettings.playersSelected = new bool[] { false, false, false, false };
+            return;
+        }
+
         _controllerID = -1;
+        _char = 0;
 
         if (_playerID == 1)
         {
             _controllerID = ControllerSettings.player1Joystick;
+            PlayerSettings.takenChararacters[0, 0] = true;
+            PlayerSettings.player1 = PlayerSettings.character.GOAT;
+            PlayerSettings.player1Alt = 0;
+            _color = 0;
         }
-
-        _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
-        _characterSelectWindowScript = GetComponentInParent<CharacterSelectWindowScript>();
-
-        _color = _playerID - 1;
-
-        int oldSelect = PlayerPrefs.GetInt("Char_P" + _playerID);
-        if (oldSelect != -1)
+        else
         {
-            _char = oldSelect;
+            for(int i = 0; i < 4; i++)
+            {
+                if (PlayerSettings.takenChararacters[0, i] == false)
+                {
+                    _color = i;
+                }
+            }
         }
+
+        DeselectCharacter();
 
         if(_controllerID == -1)
         {
             return;
         }
-        PlayerPrefs.SetInt("Preselect_char_P" + _playerID, _char);
-        PlayerPrefs.SetInt("Preselect_color_P" + _playerID, _color);
-        SetCharacter();
-        SetNameDeselected();
+        SelectCharacterToShow();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F11))
+        {
+            string temp = "";
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    temp += PlayerSettings.takenChararacters[i, j];
+                }
+            }
+        }
+
+        if (PlayerSettings.playerHasLeft[_playerID - 1]) // check if a player has left the game
+        {
+            revalidateCharacter();
+        }
+
         // Setting controller P2 - P4
-        if(_playerID > 1 && _controllerID == -1)
+        if (_playerID > 1 && _controllerID == -1)
         {
             checkForControllerInput();
             return;
@@ -91,15 +122,23 @@ public class CharacterSelectScript : MonoBehaviour
         // selecting character
         if (Input.GetButtonDown("Accept_P" + _controllerID))
         {
-            PlayerPrefs.SetInt("Char_color_P" + _controllerID, _color);
-            PlayerPrefs.SetInt("Char_P" + _controllerID, _char);
             _selected = true;
 
             SetNameSelected();
+            PlayerSettings.playersSelected[_playerID - 1] = true;
+            _characterSelectWindowScript.CheckIfAllJoined(true);
         }
         else if (Input.GetButtonDown("Decline_P" + _controllerID))
         {
-            Invoke("DeselectCharacter", 0.001f);
+            if (_selected) // deselect
+            {
+                Invoke("DeselectCharacter", 0.001f);
+            }
+            else // leave game
+            {
+                removePlayerFromGame();
+                return;
+            }
         }
 
         // selection timeout
@@ -112,25 +151,41 @@ public class CharacterSelectScript : MonoBehaviour
         // change skins
         if (Input.GetButtonDown("RightBumper_P" + _controllerID))
         {
+            if (equalCharacters()) return; // don't bother if there is no available color...
+
+            PlayerSettings.takenChararacters[_char, _color] = false;
             _color++;
-            if (_color > _maxColors - 1) _color = 0;
-            if (PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) == _char && PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID) == _color)
+            int potentialColor = _color;
+            while (true)
             {
-                _color++;
+                if (potentialColor > _maxColors - 1) potentialColor = 0;
+                if (!PlayerSettings.takenChararacters[_char, potentialColor])
+                {
+                    _color = potentialColor;
+                    break;
+                }
+                potentialColor++;
             }
-            if (_color > _maxColors - 1) _color = 0;
-            SetCharacter();
+            SelectCharacterToShow();
         }
         if (Input.GetButtonDown("LeftBumper_P" + _controllerID))
         {
+            if (equalCharacters()) return; // don't bother if there is no available color...
+
+            PlayerSettings.takenChararacters[_char, _color] = false;
             _color--;
-            if (_color < 0) _color = _maxColors - 1;
-            if (PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) == _char && PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID) == _color)
+            int potentialColor = _color;
+            while (true)
             {
-                _color--;
+                if (potentialColor < 0) potentialColor = _maxColors - 1;
+                if (!PlayerSettings.takenChararacters[_char, potentialColor])
+                {
+                    _color = potentialColor;
+                    break;
+                }
+                potentialColor--;
             }
-            if (_color < 0) _color = _maxColors - 1;
-            SetCharacter();
+            SelectCharacterToShow();
         }
 
         // character selection
@@ -138,19 +193,21 @@ public class CharacterSelectScript : MonoBehaviour
         {
             if (Input.GetAxis("LeftHorizontal_P" + _controllerID) > 0)
             {
+                PlayerSettings.takenChararacters[_char, _color] = false;
                 _char++;
                 if (_char > _namesSelected.Length - 1) _char = 0;
                 resetColor();
-                SetCharacter();
+                SelectCharacterToShow();
 
                 SetNameDeselected();
             }
             if (Input.GetAxis("LeftHorizontal_P" + _controllerID) < 0)
             {
+                PlayerSettings.takenChararacters[_char, _color] = false;
                 _char--;
                 if (_char < 0) _char = _namesSelected.Length - 1;
                 resetColor();
-                SetCharacter();
+                SelectCharacterToShow();
 
                 SetNameDeselected();
             }
@@ -164,7 +221,8 @@ public class CharacterSelectScript : MonoBehaviour
 
         if(_returnTimer >= _returnTimerLimit)
         {
-            RemoveChildren(transform);
+            DeselectCharacter();
+            PlayerSettings.playerHasLeft = new bool[] { true, true, true, true };
             _returnTimer = 0f;
             _characterSelectWindowScript.BackToMenu();
         }
@@ -177,10 +235,15 @@ public class CharacterSelectScript : MonoBehaviour
 
     void resetColor()
     {
-        _color = 0;
-        if (PlayerPrefs.GetInt("Preselect_char_P" + _enemyPlayerID) == _char && PlayerPrefs.GetInt("Preselect_color_P" + _enemyPlayerID) == _color)
+        int newColor = 0;
+        while (true)
         {
-            _color++;
+            if (!PlayerSettings.takenChararacters[_char, newColor])
+            {
+                _color = newColor;
+                return;                
+            }
+            newColor++;
         }
     }
 
@@ -188,7 +251,16 @@ public class CharacterSelectScript : MonoBehaviour
     {
         // remove Children
         RemoveChildren(transform);
+
         Instantiate(_namesDeselected[_char], transform); // initiate new name
+
+        Debug.Log(_joined);
+
+        if (ControllerSettings.listOfPlayers()[_playerID -1] == -1)
+        {
+            Debug.Log(transform.GetChild(0));
+            RemoveChildren(transform);
+        }
 
         // switch button symbols
         _selectSymbol.SetActive(true);
@@ -215,15 +287,33 @@ public class CharacterSelectScript : MonoBehaviour
         }
     }
 
-    void SetCharacter()
+    void SelectCharacterToShow()
     {
-        PlayerPrefs.SetInt("Preselect_color_P" + _playerID, _color);
-        PlayerPrefs.SetInt("Preselect_char_P" + _playerID, _char);
-
-        if (_selected)
+        switch (_playerID)
         {
-            PlayerPrefs.SetInt("Char_color_P" + _playerID, _color);
+            case 1:
+                ShowCharacter(ref PlayerSettings.player1, ref PlayerSettings.player1Alt);
+                break;
+            case 2:
+                ShowCharacter(ref PlayerSettings.player2, ref PlayerSettings.player2Alt);
+                break;
+            case 3:
+                ShowCharacter(ref PlayerSettings.player3, ref PlayerSettings.player3Alt);
+                break;
+            case 4:
+                ShowCharacter(ref PlayerSettings.player4, ref PlayerSettings.player4Alt);
+                break;
+            default:
+                break;
         }
+    }
+
+    void ShowCharacter(ref PlayerSettings.character player, ref int skin)
+    {
+        player = (PlayerSettings.character)_char;
+        skin = _color;
+        PlayerSettings.takenChararacters[(int)player, skin] = true;
+
 
         //showing stats
         RemoveChildren(_statsParent.transform);
@@ -244,19 +334,55 @@ public class CharacterSelectScript : MonoBehaviour
 
     void DeselectCharacter()
     {
-        PlayerPrefs.SetInt("Char_P" + _playerID, -1);
-        PlayerPrefs.SetInt("Char_color_P" + _playerID, -1);
         _selected = false;
+        PlayerSettings.playersSelected[_playerID - 1] = false;
 
         SetNameDeselected();
     }
 
+    private void togglePlayerVisuals()
+    {
+
+        bool playerEnabled = !_joined;
+
+        for (int i = 0; i < transform.parent.childCount; i++) // disable UI siblings
+        {
+            GameObject sibling = transform.parent.GetChild(i).gameObject;
+            if (sibling != gameObject)
+            {
+                sibling.SetActive(playerEnabled);
+            }
+        }
+
+        transform.GetChild(0).gameObject.SetActive(playerEnabled); // disable child
+
+        if (_pressToJoin != null)
+        {
+            _pressToJoin.SetActive(!playerEnabled); // toggle press to join
+        }
+
+        _populatePreviewScript.RemoveModel();
+
+        _joined = playerEnabled;
+    }
+
+    //check if there are 4 people with the same character
+    bool equalCharacters()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (!PlayerSettings.takenChararacters[_char, i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     private void checkForControllerInput()
     {
-        bool joystick = false;
         // list of assigned controllers
-
-        List<int> listOfPlayers = new List<int>(){ ControllerSettings.player1Joystick, ControllerSettings.player2Joystick, ControllerSettings.player3Joystick, ControllerSettings.player4Joystick };
+        int[] listOfPlayers = ControllerSettings.listOfPlayers();
 
         for (int i = 0; i < 5; i++) // check inputs
         {
@@ -290,56 +416,151 @@ public class CharacterSelectScript : MonoBehaviour
                             ControllerSettings.player4Joystick = i;
                             break;
                     }
-                    joystick = true;
-                    togglePlayerVisuals();
-                    SetCharacter();
                     SetNameDeselected();
+                    togglePlayerVisuals();
+                    resetColor();
+                    SelectCharacterToShow();
                     break;
                 }
             }
         }
 
-        /*
-        string the = "";
-        foreach (int numb in ControllerSettings.ListofPlayers())
-        {
-            the += numb + " - ";
-        }
-        Debug.Log(the);*/
-
         _controllerID = listOfPlayers[_playerID - 1];
     }
 
-    private void togglePlayerVisuals()
+    void revalidateCharacter()
     {
-        enabled = !_joined;
-
-        for (int i = 0; i < transform.parent.childCount; i++) // disable UI siblings
+        switch (_playerID)
         {
-            GameObject sibling = transform.parent.GetChild(i).gameObject;
-            if(sibling != gameObject)
-            {
-                sibling.SetActive(enabled);
-            }
+            case 1:
+                _char = (int)PlayerSettings.player1;
+                _color = PlayerSettings.player1Alt;
+                _controllerID = ControllerSettings.player1Joystick;
+                break;
+            case 2:
+                _char = (int)PlayerSettings.player2;
+                _color = PlayerSettings.player2Alt;
+                _controllerID = ControllerSettings.player2Joystick;
+                break;
+            case 3:
+                _char = (int)PlayerSettings.player3;
+                _color = PlayerSettings.player3Alt;
+                _controllerID = ControllerSettings.player3Joystick;
+                break;
+            case 4:
+                _char = (int)PlayerSettings.player4;
+                _color = PlayerSettings.player4Alt;
+                _controllerID = ControllerSettings.player4Joystick;
+                break;
         }
-
-        transform.GetChild(0).gameObject.SetActive(enabled); // disable child
-
-        _pressToJoin.SetActive(!enabled); // toggle press to join
-        
-        _joined = !_joined;
+        PlayerSettings.playerHasLeft[_playerID -1] = false;
+        if (_controllerID == -1 && _joined)
+        {
+            togglePlayerVisuals();
+        }
+        else if(_controllerID != -1)
+        {
+            SelectCharacterToShow();
+        }
+        if (_selected)
+        {
+            DeselectCharacter();
+        }
     }
 
-    /*
-    private void OnEnable()
+    void removePlayerFromGame()
     {
-        _populatePreviewScript = _modelsParent.GetComponent<PopulatePreviewScript>();
-        _enemyPlayerID = _playerID == 1 ? 2 : 1;
+        PlayerSettings.takenChararacters[_char, _color] = false;
 
-        _char = 0;
-        _color = _playerID - 1;
+        int amountOfPlayers = ControllerSettings.AmountOfPlayers();
 
-        SetCharacter();
-        SetNameDeselected();
-    }*/
+        if(amountOfPlayers == 1)
+        {
+            _characterSelectWindowScript.BackToMenu();
+        }
+
+        if (amountOfPlayers == _playerID) // if last joined player
+        {
+            switch (_playerID)
+            {
+                case 2:
+                    ControllerSettings.player2Joystick = -1;
+                    PlayerSettings.player2 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player2Alt = -1;
+                    break;
+                case 3:
+                    ControllerSettings.player3Joystick = -1;
+                    PlayerSettings.player3 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player3Alt = -1;
+                    break;
+                case 4:
+                    ControllerSettings.player4Joystick = -1;
+                    PlayerSettings.player4 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player4Alt = -1;
+                    break;
+            }
+            _controllerID = -1;
+            togglePlayerVisuals();
+        }
+        else
+        {
+            if(_playerID == 3) // it ain't pretty, but it's honest code
+            {
+                ControllerSettings.player3Joystick = ControllerSettings.player4Joystick;
+                PlayerSettings.player3 = PlayerSettings.player4;
+                PlayerSettings.player3Alt = PlayerSettings.player4Alt;
+            }
+            if(_playerID == 2)
+            {
+                // switch over
+                ControllerSettings.player2Joystick = ControllerSettings.player3Joystick;
+                PlayerSettings.player2 = PlayerSettings.player3;
+                PlayerSettings.player2Alt = PlayerSettings.player3Alt;
+                ControllerSettings.player3Joystick = ControllerSettings.player4Joystick;
+                PlayerSettings.player3 = PlayerSettings.player4;
+                PlayerSettings.player3Alt = PlayerSettings.player4Alt;
+            }
+            if(_playerID == 1)
+            {
+                ControllerSettings.player1Joystick = ControllerSettings.player2Joystick;
+                PlayerSettings.player1 = PlayerSettings.player2;
+                PlayerSettings.player1Alt = PlayerSettings.player2Alt;
+                ControllerSettings.player2Joystick = ControllerSettings.player3Joystick;
+                PlayerSettings.player2 = PlayerSettings.player3;
+                PlayerSettings.player2Alt = PlayerSettings.player3Alt;
+                ControllerSettings.player3Joystick = ControllerSettings.player4Joystick;
+                PlayerSettings.player3 = PlayerSettings.player4;
+                PlayerSettings.player3Alt = PlayerSettings.player4Alt;
+            }
+
+            switch (amountOfPlayers)
+            {
+                case 4:
+                    ControllerSettings.player4Joystick = -1;
+                    PlayerSettings.player4 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player4Alt = -1;
+                    break;
+                case 3:
+                    ControllerSettings.player3Joystick = -1;
+                    PlayerSettings.player3 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player3Alt = -1;
+                    break;
+                case 2:
+                    ControllerSettings.player2Joystick = -1;
+                    PlayerSettings.player2 = PlayerSettings.character.GOAT;
+                    PlayerSettings.player2Alt = -1;
+                    break;
+            }
+            PlayerSettings.playerHasLeft = new bool[]{ true, true, true, true };
+        }
+        PlayerSettings.playersSelected = new bool[] { false, false, false, false }; // deselect everyone
+    }
+
+    private void OnDisable()
+    {
+        if (_populatePreviewScript != null)
+        {
+            _populatePreviewScript.RemoveModel();
+        }
+    }
 }

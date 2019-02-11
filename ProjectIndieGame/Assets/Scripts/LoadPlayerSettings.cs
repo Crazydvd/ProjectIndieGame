@@ -26,14 +26,20 @@ public class LoadPlayerSettings : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        _parameters = transform.root.GetComponent<PlayerParameters>();
+        Debug.Log(ControllerSettings.AmountOfPlayers());
 
+        if (ControllerSettings.AmountOfPlayers() < _parameters.PLAYER)
+        {
+            transform.parent.gameObject.SetActive(false);
+            return;
+        }
 
         populateCharacterList();
+        int[,] listOfPlayers = PlayerSettings.ListOfAllPlayers();
 
-
-        _parameters = transform.root.GetComponent<PlayerParameters>();
-        int ID = PlayerPrefs.GetInt("Char_P" + _parameters.PLAYER);
-        int altID = PlayerPrefs.GetInt("Char_color_P" + _parameters.PLAYER);
+        int ID = listOfPlayers[_parameters.PLAYER - 1, 0];
+        int altID = listOfPlayers[_parameters.PLAYER - 1, 1];
         switch (ID)
         {
             case 0:

@@ -6,6 +6,8 @@ public class RotatePlayer : MonoBehaviour
 {
     [SerializeField] float _deadzone = 0.25f;
 
+    private int[] listOfPlayers = new int[] { ControllerSettings.player1Joystick, ControllerSettings.player2Joystick, ControllerSettings.player3Joystick, ControllerSettings.player4Joystick };
+
     private PlayerParameters _parameters;
 
     private void Start()
@@ -21,10 +23,10 @@ public class RotatePlayer : MonoBehaviour
             return;
         }
 
-        if (_parameters.PLAYER != PlayerParameters.KeyBoardPlayer) 
+        if (listOfPlayers[_parameters.PLAYER - 1] != 0) 
         {
 
-            Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + _parameters.PLAYER), Input.GetAxis("RightVertical_P" + _parameters.PLAYER));
+            Vector2 stickInput = new Vector2(Input.GetAxis("RightHorizontal_P" + listOfPlayers[_parameters.PLAYER - 1]), Input.GetAxis("RightVertical_P" + listOfPlayers[_parameters.PLAYER - 1]));
             if (stickInput.magnitude < _deadzone)
                 stickInput = Vector2.zero;
 

@@ -49,6 +49,8 @@ public class Movement : MonoBehaviour
 
     private bool _immortal = false;
 
+    private int[] listOfPlayers = new int[] { ControllerSettings.player1Joystick, ControllerSettings.player2Joystick, ControllerSettings.player3Joystick, ControllerSettings.player4Joystick };
+
     void Start()
     {
         Camera main = Camera.main;
@@ -78,15 +80,7 @@ public class Movement : MonoBehaviour
         }
         _walkVelocity = Vector3.zero;
 
-        Vector2 stickInput;
-        if (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer)
-        {
-            stickInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        }
-        else
-        {
-            stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + _parameters.PLAYER), Input.GetAxis("LeftVertical_P" + _parameters.PLAYER));
-        }
+        Vector2 stickInput = new Vector2(Input.GetAxis("LeftHorizontal_P" + listOfPlayers[_parameters.PLAYER -1]), Input.GetAxis("LeftVertical_P" + listOfPlayers[_parameters.PLAYER - 1]));
 
         if (stickInput.magnitude < 0.25f)
             stickInput = Vector2.zero;
@@ -126,8 +120,7 @@ public class Movement : MonoBehaviour
         {
             _rigidBody.velocity = _walkVelocity;
 
-            if (Input.GetButton("LeftBumper_P" + _parameters.PLAYER) || Input.GetAxis("LeftTrigger_P" + _parameters.PLAYER) > 0 ||
-                    (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardLB")))
+            if (Input.GetButton("LeftBumper_P" + listOfPlayers[_parameters.PLAYER - 1]) || Input.GetAxis("LeftTrigger_P" + listOfPlayers[_parameters.PLAYER - 1]) > 0)
             {
                 dodge();
             }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LoadPlayerSprite : MonoBehaviour {
 
-    [Range(1,2)]
+    [Range(1,4)]
     [SerializeField] int _playerID = 1;
 
     [SerializeField] Sprite _char1Alt1;
@@ -27,10 +27,21 @@ public class LoadPlayerSprite : MonoBehaviour {
 
     void Start()
     {
+        if(ControllerSettings.AmountOfPlayers() < _playerID) // remove HUD element if player not playing
+        {
+            transform.parent.gameObject.SetActive(false);
+            return;
+        }
+
         populateCharacterList();
 
-        int character = PlayerPrefs.GetInt("Char_P" + _playerID);
-        int alt = PlayerPrefs.GetInt("Char_color_P" + _playerID);
+        int[,] listOfPlayers = { { (int)PlayerSettings.player1, PlayerSettings.player1Alt },
+                                 { (int)PlayerSettings.player2, PlayerSettings.player2Alt },
+                                 { (int)PlayerSettings.player3, PlayerSettings.player3Alt },
+                                 { (int) PlayerSettings.player4, PlayerSettings.player4Alt }};
+
+        int character = listOfPlayers[_playerID - 1, 0];
+        int alt = listOfPlayers[_playerID - 1, 1];
 
         GetComponent<Image>().sprite = _characters[character, alt];
     }

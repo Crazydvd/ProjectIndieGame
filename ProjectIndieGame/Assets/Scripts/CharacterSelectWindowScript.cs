@@ -10,24 +10,49 @@ public class CharacterSelectWindowScript : MonoBehaviour {
 
     [SerializeField] GameObject _character1;
     [SerializeField] GameObject _character2;
+    [SerializeField] GameObject _character3;
+    [SerializeField] GameObject _character4;
+
 
     private MainMenuCameraScript _cameraScript;
     private Vector3 _defaultCharacterRotation = new Vector3(0, 90, 0);
 
 	// Use this for initialization
 	void Start () {
-        ResetCharacterSelect();
-
         _cameraScript = Camera.main.GetComponent<MainMenuCameraScript>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if(PlayerPrefs.GetInt("Char_P1") != -1 && PlayerPrefs.GetInt("Char_P2") != -1)
+
+    public bool CheckIfAllJoined(bool StageSelect)
+    {
+        List<int> listOfPlayers = new List<int>() { ControllerSettings.player1Joystick, ControllerSettings.player2Joystick, ControllerSettings.player3Joystick, ControllerSettings.player4Joystick };
+        int amountOfPlayers = 0;
+        for (int i = 0; i < 4; i++) // check how much players joined
         {
-            SceneManager.LoadScene(1);
+            if (listOfPlayers[i] != -1)
+            {
+                amountOfPlayers++;
+            }
         }
-	}
+        bool allHaveJoined = true;
+        for (int i = 0; i < amountOfPlayers; i++)
+        {
+            if (!PlayerSettings.playersSelected[i])
+            {
+                allHaveJoined = false;
+            }
+        }
+
+        if (allHaveJoined && amountOfPlayers > 1)
+        {
+            if (StageSelect)
+            {
+                _stageSelect.SetActive(true);
+                this.gameObject.SetActive(false);
+            }
+            return true;
+        }
+        return false;
+    }
 
     public void BackToMenu()
     {
@@ -35,30 +60,19 @@ public class CharacterSelectWindowScript : MonoBehaviour {
         gameObject.SetActive(false);
     }
 
-    void ResetCharacterSelect()
-    {
-        PlayerPrefs.SetInt("Char_P1", -1);
-        PlayerPrefs.SetInt("Char_P2", -1);
-        PlayerPrefs.SetInt("Color_P1", -1);
-        PlayerPrefs.SetInt("Color_P2", -1);
-        PlayerPrefs.SetInt("Preselect_color_P1", -1);
-        PlayerPrefs.SetInt("Preselect_color_P2", -1);
-        PlayerPrefs.SetInt("Preselect_char_P1", -1);
-        PlayerPrefs.SetInt("Preselect_char_P2", -1);
-    }
-
     private void OnEnable()
     {
-        _character1.SetActive(true);
-        _character2.SetActive(true);
-        ResetCharacterSelect();
+        //PlayerSettings.ResetTakenCharacters();
     }
 
     private void OnDisable()
     {
-        _character1.transform.localEulerAngles = _defaultCharacterRotation;
-        _character2.transform.localEulerAngles = _defaultCharacterRotation;
-        _character1.SetActive(false);
-        _character2.SetActive(false);
+        if (_character1 != null)
+        {
+            _character1.transform.localEulerAngles = _defaultCharacterRotation;
+            _character2.transform.localEulerAngles = _defaultCharacterRotation;
+            _character3.transform.localEulerAngles = _defaultCharacterRotation;
+            _character4.transform.localEulerAngles = _defaultCharacterRotation;
+        }
     }
 }

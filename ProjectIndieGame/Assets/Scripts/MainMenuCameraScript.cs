@@ -99,6 +99,8 @@ public class MainMenuCameraScript : MonoBehaviour
         if (_animator.GetCurrentAnimatorStateInfo(0).IsName("CharacterSelect"))
         {
             _animator.speed = 1f;
+            PlayerSettings.ResetTakenCharacters();
+            ControllerSettings.ResetPlayers(false);
             _characterSelect.SetActive(true);
         }
     }

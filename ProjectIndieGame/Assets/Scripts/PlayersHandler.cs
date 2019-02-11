@@ -19,6 +19,14 @@ public class PlayersHandler : MonoBehaviour
     void Start()
     {
         _bgMusic = Camera.main.GetComponent<BackgroundMusic>();
+        if(ControllerSettings.AmountOfPlayers() < 4)
+        {
+            players.RemoveAt(3);
+        }
+        if (ControllerSettings.AmountOfPlayers() < 3)
+        {
+            players.RemoveAt(2);
+        }
     }
 
     public List<GameObject> GetPlayers()

@@ -47,4 +47,12 @@ public class PopulatePreviewScript : MonoBehaviour {
 
         Instantiate(_characters[character, color], transform);
     }
+
+    public void RemoveModel()
+    {
+        for (int i = transform.childCount; i > 0; i--)
+        {
+            Destroy(transform.GetChild(i - 1).gameObject);
+        }
+    }
 }

@@ -4,9 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StageSelectorScript : MonoBehaviour {
-
-    [Range(1, 2)]
-    [SerializeField] int _playerID = 1;
     [SerializeField] int _windowSpeed = 1;
     [SerializeField] float _timeoutTime = 0.15f;
     [SerializeField] GameObject _startBanner;
@@ -38,24 +35,24 @@ public class StageSelectorScript : MonoBehaviour {
         _offset = _stages[1].GetComponent<RectTransform>().transform.localPosition.x;
 
 
-        SetCharacter();
+        SetStage();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_selected && Input.GetButtonDown("Start_P" + _playerID))
+        if (_selected && Input.GetButtonDown("Start_P" + ControllerSettings.player1Joystick))
         {
             SceneManager.LoadScene(1);
         }
 
-        if (Input.GetButtonDown("Accept_P" + _playerID))
+        if (Input.GetButtonDown("Accept_P" + ControllerSettings.player1Joystick))
         {
-            PlayerPrefs.SetInt("Stage", _index);
+            PlayerSettings.stageSelected = _index;
             _startBanner.SetActive(true);
             _selected = true;
         }
-        else if (Input.GetButtonDown("Decline_P" + _playerID))
+        else if (Input.GetButtonDown("Decline_P" + ControllerSettings.player1Joystick))
         {
             Invoke("Deselect", 0.001f);
         }
@@ -75,17 +72,17 @@ public class StageSelectorScript : MonoBehaviour {
         // character selection
         if (!_selected)
         {
-            if (Input.GetAxis("LeftHorizontal_P" + _playerID) > 0)
+            if (Input.GetAxis("LeftHorizontal_P" + ControllerSettings.player1Joystick) > 0)
             {
                 _index++;
                 if (_index > _stages.Count - 1) _index = 0;
-                SetCharacter();
+                SetStage();
             }
-            if (Input.GetAxis("LeftHorizontal_P" + _playerID) < 0)
+            if (Input.GetAxis("LeftHorizontal_P" + ControllerSettings.player1Joystick) < 0)
             {
                 _index--;
                 if (_index < 0) _index = _stages.Count - 1;
-                SetCharacter();
+                SetStage();
             }
 
         }
@@ -93,7 +90,7 @@ public class StageSelectorScript : MonoBehaviour {
 
     void Deselect()
     {
-        PlayerPrefs.SetInt("Stage", -1);
+        PlayerSettings.stageSelected = -1;
         _startBanner.SetActive(false);
         _selected = false;
     }
@@ -103,7 +100,7 @@ public class StageSelectorScript : MonoBehaviour {
         _rectTransform.localPosition = Vector3.Lerp(_rectTransform.localPosition, new Vector3(_targetOffset, 0, 0), Time.deltaTime * _windowSpeed);
     }
 
-    void SetCharacter()
+    void SetStage()
     {
         _targetOffset = _originOffset - (_offset * _index);
         _timeoutTimer = _timeoutTime;

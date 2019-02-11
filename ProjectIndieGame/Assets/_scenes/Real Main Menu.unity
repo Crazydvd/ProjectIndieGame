@@ -10096,7 +10096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a51cba800b67204aaa810f314bc8bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerID: 1
   _windowSpeed: 3
   _timeoutTime: 0.2
   _startBanner: {fileID: 1623685182}
@@ -11550,6 +11549,8 @@ MonoBehaviour:
   _stageSelect: {fileID: 2037500583}
   _character1: {fileID: 509870447}
   _character2: {fileID: 1208379822}
+  _character3: {fileID: 828828085}
+  _character4: {fileID: 1719963119}
 --- !u!1 &1214552747
 GameObject:
   m_ObjectHideFlags: 0

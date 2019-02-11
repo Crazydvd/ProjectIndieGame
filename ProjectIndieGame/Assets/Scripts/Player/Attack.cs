@@ -13,6 +13,8 @@ public class Attack : MonoBehaviour
     private PlayerParameters _parameters;
     private AnimationScript _animation;
 
+    private int[] listOfPlayers = new int[] { ControllerSettings.player1Joystick, ControllerSettings.player2Joystick, ControllerSettings.player3Joystick, ControllerSettings.player4Joystick };
+
     //private Movement _playerMovement;
 
     void Start()
@@ -37,8 +39,7 @@ public class Attack : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("RightBumper_P" + _parameters.PLAYER) || Input.GetAxis("RightTrigger_P" + _parameters.PLAYER) > 0 ||
-            (_parameters.PLAYER == PlayerParameters.KeyBoardPlayer && Input.GetButtonDown("KeyboardRB")))
+        if (Input.GetButtonDown("RightBumper_P" + listOfPlayers[_parameters.PLAYER - 1]) || Input.GetAxis("RightTrigger_P" + listOfPlayers[_parameters.PLAYER - 1]) > 0)
         {
             if (_movement.Immortal)
             {

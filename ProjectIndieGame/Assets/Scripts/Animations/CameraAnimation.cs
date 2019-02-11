@@ -70,8 +70,10 @@ public class CameraAnimation : MonoBehaviour
 
             PlayerParameters parameters = player.GetComponent<PlayerParameters>();
 
-            int ID = PlayerPrefs.GetInt("Char_P" + parameters.PLAYER);
-            int altID = PlayerPrefs.GetInt("Char_color_P" + parameters.PLAYER);
+            int[,] listofAllPlayers = PlayerSettings.ListOfAllPlayers();
+
+            int ID = listofAllPlayers[parameters.PLAYER - 1, 0];
+            int altID = listofAllPlayers[parameters.PLAYER - 1, 1];
 
             GameObject prefab = null;
 
